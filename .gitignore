@@ -4,6 +4,27 @@
 # macOS
 .DS_Store
 
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
 # Backup files
 index.html.backup-before-restructure
 *.backup
