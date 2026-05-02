@@ -192,29 +192,50 @@
     .mz-btn:hover:not(:disabled) { opacity: 0.8; }
     .mz-btn:focus-visible { outline: 2px solid #3D6B8E; outline-offset: 3px; }
     a:focus-visible, button:focus-visible { outline: 2px solid #3D6B8E; outline-offset: 2px; }
-    /* WHY MI-ZA NOW gold accent: 下線描画 + 発光パルス */
+    /* WHY MI-ZA NOW gold accent: 下線描画 + シマー + 強グロー + スケール */
     .why-accent {
       position: relative;
       display: inline-block;
-      animation: mzGlowPulse 4s 3s ease-in-out infinite;
+      transform-origin: center;
+      animation: mzWhyPulse 3.5s 3s ease-in-out infinite;
     }
     .why-accent::after {
       content: '';
       position: absolute;
-      left: 0; bottom: -3px;
-      height: 2px;
+      left: 0; bottom: -4px;
+      height: 3px;
       width: 100%;
-      background: #B89A4D;
+      background: linear-gradient(90deg, transparent 0%, #B89A4D 20%, #FFD466 50%, #B89A4D 80%, transparent 100%);
+      background-size: 220% 100%;
+      background-position: 50% 0;
       transform: scaleX(0);
       transform-origin: left;
-      animation: mzDraw 1s 0.5s ease-out forwards;
+      animation: mzDraw 1s 0.5s ease-out forwards, mzShimmerLine 4s 2.5s linear infinite;
     }
-    .why-accent-2::after { animation-delay: 1.0s; }
-    .why-accent-3::after { animation-delay: 1.5s; }
+    .why-accent-2::after { animation-delay: 1.0s, 3.0s; }
+    .why-accent-3::after { animation-delay: 1.5s, 3.5s; }
     @keyframes mzDraw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-    @keyframes mzGlowPulse {
-      0%, 100% { text-shadow: 0 0 0 transparent; }
-      50% { text-shadow: 0 0 12px rgba(232, 169, 58, 0.55); }
+    @keyframes mzShimmerLine {
+      0% { background-position: 200% 0; }
+      100% { background-position: -100% 0; }
+    }
+    @keyframes mzWhyPulse {
+      0%, 100% { transform: scale(1); text-shadow: 0 0 0 transparent; }
+      50% { transform: scale(1.08); text-shadow: 0 0 20px rgba(232, 169, 58, 0.8), 0 0 6px rgba(232, 169, 58, 0.5); }
+    }
+    /* WHY MI-ZA NOW セクション背景: ゴールドの放射 pulse */
+    .bg-concept-care::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(232, 169, 58, 0.18) 0%, transparent 55%);
+      pointer-events: none;
+      animation: mzBgPulse 6s ease-in-out infinite;
+      z-index: 0;
+    }
+    @keyframes mzBgPulse {
+      0%, 100% { opacity: 0.35; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.15); }
     }
     /* 背景画像: webp 優先、未対応ブラウザは jpg にフォールバック */
     .hero-section {
@@ -635,7 +656,7 @@
                     AI<strong className="why-accent why-accent-3" style={{ color: C.gold }}>実装</strong>
                   </p>
                   <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginTop: 12 }}>
-                    この3点が揃うのは MI-ZA だけ。在宅医療の現場で生まれたAIサービスです。
+                    この3点が揃うのは MI-ZA だけ。在宅医療の現場で磨かれた最新の生成AIサービスを提供します。
                   </p>
                 </div>
               </div>
