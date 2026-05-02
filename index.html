@@ -709,11 +709,11 @@
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12, maxWidth: 920, margin: "0 auto 12px" }}>
                 {[
-                  { plan: "AI伴走サービス", title: "レセプト病名チェック", file: "/samples/サンプル_01_レセプト病名チェック.pdf", ext: "PDF", icon: "📊", desc: "優先度別検出件数＋患者ごとの病名・処方整合性チェック結果" },
-                  { plan: "AI伴走サービス・入力", title: "患者リスト（入力）", file: "/samples/サンプル_05_患者リスト.pdf", ext: "PDF", icon: "📋", desc: "クリニックからご提供いただく患者データの形式例" },
-                  { plan: "AI伴走サービス", title: "訪問看護指示書 処理レポート", file: "/samples/サンプル_02_訪問看護指示書処理レポート.pdf", ext: "PDF", icon: "📝", desc: "AI下書き＋人最終確認の月次処理レポート" },
-                  { plan: "AI伴走サービス", title: "医師別分析レポート", file: "/samples/サンプル_03_医師別分析レポート.pdf", ext: "PDF", icon: "📈", desc: "医師別の患者数・点数・推定収入・前月比較・診療区分内訳" },
-                  { plan: "SPOT BCP", title: "BCP策定計画書", file: "/samples/サンプル_04_BCP策定計画書.pdf", ext: "PDF", icon: "🛡️", desc: "厚労省手引き準拠の事業継続計画（在宅部門）" },
+                  { plan: "AI伴走サービス", title: "レセプト病名チェック", file: "samples/サンプル_01_レセプト病名チェック.pdf", ext: "PDF", icon: "📊", desc: "優先度別検出件数＋患者ごとの病名・処方整合性チェック結果" },
+                  { plan: "AI伴走サービス・入力", title: "患者リスト（入力）", file: "samples/サンプル_05_患者リスト.pdf", ext: "PDF", icon: "📋", desc: "クリニックからご提供いただく患者データの形式例" },
+                  { plan: "AI伴走サービス", title: "訪問看護指示書 処理レポート", file: "samples/サンプル_02_訪問看護指示書処理レポート.pdf", ext: "PDF", icon: "📝", desc: "AI下書き＋人最終確認の月次処理レポート" },
+                  { plan: "AI伴走サービス", title: "医師別分析レポート", file: "samples/サンプル_03_医師別分析レポート.pdf", ext: "PDF", icon: "📈", desc: "医師別の患者数・点数・推定収入・前月比較・診療区分内訳" },
+                  { plan: "SPOT BCP", title: "BCP策定計画書", file: "samples/サンプル_04_BCP策定計画書.pdf", ext: "PDF", icon: "🛡️", desc: "厚労省手引き準拠の事業継続計画（在宅部門）" },
                 ].map((s, i) => (
                   <a key={i} href={s.file} target="_blank" rel="noopener noreferrer" style={{ background: C.white, padding: "16px 14px", textDecoration: "none", display: "flex", flexDirection: "column", border: `1px solid ${C.line}`, borderTop: `3px solid ${C.gold}` }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
