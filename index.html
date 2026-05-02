@@ -546,36 +546,22 @@
               </F>
               <F delay={0.42}>
                 <p className="hero-sub" style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.95, marginBottom: 28, letterSpacing: 0.5 }}>
-                  増収・経費減を、<strong style={{ color: C.gold, fontWeight: 700 }}>増員を極力抑え</strong>で実現する。
+                  増収・経費減を、<strong style={{ color: C.gold, fontWeight: 700 }}>組織生産性向上</strong>と共に実現する。
                 </p>
               </F>
               <F delay={0.54}>
-                <a href="/apply/" onClick={(e) => { e.preventDefault(); go(8); }} className="mz-btn" style={{
+                <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} className="mz-btn" style={{
                   background: C.gold, color: C.white, border: "none",
                   padding: "14px 46px", cursor: "pointer",
                   fontFamily: sans, fontSize: 15, fontWeight: 700, letterSpacing: 2,
                   transition: "opacity 0.2s", textDecoration: "none", display: "inline-block",
-                }}>プランを見る</a>
+                }}>サービスを見る</a>
                 <p style={{ marginTop: 12, fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.45)", letterSpacing: 0.5 }}>
                   4プラン・1ヶ月無料お試し可能
                 </p>
               </F>
             </div>
           </section>
-
-          {/* Hero直下：成果物サンプル誘導 */}
-          <Sec py={36} bg={C.white}>
-            <F>
-              <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center", padding: "16px 20px", background: C.bg, borderLeft: `4px solid ${C.gold}` }}>
-                <p style={{ fontFamily: sans, fontSize: 13, color: C.dark, lineHeight: 1.7, marginBottom: 10 }}>
-                  📎 <strong>「実際にどんな資料が届くの？」と思った院長へ</strong>
-                </p>
-                <a href="#deliverables" onClick={(e) => { e.preventDefault(); const el = document.getElementById('deliverables'); if (el) { window.scrollTo({ top: el.offsetTop - 60, behavior: 'smooth' }); } }} style={{ fontFamily: sans, fontSize: 13, color: C.accent, textDecoration: "underline", fontWeight: 700 }}>
-                  まず納品物のサンプルを見てみる →
-                </a>
-              </div>
-            </F>
-          </Sec>
 
           {/* Why MI-ZA Now（差別化1行・コンセプト画像背景） */}
           <Sec py={48} bg={C.bg}>
