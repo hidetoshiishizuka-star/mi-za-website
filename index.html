@@ -192,6 +192,30 @@
     .mz-btn:hover:not(:disabled) { opacity: 0.8; }
     .mz-btn:focus-visible { outline: 2px solid #3D6B8E; outline-offset: 3px; }
     a:focus-visible, button:focus-visible { outline: 2px solid #3D6B8E; outline-offset: 2px; }
+    /* WHY MI-ZA NOW gold accent: 下線描画 + 発光パルス */
+    .why-accent {
+      position: relative;
+      display: inline-block;
+      animation: mzGlowPulse 4s 3s ease-in-out infinite;
+    }
+    .why-accent::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -3px;
+      height: 2px;
+      width: 100%;
+      background: #B89A4D;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: mzDraw 1s 0.5s ease-out forwards;
+    }
+    .why-accent-2::after { animation-delay: 1.0s; }
+    .why-accent-3::after { animation-delay: 1.5s; }
+    @keyframes mzDraw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes mzGlowPulse {
+      0%, 100% { text-shadow: 0 0 0 transparent; }
+      50% { text-shadow: 0 0 12px rgba(232, 169, 58, 0.55); }
+    }
     /* 背景画像: webp 優先、未対応ブラウザは jpg にフォールバック */
     .hero-section {
       background-image: linear-gradient(rgba(10, 22, 48, 0.78), rgba(10, 22, 48, 0.85)), url('photo-hero-visit.jpg');
@@ -248,6 +272,9 @@
     <input name="お電話番号" />
     <textarea name="ご相談内容"></textarea>
   </form>
+  <form hidden method='post' name='newsletter'><input type='hidden' name='form-name' value='newsletter' />
+    <input name="メールアドレス" />
+  </form>
   <form hidden method='post' name='apply'><input type='hidden' name='form-name' value='apply' />
     <input name="希望プラン" />
     <input name="クリニック名" />
@@ -288,7 +315,7 @@
       { ja:"サービス",     en:"SERVICE", url:"/service/",  title:"在宅医療コンサルティングのサービス内容｜MI-ZA（ミーザ）",    desc:"MI-ZA（ミーザ）の在宅医療コンサルティングサービス。経営企画・組織開発・マーケティングの3つの軸で訪問診療クリニックの院長をサポートします。" },
       { ja:"支援事例",     en:"CASE",    url:"/cases/",    title:"支援事例（個別コンサルティング）｜MI-ZA（ミーザ）在宅医療・訪問診療クリニック専門",         desc:"MI-ZA（ミーザ）の個別コンサルティングの支援事例。訪問診療・在宅医療クリニックの実際のご相談と支援内容をご紹介します。サブスクリプションサービス事例は2026年5月開始後、順次掲載予定。" },
       { ja:"会社概要",     en:"COMPANY", url:"/company/",  title:"会社概要｜MI-ZA（ミーザ）在宅医療・訪問診療クリニック専門の経営・伴走支援",         desc:"MI-ZA（ミーザ）の会社概要。在宅医療・訪問診療クリニックの経営を支援するコンサルティング会社です。" },
-      { ja:"メンバー",     en:"MEMBER",  url:"/member/",   title:"メンバー｜MI-ZA（ミーザ）在宅医療・訪問診療クリニック専門の経営・伴走支援",         desc:"MI-ZA（ミーザ）のメンバー紹介。訪問診療・在宅医療クリニック専門の経営コンサルタントチームです。" },
+      { ja:"スタッフ",     en:"STAFF",  url:"/member/",   title:"スタッフ｜MI-ZA（ミーザ）在宅医療・訪問診療クリニック専門の経営・伴走支援",         desc:"MI-ZA（ミーザ）のスタッフ紹介。訪問診療・在宅医療クリニック専門の経営コンサルタントチームです。" },
       { ja:"ブログ",       en:"BLOG",    url:"/blog/",     title:"ブログ｜MI-ZA（ミーザ）在宅医療・訪問診療クリニック専門の経営・伴走支援",           desc:"MI-ZA（ミーザ）公式ブログ。在宅医療・訪問診療の経営・診療報酬・組織づくりに関する情報を発信。" },
       { ja:"お問い合わせ", en:"CONTACT", url:"/contact/",  title:"お問い合わせ｜MI-ZA（ミーザ）在宅医療・訪問診療クリニック専門の経営・伴走支援",     desc:"MI-ZA（ミーザ）へのお問い合わせ。訪問診療・在宅医療クリニックの経営に関するご相談はこちらから。" },
       { ja:"プライバシーポリシー", en:"PRIVACY", url:"/privacy/", title:"プライバシーポリシー｜MI-ZA（ミーザ）在宅医療・訪問診療クリニック専門の経営・伴走支援", desc:"MI-ZA（ミーザ）のプライバシーポリシー。個人情報の取り扱いについて。" },
@@ -485,7 +512,7 @@
     const CHALLENGES = [
       { title: "院長がいないと動かない",                   desc: "訪問診療中に問題が起きても、スタッフが判断できずに院長の帰りを待っている。院長のスマホには1日30件以上の連絡が来る。" },
       { title: "忙しいのに利益が残らない",                 desc: "患者数は増えているのに、なぜか手元に残るお金が減っている。人件費が何%なのか、すぐに答えられない。" },
-      { title: "看護師が辞めると、また看護師が辞める",     desc: "一人辞めると残ったメンバーのオンコールが増え、疲弊してまた辞める。補充採用のための採用が続いている。" },
+      { title: "看護師が辞めると、また看護師が辞める",     desc: "一人辞めると残ったスタッフのオンコールが増え、疲弊してまた辞める。補充採用のための採用が続いている。" },
       { title: "算定できているはずの加算が、取れていない", desc: "診療報酬の改定内容を把握する担当者がいない。要件を満たしているのに気づかず、数ヶ月分の加算を取りこぼしていた。" },
     ];
 
@@ -507,6 +534,42 @@
       { src: "在支診（関東）", q: "部署を超えて意見をまとめる必要な場で合意形成を支援してくれた。利害関係はないが、現場の感覚がわかる人が入ることで、意見がまとまった。" },
       { src: "在支病（関東）", q: "退職が増えている中入っていただき、課題を抽出し分析して対策を出してくれたので、これからの方針を確かに決めていくことができた。自院だけでは何もできなかった。" },
     ];
+
+    function NewsletterForm() {
+      const [email, setEmail] = React.useState("");
+      const [submitted, setSubmitted] = React.useState(false);
+      const [sending, setSending] = React.useState(false);
+      const [err, setErr] = React.useState("");
+      function handleSubmit(e) {
+        e.preventDefault();
+        if (!email) return;
+        setSending(true); setErr("");
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({ "form-name": "newsletter", "メールアドレス": email }).toString(),
+        })
+          .then(() => { setSubmitted(true); setSending(false); })
+          .catch(() => { setErr("送信に失敗しました。再度お試しください。"); setSending(false); });
+      }
+      if (submitted) {
+        return (
+          <p style={{ fontFamily: sans, fontSize: 14, color: C.navy, fontWeight: 700, padding: "16px 0" }}>
+            ご登録ありがとうございます。次回配信よりお届けします。
+          </p>
+        );
+      }
+      return (
+        <form name="newsletter" method="POST" data-netlify="true" onSubmit={handleSubmit} style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center", maxWidth: 480, margin: "0 auto" }}>
+          <input type="hidden" name="form-name" value="newsletter" />
+          <input type="email" name="メールアドレス" required placeholder="your@example.com" value={email} onChange={(e) => setEmail(e.target.value)} style={{ flex: "1 1 240px", padding: "12px 16px", fontFamily: sans, fontSize: 14, border: `1px solid ${C.line}`, background: C.white, minWidth: 0 }} />
+          <button type="submit" disabled={sending} className="mz-btn" style={{ background: C.gold, color: C.white, border: "none", padding: "12px 24px", fontFamily: sans, fontSize: 13, fontWeight: 700, letterSpacing: 1, cursor: sending ? "wait" : "pointer", opacity: sending ? 0.6 : 1, whiteSpace: "nowrap" }}>
+            {sending ? "送信中..." : "メルマガを申し込む"}
+          </button>
+          {err && <p style={{ flexBasis: "100%", color: "#C0392B", fontSize: 12, marginTop: 4 }}>{err}</p>}
+        </form>
+      );
+    }
 
     function Home({ go }) {
       return (
@@ -567,9 +630,9 @@
                 <div style={{ textAlign: "center", position: "relative", zIndex: 2 }}>
                   <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 4, marginBottom: 10, fontWeight: 700 }}>WHY MI-ZA, NOW</p>
                   <p style={{ fontFamily: serif, fontSize: 18, color: C.navy, fontWeight: 700, lineHeight: 1.7 }}>
-                    在宅医療<strong style={{ color: C.gold }}>特化</strong> ×<br className="sp-only-br" />
-                    事務長経験10年超の<strong style={{ color: C.gold }}>現場力</strong> ×<br className="sp-only-br" />
-                    AI<strong style={{ color: C.gold }}>実装</strong>
+                    在宅医療<strong className="why-accent" style={{ color: C.gold }}>特化</strong> ×<br className="sp-only-br" />
+                    事務長経験10年超の<strong className="why-accent why-accent-2" style={{ color: C.gold }}>現場力</strong> ×<br className="sp-only-br" />
+                    AI<strong className="why-accent why-accent-3" style={{ color: C.gold }}>実装</strong>
                   </p>
                   <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginTop: 12 }}>
                     この3点が揃うのは MI-ZA だけ。在宅医療の現場で生まれたAIサービスです。
@@ -979,7 +1042,7 @@
           {/* Member Preview（コンパクト版・写真+1行プロフ） */}
           <Sec py={56}>
             <div style={{ marginBottom: 20, textAlign: "center" }}>
-              <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 4, marginBottom: 6 }}>MEMBER</p>
+              <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 4, marginBottom: 6 }}>STAFF</p>
               <h3 style={{ fontFamily: sans, fontSize: 17, fontWeight: 700, color: C.navy }}>支える人たち</h3>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16, maxWidth: 720, margin: "0 auto" }}>
@@ -1005,7 +1068,7 @@
             <F delay={0.2}>
               <div style={{ textAlign: "center", marginTop: 16 }}>
                 <a href="/member/" onClick={(e) => { e.preventDefault(); go(4); }} style={{ fontFamily: sans, fontSize: 12, color: C.accent, textDecoration: "underline" }}>
-                  メンバーの詳細を見る →
+                  スタッフの詳細を見る →
                 </a>
               </div>
             </F>
@@ -1026,6 +1089,23 @@
                 </p>
                 <p style={{ fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.7, marginTop: 14 }}>
                   ※ サブスク契約者には、新機能・新プランのリリースを優先的にご案内します。
+                </p>
+              </div>
+            </F>
+          </Sec>
+
+          {/* メルマガ申込 */}
+          <Sec py={64} bg={C.bg}>
+            <F>
+              <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
+                <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 4, marginBottom: 8, fontWeight: 700 }}>NEWSLETTER</p>
+                <h3 style={{ fontFamily: serif, fontSize: 22, fontWeight: 700, color: C.navy, marginBottom: 12 }}>在宅医療の最新情報を、週1回メールで。</h3>
+                <p style={{ fontFamily: sans, fontSize: 13, color: C.mid, lineHeight: 1.95, marginBottom: 24 }}>
+                  診療報酬・制度動向・他院の事例など、院長と事務長に役立つ情報をお届けします。
+                </p>
+                <NewsletterForm />
+                <p style={{ fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.7, marginTop: 14 }}>
+                  ※ 医療従事者以外はお断りすることがあります。配信停止はメール内のリンクからいつでも可能です。
                 </p>
               </div>
             </F>
@@ -1572,7 +1652,7 @@
                 <a href="/member/" onClick={(e) => { e.preventDefault(); go(4); }} style={{ fontFamily: sans, fontSize: 12, color: C.navy, textDecoration: "none", letterSpacing: 1, transition: "color 0.2s" }}
                   onMouseOver={e => { e.currentTarget.style.color = C.accent; }}
                   onMouseOut={e => { e.currentTarget.style.color = C.navy; }}>
-                  メンバーの詳細を見る →
+                  スタッフの詳細を見る →
                 </a>
               </div>
             </F>
@@ -1604,8 +1684,8 @@
         <>
           <section style={{ background: C.navy, paddingTop: 108, paddingBottom: 48, textAlign: "center" }}>
             <F>
-              <p style={{ fontFamily: enFont, fontSize: 12, color: "rgba(255,255,255,0.35)", letterSpacing: 5, marginBottom: 10 }}>MEMBER</p>
-              <h1 style={{ fontFamily: sans, fontSize: 25, color: C.white, fontWeight: 700, margin: 0 }}>メンバー紹介</h1>
+              <p style={{ fontFamily: enFont, fontSize: 12, color: "rgba(255,255,255,0.35)", letterSpacing: 5, marginBottom: 10 }}>STAFF</p>
+              <h1 style={{ fontFamily: sans, fontSize: 25, color: C.white, fontWeight: 700, margin: 0 }}>スタッフ紹介</h1>
             </F>
           </section>
           <Sec bg={C.bg}>
