@@ -749,14 +749,6 @@
                     <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 6 }}>0{i+1}</p>
                     <p style={{ fontFamily: serif, fontSize: 16, fontWeight: 700, color: C.navy, marginBottom: 10, lineHeight: 1.5 }}>{item.c}</p>
                     <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginBottom: 14, flexGrow: 1 }}>{item.a}</p>
-                    <div style={{ borderTop: `1px solid ${C.line}`, paddingTop: 12 }}>
-                      <p style={{ fontFamily: sans, fontSize: 10, color: C.gold, fontWeight: 700, letterSpacing: 1, marginBottom: 6 }}>使うサービス</p>
-                      {item.s.map((svc, j) => (
-                        <a key={j} href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ display: "block", fontFamily: sans, fontSize: 12, color: C.accent, textDecoration: "underline", marginBottom: 4 }}>
-                          {svc} →
-                        </a>
-                      ))}
-                    </div>
                   </div>
                 ))}
               </div>
