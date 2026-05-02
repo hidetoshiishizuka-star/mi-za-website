@@ -208,8 +208,8 @@
     @media (max-width: 681px) {
       .pc-nav  { display: none !important; }
       .sp-nav  { display: block !important; }
-      .site-header-inner { height: 72px !important; }
-      .site-logo { height: 56px !important; }
+      .site-header-inner { height: 64px !important; }
+      .site-logo { height: 48px !important; }
       .hero-section { min-height: auto !important; padding: 110px 24px 72px !important; overflow-x: hidden !important; }
       .hero-title { font-size: 17px !important; letter-spacing: 0.5px !important; }
       .hero-sub { font-size: 13px !important; }
@@ -406,7 +406,7 @@
               src={transparent ? "logo-white.svg" : "logo-color.svg"}
               alt="MI-ZA（ミーザ）"
               onClick={() => nav(0)}
-              style={{ height: 80, width: "auto", cursor: "pointer", display: "block" }}
+              style={{ height: 66, width: "auto", cursor: "pointer", display: "block" }}
             />
 
             {/* Desktop */}
@@ -418,7 +418,7 @@
                     textDecoration: "none", background: "none", cursor: "pointer",
                     fontFamily: sans, fontSize: 13, letterSpacing: 1, padding: 0,
                     color: transparent
-                      ? (cur === i ? C.white : "rgba(255,255,255,0.55)")
+                      ? (cur === i ? C.white : "rgba(255,255,255,0.9)")
                       : (cur === i ? C.navy  : C.mid),
                     fontWeight: cur === i ? 700 : 400,
                     transition: "color 0.3s",
