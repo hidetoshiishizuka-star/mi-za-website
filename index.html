@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <!-- Subpath-aware base for GitHub Pages preview -->
+  <script>
+    (function() {
+      var seg = window.location.pathname.split('/')[1] || '';
+      var base = '/';
+      if (window.location.hostname.endsWith('.github.io') && seg) {
+        base = '/' + seg + '/';
+      }
+      document.write('<base href="' + base + '">');
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MI-ZA（ミーザ）｜在宅医療コンサルティング・訪問診療クリニック経営支援</title>
@@ -8,9 +19,9 @@
   <meta name="robots" content="index, follow" />
   <meta name="google-site-verification" content="32DXB6coTGY5ZAeAwOTrUQ8VUtkJErhzReWyx9sbJns" />
   <link rel="canonical" href="https://mi-za.org" />
-  <link rel="icon" type="image/svg+xml" href="/mi-za-icon.svg" />
-  <link rel="icon" type="image/png" href="/mi-za-icon.png" />
-  <link rel="shortcut icon" href="/mi-za-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="mi-za-icon.svg" />
+  <link rel="icon" type="image/png" href="mi-za-icon.png" />
+  <link rel="shortcut icon" href="mi-za-icon.png" />
   <!-- OGP -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mi-za.org" />
@@ -183,16 +194,16 @@
     a:focus-visible, button:focus-visible { outline: 2px solid #3D6B8E; outline-offset: 2px; }
     /* 背景画像: webp 優先、未対応ブラウザは jpg にフォールバック */
     .hero-section {
-      background-image: linear-gradient(rgba(10, 22, 48, 0.78), rgba(10, 22, 48, 0.85)), url('/photo-hero-visit.jpg');
-      background-image: linear-gradient(rgba(10, 22, 48, 0.78), rgba(10, 22, 48, 0.85)), image-set(url('/photo-hero-visit.webp') type('image/webp') 1x, url('/photo-hero-visit.jpg') type('image/jpeg') 1x);
+      background-image: linear-gradient(rgba(10, 22, 48, 0.78), rgba(10, 22, 48, 0.85)), url('photo-hero-visit.jpg');
+      background-image: linear-gradient(rgba(10, 22, 48, 0.78), rgba(10, 22, 48, 0.85)), image-set(url('photo-hero-visit.webp') type('image/webp') 1x, url('photo-hero-visit.jpg') type('image/jpeg') 1x);
     }
     .bg-concept-care {
-      background-image: linear-gradient(rgba(247,246,243,0.85), rgba(247,246,243,0.95)), url('/photo-concept-care.jpg');
-      background-image: linear-gradient(rgba(247,246,243,0.85), rgba(247,246,243,0.95)), image-set(url('/photo-concept-care.webp') type('image/webp') 1x, url('/photo-concept-care.jpg') type('image/jpeg') 1x);
+      background-image: linear-gradient(rgba(247,246,243,0.85), rgba(247,246,243,0.95)), url('photo-concept-care.jpg');
+      background-image: linear-gradient(rgba(247,246,243,0.85), rgba(247,246,243,0.95)), image-set(url('photo-concept-care.webp') type('image/webp') 1x, url('photo-concept-care.jpg') type('image/jpeg') 1x);
     }
     .bg-ai-tablet {
-      background-image: linear-gradient(rgba(10,22,48,0.82), rgba(10,22,48,0.92)), url('/photo-ai-tablet.jpg');
-      background-image: linear-gradient(rgba(10,22,48,0.82), rgba(10,22,48,0.92)), image-set(url('/photo-ai-tablet.webp') type('image/webp') 1x, url('/photo-ai-tablet.jpg') type('image/jpeg') 1x);
+      background-image: linear-gradient(rgba(10,22,48,0.82), rgba(10,22,48,0.92)), url('photo-ai-tablet.jpg');
+      background-image: linear-gradient(rgba(10,22,48,0.82), rgba(10,22,48,0.92)), image-set(url('photo-ai-tablet.webp') type('image/webp') 1x, url('photo-ai-tablet.jpg') type('image/jpeg') 1x);
     }
     @media (max-width: 681px) {
       .pc-nav  { display: none !important; }
@@ -389,7 +400,7 @@
             height: 64,
           }}>
             <img
-              src="/logo-color.svg"
+              src="logo-color.svg"
               alt="MI-ZA（ミーザ）"
               onClick={() => nav(0)}
               style={{ height: 44, width: "auto", cursor: "pointer", display: "block" }}
@@ -587,8 +598,8 @@
             <F>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20, maxWidth: 920, margin: "0 auto" }}>
                 {[
-                  { ic: "01", t: "在宅医療事務長 10年以上の現場知見", d: "代表は事務長10年の経験。取締役・所属スタッフは現役の在宅医療事務長。仕組み化・組織開発・診療報酬対応を実体験で蓄積。在宅医療の世界で全員10年以上のキャリア。", img: "/photo-jimucho-desk.jpg", alt: "在宅医療事務長の業務イメージ — 計算機とノート" },
-                  { ic: "02", t: "AI × 人の二重チェック体制", d: "AIは月32時間稼働（レセ事前チェック8h・指示書下書き12h・レポート分析12h）。すべての出力は必ず現役事務長が最終確認してから納品します。", img: "/photo-ai-collab.jpg", alt: "AIと現役事務長による二重チェック" },
+                  { ic: "01", t: "在宅医療事務長 10年以上の現場知見", d: "代表は事務長10年の経験。取締役・所属スタッフは現役の在宅医療事務長。仕組み化・組織開発・診療報酬対応を実体験で蓄積。在宅医療の世界で全員10年以上のキャリア。", img: "photo-jimucho-desk.jpg", alt: "在宅医療事務長の業務イメージ — 計算機とノート" },
+                  { ic: "02", t: "AI × 人の二重チェック体制", d: "AIは月32時間稼働（レセ事前チェック8h・指示書下書き12h・レポート分析12h）。すべての出力は必ず現役事務長が最終確認してから納品します。", img: "photo-ai-collab.jpg", alt: "AIと現役事務長による二重チェック" },
                   { ic: "03", t: "1ヶ月無料お試し可能", d: "サービス開始までの設定期間中（最長1ヶ月）は無料。気に入らなければ違約金なしでキャンセル可能。クレジットカード登録不要・サービス開始後の請求書払い。", img: null, alt: "" },
                 ].map((b, i) => (
                   <div key={i} style={{ background: C.white, border: `1px solid ${C.line}`, overflow: "hidden", display: "flex", flexDirection: "column" }}>
@@ -826,8 +837,8 @@
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12, marginBottom: 24, maxWidth: 920, margin: "0 auto 24px" }}>
                 <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9" }}>
                   <picture style={{ display: "contents" }}>
-                    <source srcSet="/photo-challenge-doctor.webp" type="image/webp" />
-                    <img src="/photo-challenge-doctor.jpg" alt="一人で抱え込む院長の悩み" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                    <source srcSet="photo-challenge-doctor.webp" type="image/webp" />
+                    <img src="photo-challenge-doctor.jpg" alt="一人で抱え込む院長の悩み" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                   </picture>
                   <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "10px 14px", background: "linear-gradient(transparent, rgba(0,0,0,0.65))", color: C.white }}>
                     <p style={{ fontFamily: serif, fontSize: 13, fontWeight: 700, color: C.white, margin: 0 }}>判断の重さ — 院長一人で抱え込む</p>
@@ -835,8 +846,8 @@
                 </div>
                 <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9" }}>
                   <picture style={{ display: "contents" }}>
-                    <source srcSet="/photo-challenge-papers.webp" type="image/webp" />
-                    <img src="/photo-challenge-papers.jpg" alt="積み上がる書類業務" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                    <source srcSet="photo-challenge-papers.webp" type="image/webp" />
+                    <img src="photo-challenge-papers.jpg" alt="積み上がる書類業務" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                   </picture>
                   <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "10px 14px", background: "linear-gradient(transparent, rgba(0,0,0,0.65))", color: C.white }}>
                     <p style={{ fontFamily: serif, fontSize: 13, fontWeight: 700, color: C.white, margin: 0 }}>業務量の重さ — 月末の書類とレセ対応</p>
@@ -879,8 +890,8 @@
               <div style={{ maxWidth: 920, margin: "0 auto", background: C.white, display: "grid", gridTemplateColumns: "minmax(220px, 1fr) 2fr", gap: 0 }} className="consul-grid">
                 <div style={{ position: "relative", overflow: "hidden", minHeight: 220 }}>
                   <picture style={{ display: "contents" }}>
-                    <source srcSet="/photo-consul-support.webp" type="image/webp" />
-                    <img src="/photo-consul-support.jpg" alt="MI-ZA 個別コンサルティング — オンライン伴走" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                    <source srcSet="photo-consul-support.webp" type="image/webp" />
+                    <img src="photo-consul-support.jpg" alt="MI-ZA 個別コンサルティング — オンライン伴走" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                   </picture>
                 </div>
                 <div style={{ padding: "28px 28px", borderLeft: `4px solid ${C.accent}` }}>
@@ -1010,8 +1021,8 @@
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16, maxWidth: 720, margin: "0 auto" }}>
               {[
-                { role: "CEO", img: "/photo-ceo.jpg", name: "代表取締役　石塚（波村）美絵", short: "事務長10年・組織開発／個別コンサル・03経営相談・事務長養成プログラム・HP制作 担当", alt: "石塚美絵 MI-ZA代表 在宅医療コンサルタント" },
-                { role: "DIRECTOR", img: "/photo-director.jpg", name: "取締役　石塚 秀俊", short: "現役事務長・AI実装／04 AI伴走サブスク・01病名チェック・02訪問看護指示書 のAI実装と現場実証 担当", alt: "石塚秀俊 MI-ZA取締役 在宅医療コンサルタント" },
+                { role: "CEO", img: "photo-ceo.jpg", name: "代表取締役　石塚（波村）美絵", short: "事務長10年・組織開発／個別コンサル・03経営相談・事務長養成プログラム・HP制作 担当", alt: "石塚美絵 MI-ZA代表 在宅医療コンサルタント" },
+                { role: "DIRECTOR", img: "photo-director.jpg", name: "取締役　石塚 秀俊", short: "現役事務長・AI実装／04 AI伴走サブスク・01病名チェック・02訪問看護指示書 のAI実装と現場実証 担当", alt: "石塚秀俊 MI-ZA取締役 在宅医療コンサルタント" },
               ].map((m, i) => (
                 <F key={i} delay={i * 0.1}>
                   <div style={{ display: "flex", gap: 12, alignItems: "center", padding: "14px 16px", background: C.bg }}>
@@ -1063,8 +1074,8 @@
               <div style={{ maxWidth: 920, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, alignItems: "stretch", background: C.white, border: `1px solid ${C.line}` }} className="cta-grid">
                 <div style={{ position: "relative", overflow: "hidden", minHeight: 300 }}>
                   <picture style={{ display: "contents" }}>
-                    <source srcSet="/photo-cta-zoom-doctor.webp" type="image/webp" />
-                    <img src="/photo-cta-zoom-doctor.jpg" alt="MI-ZAとの30分Zoom相談 — 売り込みなし" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                    <source srcSet="photo-cta-zoom-doctor.webp" type="image/webp" />
+                    <img src="photo-cta-zoom-doctor.jpg" alt="MI-ZAとの30分Zoom相談 — 売り込みなし" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                   </picture>
                 </div>
                 <div style={{ padding: "40px 32px", display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
@@ -1552,8 +1563,8 @@
             <F><P style={{ marginBottom: 32 }}>在宅医療クリニックの変化には、現場の感情を理解することと、変えるべきことを変える決断——その両方が必要だと考えています。</P></F>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(261px, 1fr))", gap: 28, marginBottom: 28 }}>
               {[
-                { role: "CEO", img: "/photo-ceo.jpg", name: "代表取締役　石塚（波村）美絵", desc: "九州大学大学院法学府修了。琉球大学講師を経て、在宅医療クリニックの事務長として約10年。組織の仕組み化、合意形成支援が得意。", alt: "石塚美絵 MI-ZA代表 在宅医療コンサルタント" },
-                { role: "DIRECTOR", img: "/photo-director.jpg", name: "取締役　石塚 秀俊", desc: "東京工業大学大学院修了。伊藤忠商事を経て、医療法人の事務長として全事業所の黒字化を達成。その後アクセンチュアで経営コンサルに従事。", alt: "石塚秀俊 MI-ZA取締役 在宅医療コンサルタント" },
+                { role: "CEO", img: "photo-ceo.jpg", name: "代表取締役　石塚（波村）美絵", desc: "九州大学大学院法学府修了。琉球大学講師を経て、在宅医療クリニックの事務長として約10年。組織の仕組み化、合意形成支援が得意。", alt: "石塚美絵 MI-ZA代表 在宅医療コンサルタント" },
+                { role: "DIRECTOR", img: "photo-director.jpg", name: "取締役　石塚 秀俊", desc: "東京工業大学大学院修了。伊藤忠商事を経て、医療法人の事務長として全事業所の黒字化を達成。その後アクセンチュアで経営コンサルに従事。", alt: "石塚秀俊 MI-ZA取締役 在宅医療コンサルタント" },
               ].map((m, i) => (
                 <F key={i} delay={i * 0.1}>
                   <div style={{ background: C.white, padding: "29px 23px", display: "flex", gap: 16, alignItems: "flex-start" }}>
@@ -1600,8 +1611,8 @@
     /* ─── MEMBER ─── */
     function Member({ go }) {
       const MEMBERS = [
-        { role: "CEO", img: "/photo-ceo.jpg", alt: "在宅医療・訪問診療クリニック専門 経営コンサルタント・事務長支援 石塚美絵（波村美絵）代表取締役 MI-ZA", name: "代表取締役　石塚（波村）美絵", bio: "九州大学大学院法学府修了後、琉球大学で法学を教えるなかで、法律では弱い人を直接支えるには遠すぎると感じるようになりました。もっと身近に人を支えたい——その思いから病院のMSWへ転じました。しかし病院にはない、「その人の家に上がり、家族を知り、人生ごと診る」——在宅医療の考えに共鳴してこの世界に入りました。事務長として約10年、訪問診療クリニックの運営に携わり、仕組み化支援で残業に苦しんでいたスタッフの残業を半年でゼロへ。スタッフが前に進めない時の合意形成のあり方を組織開発の一助として支援してきました。身近な人が在宅医療を知らずに苦しんだ経験が、この仕事を続ける理由になっています。順天堂大学ビジネススクール ヘルスケアマネジメントプログラム入門・修了（2018年）。一般社団法人日本在宅医療事務連絡会理事。", skill: "得意領域：組織の意思決定の流れをつくる（組織プロセスファシリテーション）、診療報酬改定対応、医療広告・HP運用、人事労務整備、医師採用・定着支援、事務長・管理職育成" },
-        { role: "DIRECTOR", img: "/photo-director.jpg", alt: "在宅医療・訪問診療クリニック専門 経営コンサルタント 石塚秀俊 取締役 MI-ZA", name: "取締役　石塚 秀俊", bio: "伊藤忠商事（豪州駐在4年）、ガリバーインターナショナル経営企画部長・人事部長を経て、医療・介護の現場へ転じました。訪問診療・訪問看護ステーション統括部長を歴任し、医療機関・介護事業所計50カ所以上を運営する医療法人では事務長・統括マネジャーとして全事業所の黒字化を達成。その後アクセンチュア シニアプリンシパルとして経営・ヘルスケア領域のコンサルティングに従事。2025年には日本の医療法人によるベトナムでのクリニック2拠点立ち上げに事業開発部長として携わりました。組織を変える仕事を積み重ねるなかで、変化が起きる組織と起きない組織の違いを繰り返し見てきました。現場の状況を正確に読み、変えるべきことを明確に決める——それが、院長の経営判断を支える力になると考えています。東京工業大学大学院修了。一般社団法人日本在宅医療事務連絡会代表理事。", skill: "得意領域：経営判断の支援、診療報酬改定対応（在宅医療・訪問看護）、マーケティング戦略、集患戦略、事業計画策定、訪問看護の組織運営、管理職育成、医療DX" },
+        { role: "CEO", img: "photo-ceo.jpg", alt: "在宅医療・訪問診療クリニック専門 経営コンサルタント・事務長支援 石塚美絵（波村美絵）代表取締役 MI-ZA", name: "代表取締役　石塚（波村）美絵", bio: "九州大学大学院法学府修了後、琉球大学で法学を教えるなかで、法律では弱い人を直接支えるには遠すぎると感じるようになりました。もっと身近に人を支えたい——その思いから病院のMSWへ転じました。しかし病院にはない、「その人の家に上がり、家族を知り、人生ごと診る」——在宅医療の考えに共鳴してこの世界に入りました。事務長として約10年、訪問診療クリニックの運営に携わり、仕組み化支援で残業に苦しんでいたスタッフの残業を半年でゼロへ。スタッフが前に進めない時の合意形成のあり方を組織開発の一助として支援してきました。身近な人が在宅医療を知らずに苦しんだ経験が、この仕事を続ける理由になっています。順天堂大学ビジネススクール ヘルスケアマネジメントプログラム入門・修了（2018年）。一般社団法人日本在宅医療事務連絡会理事。", skill: "得意領域：組織の意思決定の流れをつくる（組織プロセスファシリテーション）、診療報酬改定対応、医療広告・HP運用、人事労務整備、医師採用・定着支援、事務長・管理職育成" },
+        { role: "DIRECTOR", img: "photo-director.jpg", alt: "在宅医療・訪問診療クリニック専門 経営コンサルタント 石塚秀俊 取締役 MI-ZA", name: "取締役　石塚 秀俊", bio: "伊藤忠商事（豪州駐在4年）、ガリバーインターナショナル経営企画部長・人事部長を経て、医療・介護の現場へ転じました。訪問診療・訪問看護ステーション統括部長を歴任し、医療機関・介護事業所計50カ所以上を運営する医療法人では事務長・統括マネジャーとして全事業所の黒字化を達成。その後アクセンチュア シニアプリンシパルとして経営・ヘルスケア領域のコンサルティングに従事。2025年には日本の医療法人によるベトナムでのクリニック2拠点立ち上げに事業開発部長として携わりました。組織を変える仕事を積み重ねるなかで、変化が起きる組織と起きない組織の違いを繰り返し見てきました。現場の状況を正確に読み、変えるべきことを明確に決める——それが、院長の経営判断を支える力になると考えています。東京工業大学大学院修了。一般社団法人日本在宅医療事務連絡会代表理事。", skill: "得意領域：経営判断の支援、診療報酬改定対応（在宅医療・訪問看護）、マーケティング戦略、集患戦略、事業計画策定、訪問看護の組織運営、管理職育成、医療DX" },
       ];
       return (
         <>
@@ -2914,7 +2925,7 @@
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 28, marginBottom: 36 }}>
               <div>
-                <img src="/logo-white.svg" alt="MI-ZA（ミーザ）" style={{ height: 50, width: "auto", marginBottom: 12, display: "block" }} />
+                <img src="logo-white.svg" alt="MI-ZA（ミーザ）" style={{ height: 50, width: "auto", marginBottom: 12, display: "block" }} />
                 <p style={{ fontFamily: serif, fontSize: 13, color: "rgba(255,255,255,0.55)", letterSpacing: 1, marginBottom: 8 }}>在宅医療には、続けられる仕組みを。</p>
                 <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.3)", lineHeight: 1.95 }}>
                   株式会社MI-ZA（ミーザ）<br />東京都港区北青山1-3-1 アールキューブ青山3F<br />在宅医療に特化した経営支援・DXコンサルティング
