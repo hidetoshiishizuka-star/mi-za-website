@@ -663,6 +663,61 @@
             </F>
           </Sec>
 
+          {/* Challenge */}
+          <Sec>
+            <SH en="CHALLENGE" ja="こんな状況、ありませんか？" />
+            {/* Challenge イメージ2枚 */}
+            <F>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12, marginBottom: 24, maxWidth: 920, margin: "0 auto 24px" }}>
+                <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9" }}>
+                  <picture style={{ display: "contents" }}>
+                    <source srcSet="photo-challenge-doctor.webp" type="image/webp" />
+                    <img src="photo-challenge-doctor.jpg" alt="一人で抱え込む院長の悩み" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  </picture>
+                  <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "10px 14px", background: "linear-gradient(transparent, rgba(0,0,0,0.65))", color: C.white }}>
+                    <p style={{ fontFamily: serif, fontSize: 13, fontWeight: 700, color: C.white, margin: 0 }}>判断の重さ — 院長一人で抱え込む</p>
+                  </div>
+                </div>
+                <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9" }}>
+                  <picture style={{ display: "contents" }}>
+                    <source srcSet="photo-challenge-papers.webp" type="image/webp" />
+                    <img src="photo-challenge-papers.jpg" alt="積み上がる書類業務" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  </picture>
+                  <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "10px 14px", background: "linear-gradient(transparent, rgba(0,0,0,0.65))", color: C.white }}>
+                    <p style={{ fontFamily: serif, fontSize: 13, fontWeight: 700, color: C.white, margin: 0 }}>業務量の重さ — 月末の書類とレセ対応</p>
+                  </div>
+                </div>
+              </div>
+            </F>
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(281px, 1fr))",
+              gap: 12, marginBottom: 40,
+            }}>
+              {CHALLENGES.map((c, i) => (
+                <F key={i} delay={i * 0.07}>
+                  <div style={{
+                    padding: "23px 21px",
+                    borderLeft: `3px solid ${C.navy}`,
+                  }}>
+                    <p style={{ fontFamily: sans, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 8, lineHeight: 1.6 }}>{c.title}</p>
+                    <p style={{ fontFamily: sans, fontSize: 15, color: C.mid, lineHeight: 1.9 }}>{c.desc}</p>
+                  </div>
+                </F>
+              ))}
+            </div>
+            <F delay={0.35}>
+              <P>在宅医療クリニックの院長は、一日の大半を患者の自宅で過ごします。その間、組織は院長の目の届かない場所で動いています。経営・算定・スタッフ管理・診療報酬改定への対応——それらを一人で判断し続けることには、限界があります。</P>
+              <P><strong>MI-ZAは、院長の「判断を支える人」として関わります。</strong>訪問またはZoomで、アドバイスするだけでなく、変化が根づくまで一緒に動きます。</P>
+              <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, marginTop: 16, lineHeight: 1.85 }}>
+                📖 関連記事：
+                <a href="/blog/home-medical-secretary-day/" onClick={(e) => { e.preventDefault(); go(13); }} style={{ color: C.accent, textDecoration: "underline", marginLeft: 4 }}>事務長の1日</a>
+                <span style={{ marginLeft: 8, marginRight: 8 }}>／</span>
+                <a href="/blog/2026-reimbursement-revision/" onClick={(e) => { e.preventDefault(); go(14); }} style={{ color: C.accent, textDecoration: "underline" }}>2026年診療報酬改定対応</a>
+              </p>
+            </F>
+          </Sec>
+
           {/* TRUST BADGES (Hero下・信頼バッジ3点) */}
           <Sec py={56} bg={C.white}>
             <F>
@@ -873,61 +928,6 @@
                   💡 参照記事：<a href="/blog/mighty-checker-comparison/" onClick={(e) => { e.preventDefault(); go(15); }} style={{ color: C.accent, textDecoration: "underline" }}>マイティーチェッカーとMI-ZAの病名チェック・レセプト事前チェックは何が違うのか</a>
                 </p>
               </div>
-            </F>
-          </Sec>
-
-          {/* Challenge */}
-          <Sec>
-            <SH en="CHALLENGE" ja="こんな状況、ありませんか？" />
-            {/* Challenge イメージ2枚 */}
-            <F>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12, marginBottom: 24, maxWidth: 920, margin: "0 auto 24px" }}>
-                <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9" }}>
-                  <picture style={{ display: "contents" }}>
-                    <source srcSet="photo-challenge-doctor.webp" type="image/webp" />
-                    <img src="photo-challenge-doctor.jpg" alt="一人で抱え込む院長の悩み" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  </picture>
-                  <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "10px 14px", background: "linear-gradient(transparent, rgba(0,0,0,0.65))", color: C.white }}>
-                    <p style={{ fontFamily: serif, fontSize: 13, fontWeight: 700, color: C.white, margin: 0 }}>判断の重さ — 院長一人で抱え込む</p>
-                  </div>
-                </div>
-                <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9" }}>
-                  <picture style={{ display: "contents" }}>
-                    <source srcSet="photo-challenge-papers.webp" type="image/webp" />
-                    <img src="photo-challenge-papers.jpg" alt="積み上がる書類業務" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  </picture>
-                  <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "10px 14px", background: "linear-gradient(transparent, rgba(0,0,0,0.65))", color: C.white }}>
-                    <p style={{ fontFamily: serif, fontSize: 13, fontWeight: 700, color: C.white, margin: 0 }}>業務量の重さ — 月末の書類とレセ対応</p>
-                  </div>
-                </div>
-              </div>
-            </F>
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(281px, 1fr))",
-              gap: 12, marginBottom: 40,
-            }}>
-              {CHALLENGES.map((c, i) => (
-                <F key={i} delay={i * 0.07}>
-                  <div style={{
-                    padding: "23px 21px",
-                    borderLeft: `3px solid ${C.navy}`,
-                  }}>
-                    <p style={{ fontFamily: sans, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 8, lineHeight: 1.6 }}>{c.title}</p>
-                    <p style={{ fontFamily: sans, fontSize: 15, color: C.mid, lineHeight: 1.9 }}>{c.desc}</p>
-                  </div>
-                </F>
-              ))}
-            </div>
-            <F delay={0.35}>
-              <P>在宅医療クリニックの院長は、一日の大半を患者の自宅で過ごします。その間、組織は院長の目の届かない場所で動いています。経営・算定・スタッフ管理・診療報酬改定への対応——それらを一人で判断し続けることには、限界があります。</P>
-              <P><strong>MI-ZAは、院長の「判断を支える人」として関わります。</strong>訪問またはZoomで、アドバイスするだけでなく、変化が根づくまで一緒に動きます。</P>
-              <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, marginTop: 16, lineHeight: 1.85 }}>
-                📖 関連記事：
-                <a href="/blog/home-medical-secretary-day/" onClick={(e) => { e.preventDefault(); go(13); }} style={{ color: C.accent, textDecoration: "underline", marginLeft: 4 }}>事務長の1日</a>
-                <span style={{ marginLeft: 8, marginRight: 8 }}>／</span>
-                <a href="/blog/2026-reimbursement-revision/" onClick={(e) => { e.preventDefault(); go(14); }} style={{ color: C.accent, textDecoration: "underline" }}>2026年診療報酬改定対応</a>
-              </p>
             </F>
           </Sec>
 
