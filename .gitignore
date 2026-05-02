@@ -1,0 +1,10 @@
+# Local Netlify folder
+.netlify
+
+# macOS
+.DS_Store
+
+# Backup files
+index.html.backup-before-restructure
+*.backup
+*.bak
