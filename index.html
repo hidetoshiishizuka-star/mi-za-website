@@ -17,13 +17,16 @@
   <meta property="og:description" content="在宅医療・訪問診療クリニック専門の経営コンサルティング会社MI-ZA（ミーザ）。在宅医療の経営・事務長支援・ホームページ制作まで対応。石塚美絵（波村美絵）・石塚秀俊が院長の判断を支えます。" />
   <meta property="og:site_name" content="MI-ZA（ミーザ）" />
   <meta property="og:locale" content="ja_JP" />
-  <meta property="og:image" content="https://mi-za.org/mi-za-icon.png" />
-  <meta property="og:image:alt" content="MI-ZA（ミーザ） ロゴ" />
+  <meta property="og:image" content="https://mi-za.org/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MI-ZA（ミーザ） — 在宅医療コンサルティング・訪問診療クリニック経営支援" />
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MI-ZA（ミーザ）｜在宅医療コンサルティング・訪問診療クリニック経営支援" />
   <meta name="twitter:description" content="在宅医療コンサルならMI-ZA（ミーザ）。訪問診療クリニック専門の経営・事務長支援・ホームページ制作。" />
-  <meta name="twitter:image" content="https://mi-za.org/mi-za-icon.png" />
+  <meta name="twitter:image" content="https://mi-za.org/og-image.png" />
   <!-- Theme color -->
   <meta name="theme-color" content="#1B2A4A" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -578,7 +581,10 @@
                   <div key={i} style={{ background: C.white, border: `1px solid ${C.line}`, overflow: "hidden", display: "flex", flexDirection: "column" }}>
                     {b.img && (
                       <div style={{ height: 140, overflow: "hidden", background: C.bg }}>
-                        <img src={b.img} alt={b.alt} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                        <picture style={{ display: "contents" }}>
+                          <source srcSet={b.img.replace(/\.jpg$/, '.webp')} type="image/webp" />
+                          <img src={b.img} alt={b.alt} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                        </picture>
                       </div>
                     )}
                     {!b.img && (
@@ -806,13 +812,19 @@
             <F>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12, marginBottom: 24, maxWidth: 920, margin: "0 auto 24px" }}>
                 <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9" }}>
-                  <img src="/photo-challenge-doctor.jpg" alt="一人で抱え込む院長の悩み" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  <picture style={{ display: "contents" }}>
+                    <source srcSet="/photo-challenge-doctor.webp" type="image/webp" />
+                    <img src="/photo-challenge-doctor.jpg" alt="一人で抱え込む院長の悩み" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  </picture>
                   <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "10px 14px", background: "linear-gradient(transparent, rgba(0,0,0,0.65))", color: C.white }}>
                     <p style={{ fontFamily: serif, fontSize: 13, fontWeight: 700, color: C.white, margin: 0 }}>判断の重さ — 院長一人で抱え込む</p>
                   </div>
                 </div>
                 <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9" }}>
-                  <img src="/photo-challenge-papers.jpg" alt="積み上がる書類業務" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  <picture style={{ display: "contents" }}>
+                    <source srcSet="/photo-challenge-papers.webp" type="image/webp" />
+                    <img src="/photo-challenge-papers.jpg" alt="積み上がる書類業務" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  </picture>
                   <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "10px 14px", background: "linear-gradient(transparent, rgba(0,0,0,0.65))", color: C.white }}>
                     <p style={{ fontFamily: serif, fontSize: 13, fontWeight: 700, color: C.white, margin: 0 }}>業務量の重さ — 月末の書類とレセ対応</p>
                   </div>
@@ -853,7 +865,10 @@
             <F>
               <div style={{ maxWidth: 920, margin: "0 auto", background: C.white, display: "grid", gridTemplateColumns: "minmax(220px, 1fr) 2fr", gap: 0 }} className="consul-grid">
                 <div style={{ position: "relative", overflow: "hidden", minHeight: 220 }}>
-                  <img src="/photo-consul-support.jpg" alt="MI-ZA 個別コンサルティング — オンライン伴走" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  <picture style={{ display: "contents" }}>
+                    <source srcSet="/photo-consul-support.webp" type="image/webp" />
+                    <img src="/photo-consul-support.jpg" alt="MI-ZA 個別コンサルティング — オンライン伴走" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  </picture>
                 </div>
                 <div style={{ padding: "28px 28px", borderLeft: `4px solid ${C.accent}` }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12, flexWrap: "wrap", gap: 8 }}>
@@ -987,7 +1002,10 @@
               ].map((m, i) => (
                 <F key={i} delay={i * 0.1}>
                   <div style={{ display: "flex", gap: 12, alignItems: "center", padding: "14px 16px", background: C.bg }}>
-                    <img src={m.img} alt={m.alt} loading="lazy" decoding="async" width="56" height="56" style={{ width: 56, height: 56, flexShrink: 0, objectFit: "cover", objectPosition: "center top", borderRadius: "50%" }} />
+                    <picture style={{ display: "contents" }}>
+                      <source srcSet={m.img.replace(/\.jpg$/, '.webp')} type="image/webp" />
+                      <img src={m.img} alt={m.alt} loading="lazy" decoding="async" width="56" height="56" style={{ width: 56, height: 56, flexShrink: 0, objectFit: "cover", objectPosition: "center top", borderRadius: "50%" }} />
+                    </picture>
                     <div style={{ minWidth: 0 }}>
                       <p style={{ fontFamily: enFont, fontSize: 10, color: C.accent, letterSpacing: 2, marginBottom: 2 }}>{m.role}</p>
                       <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 2, lineHeight: 1.4 }}>{m.name}</p>
@@ -1031,7 +1049,10 @@
             <F>
               <div style={{ maxWidth: 920, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, alignItems: "stretch", background: C.white, border: `1px solid ${C.line}` }} className="cta-grid">
                 <div style={{ position: "relative", overflow: "hidden", minHeight: 300 }}>
-                  <img src="/photo-cta-zoom-doctor.jpg" alt="MI-ZAとの30分Zoom相談 — 売り込みなし" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  <picture style={{ display: "contents" }}>
+                    <source srcSet="/photo-cta-zoom-doctor.webp" type="image/webp" />
+                    <img src="/photo-cta-zoom-doctor.jpg" alt="MI-ZAとの30分Zoom相談 — 売り込みなし" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  </picture>
                 </div>
                 <div style={{ padding: "40px 32px", display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
                   <p style={{ fontFamily: serif, fontSize: 20, color: C.navy, letterSpacing: 1, marginBottom: 12, lineHeight: 1.5 }} className="sp-heading">現状を整理するところから、<br />始めませんか。</p>
@@ -1523,7 +1544,10 @@
               ].map((m, i) => (
                 <F key={i} delay={i * 0.1}>
                   <div style={{ background: C.white, padding: "29px 23px", display: "flex", gap: 16, alignItems: "flex-start" }}>
-                    <img src={m.img} alt={m.alt} loading="lazy" decoding="async" width="72" height="72" style={{ width: 72, height: 72, flexShrink: 0, objectFit: "cover", objectPosition: "center top" }} />
+                    <picture style={{ display: "contents" }}>
+                      <source srcSet={m.img.replace(/\.jpg$/, '.webp')} type="image/webp" />
+                      <img src={m.img} alt={m.alt} loading="lazy" decoding="async" width="72" height="72" style={{ width: 72, height: 72, flexShrink: 0, objectFit: "cover", objectPosition: "center top" }} />
+                    </picture>
                     <div>
                       <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 4 }}>{m.role}</p>
                       <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.navy, marginBottom: 8 }} className="member-name">{m.name}</p>
@@ -1580,7 +1604,10 @@
               <F key={i} delay={i * 0.1}>
                 <div style={{ paddingBottom: i === 0 ? 40 : 0, marginBottom: i === 0 ? 40 : 0, borderBottom: i === 0 ? `2px solid ${C.line}` : "none" }}>
                   <div style={{ display:'flex', gap:20, alignItems:'flex-start', marginBottom:20 }}>
-                    <img src={m.img} alt={m.alt || m.name} loading="lazy" decoding="async" width="88" height="88" style={{ width:88, height:88, flexShrink:0, objectFit:'cover', objectPosition:'center top' }} />
+                    <picture style={{ display: "contents" }}>
+                      <source srcSet={m.img.replace(/\.jpg$/, '.webp')} type="image/webp" />
+                      <img src={m.img} alt={m.alt || m.name} loading="lazy" decoding="async" width="88" height="88" style={{ width:88, height:88, flexShrink:0, objectFit:'cover', objectPosition:'center top' }} />
+                    </picture>
                     <div>
                       <p style={{ fontFamily: enFont, fontSize: 12, color: C.accent, letterSpacing: 3, marginBottom: 6 }}>{m.role}</p>
                       <p style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy }} className="member-name">{m.name}</p>
