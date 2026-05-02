@@ -181,6 +181,19 @@
     .mz-btn:hover:not(:disabled) { opacity: 0.8; }
     .mz-btn:focus-visible { outline: 2px solid #3D6B8E; outline-offset: 3px; }
     a:focus-visible, button:focus-visible { outline: 2px solid #3D6B8E; outline-offset: 2px; }
+    /* 背景画像: webp 優先、未対応ブラウザは jpg にフォールバック */
+    .hero-section {
+      background-image: linear-gradient(rgba(10, 22, 48, 0.78), rgba(10, 22, 48, 0.85)), url('/photo-hero-visit.jpg');
+      background-image: linear-gradient(rgba(10, 22, 48, 0.78), rgba(10, 22, 48, 0.85)), image-set(url('/photo-hero-visit.webp') type('image/webp') 1x, url('/photo-hero-visit.jpg') type('image/jpeg') 1x);
+    }
+    .bg-concept-care {
+      background-image: linear-gradient(rgba(247,246,243,0.85), rgba(247,246,243,0.95)), url('/photo-concept-care.jpg');
+      background-image: linear-gradient(rgba(247,246,243,0.85), rgba(247,246,243,0.95)), image-set(url('/photo-concept-care.webp') type('image/webp') 1x, url('/photo-concept-care.jpg') type('image/jpeg') 1x);
+    }
+    .bg-ai-tablet {
+      background-image: linear-gradient(rgba(10,22,48,0.82), rgba(10,22,48,0.92)), url('/photo-ai-tablet.jpg');
+      background-image: linear-gradient(rgba(10,22,48,0.82), rgba(10,22,48,0.92)), image-set(url('/photo-ai-tablet.webp') type('image/webp') 1x, url('/photo-ai-tablet.jpg') type('image/jpeg') 1x);
+    }
     @media (max-width: 681px) {
       .pc-nav  { display: none !important; }
       .sp-nav  { display: block !important; }
@@ -490,7 +503,6 @@
             display: "flex", alignItems: "center", justifyContent: "center",
             position: "relative",
             backgroundColor: C.navy,
-            backgroundImage: `linear-gradient(rgba(10, 22, 48, 0.78), rgba(10, 22, 48, 0.85)), url('/photo-hero-visit.jpg')`,
             backgroundSize: "cover",
             backgroundPosition: "center 30%",
             backgroundRepeat: "no-repeat",
@@ -554,7 +566,7 @@
           {/* Why MI-ZA Now（差別化1行・コンセプト画像背景） */}
           <Sec py={48} bg={C.bg}>
             <F>
-              <div style={{ maxWidth: 920, margin: "0 auto", position: "relative", overflow: "hidden", minHeight: 240, display: "flex", alignItems: "center", justifyContent: "center", backgroundImage: `linear-gradient(rgba(247,246,243,0.85), rgba(247,246,243,0.95)), url('/photo-concept-care.jpg')`, backgroundSize: "cover", backgroundPosition: "center", padding: "44px 24px", borderLeft: `4px solid ${C.gold}` }}>
+              <div className="bg-concept-care" style={{ maxWidth: 920, margin: "0 auto", position: "relative", overflow: "hidden", minHeight: 240, display: "flex", alignItems: "center", justifyContent: "center", backgroundSize: "cover", backgroundPosition: "center", padding: "44px 24px", borderLeft: `4px solid ${C.gold}` }}>
                 <div style={{ textAlign: "center", position: "relative", zIndex: 2 }}>
                   <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 4, marginBottom: 10, fontWeight: 700 }}>WHY MI-ZA, NOW</p>
                   <p style={{ fontFamily: serif, fontSize: 18, color: C.navy, fontWeight: 700, lineHeight: 1.7 }}>
@@ -647,7 +659,7 @@
             {/* AI伴走サービス・メインカード */}
             <F delay={0.05}>
               <div style={{ maxWidth: 920, margin: "0 auto" }}>
-                <div style={{ backgroundColor: C.navy, backgroundImage: `linear-gradient(rgba(10,22,48,0.82), rgba(10,22,48,0.92)), url('/photo-ai-tablet.jpg')`, backgroundSize: "cover", backgroundPosition: "center", padding: "40px 32px", borderTop: `5px solid ${C.gold}`, position: "relative" }}>
+                <div className="bg-ai-tablet" style={{ backgroundColor: C.navy, backgroundSize: "cover", backgroundPosition: "center", padding: "40px 32px", borderTop: `5px solid ${C.gold}`, position: "relative" }}>
                   <span style={{ position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)", background: C.gold, color: C.white, fontSize: 11, fontWeight: 700, padding: "4px 14px", letterSpacing: 2, whiteSpace: "nowrap" }}>⭐ MAIN SERVICE</span>
                   <div style={{ textAlign: "center", marginBottom: 24 }}>
                     <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 4, marginBottom: 8, fontWeight: 700 }}>AI EMBEDDED PARTNER</p>
