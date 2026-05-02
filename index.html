@@ -208,6 +208,8 @@
     @media (max-width: 681px) {
       .pc-nav  { display: none !important; }
       .sp-nav  { display: block !important; }
+      .site-header-inner { height: 72px !important; }
+      .site-logo { height: 56px !important; }
       .hero-section { min-height: auto !important; padding: 110px 24px 72px !important; overflow-x: hidden !important; }
       .hero-title { font-size: 17px !important; letter-spacing: 0.5px !important; }
       .hero-sub { font-size: 13px !important; }
@@ -394,16 +396,17 @@
           borderBottom: transparent ? "none" : `2px solid ${C.line}`,
           transition: "all 0.3s",
         }}>
-          <div style={{
+          <div className="site-header-inner" style={{
             maxWidth: 1000, margin: "0 auto", padding: "0 29px",
             display: "flex", alignItems: "center", justifyContent: "space-between",
-            height: 64,
+            height: 96,
           }}>
             <img
+              className="site-logo"
               src="logo-color.svg"
               alt="MI-ZA（ミーザ）"
               onClick={() => nav(0)}
-              style={{ height: 44, width: "auto", cursor: "pointer", display: "block" }}
+              style={{ height: 80, width: "auto", cursor: "pointer", display: "block" }}
             />
 
             {/* Desktop */}
