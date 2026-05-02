@@ -718,6 +718,60 @@
             </F>
           </Sec>
 
+          {/* SOLUTIONS — 4課題 → MI-ZA の打ち手マッピング */}
+          <Sec py={56} bg={C.bg}>
+            <SH en="SOLUTIONS" ja="それぞれの課題に、MI-ZAはこう応えます" />
+            <F>
+              <div style={{ maxWidth: 920, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16 }}>
+                {[
+                  {
+                    c: "院長がいないと動かない",
+                    a: "スタッフが判断できる仕組みづくりと、事務長機能の代行・育成。判断の集中を解消し、組織として動ける状態へ。",
+                    s: ["個別コンサル「組織開発」", "03 経営相談（壁打ち）"],
+                  },
+                  {
+                    c: "忙しいのに利益が残らない",
+                    a: "月次の損益・人件費・単価を可視化し、ボトルネックを特定。算定最適化と一緒に利益体質に。",
+                    s: ["04 AI伴走（月次レポート）", "個別コンサル「経営企画」"],
+                  },
+                  {
+                    c: "看護師が辞めると、また辞める",
+                    a: "AIで事務負荷を軽減し、看護師が看護に専念できる環境を作る。並行して採用・定着の仕組みを整備。",
+                    s: ["04 AI伴走サブスクリプション", "個別コンサル「組織開発」"],
+                  },
+                  {
+                    c: "加算が取れていない",
+                    a: "毎月のレセ事前チェックで算定漏れを防止。診療報酬改定の対応も伴走。",
+                    s: ["01 病名チェック", "03 経営相談（改定対応）"],
+                  },
+                ].map((item, i) => (
+                  <div key={i} style={{ background: C.white, padding: "24px 24px", borderTop: `3px solid ${C.gold}`, display: "flex", flexDirection: "column" }}>
+                    <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 6 }}>0{i+1}</p>
+                    <p style={{ fontFamily: serif, fontSize: 16, fontWeight: 700, color: C.navy, marginBottom: 10, lineHeight: 1.5 }}>{item.c}</p>
+                    <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginBottom: 14, flexGrow: 1 }}>{item.a}</p>
+                    <div style={{ borderTop: `1px solid ${C.line}`, paddingTop: 12 }}>
+                      <p style={{ fontFamily: sans, fontSize: 10, color: C.gold, fontWeight: 700, letterSpacing: 1, marginBottom: 6 }}>使うサービス</p>
+                      {item.s.map((svc, j) => (
+                        <a key={j} href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ display: "block", fontFamily: sans, fontSize: 12, color: C.accent, textDecoration: "underline", marginBottom: 4 }}>
+                          {svc} →
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </F>
+            <F delay={0.3}>
+              <div style={{ textAlign: "center", marginTop: 32 }}>
+                <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ fontFamily: sans, fontSize: 13, color: C.navy, background: "transparent", border: `2px solid ${C.navy}`, padding: "11px 29px", letterSpacing: 1, transition: "all 0.2s", textDecoration: "none", display: "inline-block" }}
+                  onMouseOver={e => { e.currentTarget.style.background = C.navy; e.currentTarget.style.color = C.white; }}
+                  onMouseOut={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = C.navy; }}>
+                  サービス全体を見る →
+                </a>
+              </div>
+            </F>
+          </Sec>
+
           {/* TRUST BADGES (Hero下・信頼バッジ3点) */}
           <Sec py={56} bg={C.white}>
             <F>
