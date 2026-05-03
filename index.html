@@ -876,13 +876,13 @@
                   <div style={{ background: "rgba(201,169,90,0.12)", padding: "20px 24px", marginBottom: 22, borderLeft: `4px solid ${C.gold}`, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
                     <div>
                       <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>月額料金</p>
-                      <p style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.white, marginBottom: 4 }}>月 ¥98,000<span style={{ fontSize: 12, fontWeight: 400, marginLeft: 4 }}>／1事業所</span></p>
-                      <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700 }}>先着10CLのみ ¥80,000固定（受付中）</p>
+                      <p style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.white, marginBottom: 4 }}>月 ¥98,000<span style={{ fontSize: 12, fontWeight: 400, marginLeft: 4 }}>（税別）／1事業所</span></p>
+                      <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700 }}>先着10CLのみ ¥80,000固定（税別・受付中）</p>
                     </div>
                     <div>
                       <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>契約期間</p>
                       <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.white }}>1年契約</p>
-                      <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.7)" }}>1年経過後は通常価格 月¥98,000</p>
+                      <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.7)" }}>1年経過後は通常価格 月¥98,000（税別）</p>
                     </div>
                     <div>
                       <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>お試し</p>
@@ -906,61 +906,6 @@
               </div>
             </F>
             {/* マトリクス・補助プランは削除（AI伴走サービス1本に集約） */}
-            {/* 成果物サンプル */}
-            <F delay={0.12}>
-              <div id="deliverables" style={{ marginTop: 40, marginBottom: 8, textAlign: "center", scrollMarginTop: 80 }}>
-                <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 4, marginBottom: 6, fontWeight: 700 }}>DELIVERABLES SAMPLE — 一部抜粋</p>
-                <h3 style={{ fontFamily: sans, fontSize: 17, fontWeight: 700, color: C.navy, marginBottom: 6 }}>成果物サンプル（クリックで閲覧）</h3>
-                <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85 }}>
-                  実際の納品物の<strong>一部のみを抜粋</strong>して掲載しています。<br className="sp-only-br" />
-                  実サービスでは、貴クリニック様の状況に応じて<strong>これ以外にも多数の成果物・カスタマイズ対応</strong>をご提供します（病院名・患者名は匿名化）。
-                </p>
-              </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12, maxWidth: 920, margin: "0 auto 12px" }}>
-                {[
-                  { plan: "AI伴走サービス", title: "レセプト病名チェック", file: "samples/サンプル_01_レセプト病名チェック.pdf", ext: "PDF", icon: "📊", desc: "優先度別検出件数＋患者ごとの病名・処方整合性チェック結果" },
-                  { plan: "AI伴走サービス・入力", title: "患者リスト（入力）", file: "samples/サンプル_05_患者リスト.pdf", ext: "PDF", icon: "📋", desc: "クリニックからご提供いただく患者データの形式例" },
-                  { plan: "AI伴走サービス", title: "訪問看護指示書 処理レポート", file: "samples/サンプル_02_訪問看護指示書処理レポート.pdf", ext: "PDF", icon: "📝", desc: "AI下書き＋人最終確認の月次処理レポート" },
-                  { plan: "AI伴走サービス", title: "医師別分析レポート", file: "samples/サンプル_03_医師別分析レポート.pdf", ext: "PDF", icon: "📈", desc: "医師別の患者数・点数・推定収入・前月比較・診療区分内訳" },
-                  { plan: "SPOT BCP", title: "BCP策定計画書", file: "samples/サンプル_04_BCP策定計画書.pdf", ext: "PDF", icon: "🛡️", desc: "厚労省手引き準拠の事業継続計画（在宅部門）" },
-                ].map((s, i) => (
-                  <a key={i} href={s.file} target="_blank" rel="noopener noreferrer" style={{ background: C.white, padding: "16px 14px", textDecoration: "none", display: "flex", flexDirection: "column", border: `1px solid ${C.line}`, borderTop: `3px solid ${C.gold}` }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                      <span style={{ fontSize: 22 }}>{s.icon}</span>
-                      <span style={{ fontFamily: enFont, fontSize: 9, color: C.gold, letterSpacing: 2, fontWeight: 700 }}>{s.plan}</span>
-                    </div>
-                    <p style={{ fontFamily: serif, fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 6, lineHeight: 1.4 }}>{s.title}</p>
-                    <p style={{ fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.6, marginBottom: 10, flex: 1 }}>{s.desc}</p>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: `1px solid ${C.line}`, paddingTop: 8 }}>
-                      <span style={{ fontFamily: sans, fontSize: 9, color: C.mid, letterSpacing: 1, fontWeight: 700 }}>{s.ext}</span>
-                      <span style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700 }}>開く →</span>
-                    </div>
-                  </a>
-                ))}
-              </div>
-              <p style={{ textAlign: "center", fontFamily: sans, fontSize: 10, color: C.mid, marginBottom: 8, lineHeight: 1.7 }}>
-                ※ <strong>掲載しているのは納品物の一部です</strong>。月次レポート・カスタムレポート・経営会議用PPT・各種データ分析など、ここに掲載されていない成果物も多数あります。<br className="sp-only-br" />
-                サンプルは閲覧専用PDF（SAMPLE透かし入り）。データはすべて架空で実データは含まれません。編集可能ファイル・実フォーマットはご契約後にご提供します。複製・転載はご遠慮ください。
-              </p>
-            </F>
-
-            {/* スポット（単発）サービス: BCP策定支援 */}
-            <F delay={0.15}>
-              <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, textAlign: "center", marginBottom: 14, marginTop: 36, letterSpacing: 1 }}>
-                ─── 単発で頼めるスポットサービス ───
-              </p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 14, maxWidth: 760, margin: "0 auto" }}>
-                <a href="/apply/" onClick={(e) => { e.preventDefault(); go(8); }} style={{ background: C.white, border: `2px solid ${C.line}`, padding: "26px 18px 22px", textDecoration: "none", display: "flex", flexDirection: "column" }}>
-                  <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 4 }}>SPOT 01</p>
-                  <p style={{ fontFamily: sans, fontSize: 10, color: C.gold, fontWeight: 700, marginBottom: 4 }}>2026年改定で施設基準に必須化</p>
-                  <p style={{ fontFamily: serif, fontSize: 16, fontWeight: 700, color: C.navy, marginBottom: 8, lineHeight: 1.4 }}>BCP策定支援</p>
-                  <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.8, marginBottom: 12, flex: 1 }}>
-                    事業継続計画（災害・感染症対応・訪問中被災・患者リスト・医薬品供給・安否確認・代替連絡）の策定をMI-ZAが伴走支援。
-                  </p>
-                  <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.dark }}>1回 ¥100,000<span style={{ fontSize: 10, color: C.mid, fontWeight: 400, display: "block", marginTop: 2 }}>（税抜・1回完結／サブスク非加入でも単発依頼可・無料お試し非該当）</span></p>
-                </a>
-              </div>
-            </F>
             <F delay={0.2}>
               <div style={{ textAlign: "center", marginTop: 24 }}>
                 <p style={{ fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.85 }}>
@@ -987,7 +932,7 @@
                   <p style={{ fontFamily: sans, fontSize: 12, color: C.dark, lineHeight: 1.7 }}>週1回のメルマガで「在宅医療の最新情報」を配信。診療報酬・制度・業界動向を院長と事務長にお届けします。</p>
                 </div>
                 <p style={{ marginTop: 12, fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.85 }}>
-                  ※ 04プラン「先着10CLのみ ¥80,000固定」は、お申込みのタイミングにより既に満枠となっている場合がございます。<br className="sp-only-br" />11社目以降は通常価格（月¥98,000）にてご契約となりますことを、あらかじめご了承ください。
+                  ※ 04プラン「先着10CLのみ ¥80,000固定」は、お申込みのタイミングにより既に満枠となっている場合がございます。<br className="sp-only-br" />11社目以降は通常価格（月¥98,000・税別）にてご契約となりますことを、あらかじめご了承ください。
                 </p>
                 <p style={{ marginTop: 12 }}>
                   <a href="/apply/" onClick={(e) => { e.preventDefault(); go(8); }} style={{ fontFamily: sans, fontSize: 13, color: C.accent, textDecoration: "underline" }}>
@@ -1330,7 +1275,7 @@
                   <p style={{ fontFamily: sans, fontSize: 12, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, marginBottom: 12 }}>
                     AI×現役事務長で業務全体に伴走。月額制で継続的にサポート。
                   </p>
-                  <p style={{ fontFamily: sans, fontSize: 14, color: C.gold, fontWeight: 700 }}>月 ¥9,000 〜 ¥98,000</p>
+                  <p style={{ fontFamily: sans, fontSize: 14, color: C.gold, fontWeight: 700 }}>月 ¥9,000 〜 ¥98,000（税別）</p>
                 </a>
                 {/* 単発 */}
                 <a href="#single-section" onClick={(e) => { e.preventDefault(); document.getElementById('single-section').scrollIntoView({behavior:'smooth', block:'start'}); }} style={{ background: C.white, border: `2px solid ${C.line}`, padding: "24px 22px", textDecoration: "none", display: "block" }}>
@@ -1339,7 +1284,7 @@
                   <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginBottom: 12 }}>
                     必要なときだけご利用いただける単発サービス。買い切り型・プロジェクト型。
                   </p>
-                  <p style={{ fontFamily: sans, fontSize: 14, color: C.dark, fontWeight: 700 }}>動画 ¥39,800 〜 / HP 個別お見積</p>
+                  <p style={{ fontFamily: sans, fontSize: 14, color: C.dark, fontWeight: 700 }}>動画 ¥39,800 〜（税別）／ HP 個別お見積</p>
                 </a>
                 {/* 個別コンサル */}
                 <a href="#consul-section" onClick={(e) => { e.preventDefault(); document.getElementById('consul-section').scrollIntoView({behavior:'smooth', block:'start'}); }} style={{ background: C.white, border: `2px solid ${C.line}`, padding: "24px 22px", textDecoration: "none", display: "block" }}>
@@ -1375,26 +1320,26 @@
                     </div>
                     <p style={{ fontFamily: serif, fontSize: 19, fontWeight: 700, color: C.white, marginBottom: 8 }}>AI伴走サブスクリプション</p>
                     <p style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, marginBottom: 12 }}>
-                      月2回×1時間訪問（月2時間／関東圏のみ）＋月32時間リモートAI稼働で業務全体に伴走。経営相談オプション +¥30,000で03機能も追加可。
+                      月2回×1時間訪問（月2時間／関東圏のみ）＋月32時間リモートAI稼働で業務全体に伴走。経営相談オプション +¥30,000（税別）で03機能も追加可。
                     </p>
-                    <p style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.white }}>月 ¥98,000<span style={{ fontSize: 12, color: C.gold, marginLeft: 10, fontWeight: 700 }}>先着10CLのみ ¥80,000固定（受付中）</span></p>
+                    <p style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.white }}>月 ¥98,000（税別）<span style={{ fontSize: 12, color: C.gold, marginLeft: 10, fontWeight: 700 }}>先着10CLのみ ¥80,000固定（税別・受付中）</span></p>
                   </div>
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
                     <div style={{ background: C.white, border: `2px solid ${C.gold}`, padding: "18px 18px" }}>
                       <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 4 }}>PLAN 02</p>
                       <p style={{ fontFamily: sans, fontSize: 10, color: C.gold, fontWeight: 700, marginBottom: 4 }}>入口プラン</p>
                       <p style={{ fontFamily: serif, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 6 }}>訪問看護指示書 作成支援</p>
-                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 700, color: C.dark }}>月 ¥9,000 〜</p>
+                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 700, color: C.dark }}>月 ¥9,000 〜（税別）</p>
                     </div>
                     <div style={{ background: C.white, border: `2px solid ${C.line}`, padding: "18px 18px" }}>
                       <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 4 }}>PLAN 01</p>
                       <p style={{ fontFamily: serif, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 6 }}>病名チェック</p>
-                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 700, color: C.dark }}>月 ¥30,000</p>
+                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 700, color: C.dark }}>月 ¥30,000（税別）</p>
                     </div>
                     <div style={{ background: C.white, border: `2px solid ${C.line}`, padding: "18px 18px" }}>
                       <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 4 }}>PLAN 03</p>
                       <p style={{ fontFamily: serif, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 6 }}>経営相談 ＋ 月次レポート</p>
-                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 700, color: C.dark }}>月 ¥100,000</p>
+                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 700, color: C.dark }}>月 ¥100,000（税別）</p>
                     </div>
                   </div>
                 </div>
@@ -1410,7 +1355,7 @@
                     プラン詳細・申込みへ →
                   </a>
                   <p style={{ marginTop: 12, fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.7 }}>
-                    01〜03は月単位（1ヶ月から可）／04 AI伴走は1年契約・1年経過後 月¥98,000<br />
+                    01〜03は月単位（1ヶ月から可）／04 AI伴走は1年契約・1年経過後 月¥98,000（税別）<br />
                     全プラン<strong>1週間無料お試しあり</strong>・組合せ自由・サブスク契約者特典：週1回のメルマガ無料配信
                   </p>
                 </div>
@@ -1435,8 +1380,8 @@
                   t: "事務長養成プログラム（動画版）",
                   d: "事務長10年の経験から、在宅医療クリニックの事務長業務を体系化した全12回（各1時間）の動画教材＋パワポ資料。買い切り型で何度でも視聴可能、新任事務長の研修にも最適です。",
                   tag: "動画教材／買い切り",
-                  price: "通常 ¥49,800（税抜）",
-                  priceNote: "🎁 発売記念 先着50名様 ¥39,800（税抜）／ 動画12本×各1時間＋パワポ資料・期間制限なし・繰り返し視聴可",
+                  price: "通常 ¥49,800（税別）",
+                  priceNote: "🎁 発売記念 先着50名様 ¥39,800（税別）／ 動画12本×各1時間＋パワポ資料・期間制限なし・繰り返し視聴可",
                   cta: "販売開始のお知らせを受け取る",
                   ctaHref: "/contact/",
                   ctaPage: 6,
@@ -2135,7 +2080,7 @@
           <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>まとめ：事務長が居ないクリニックは、誰が対応するのか</h2>
           <p style={{ marginBottom: 16 }}>2026年改定への対応は、<strong>事務長の有無で大きく結果が変わる</strong>領域です。新加算の把握、施設基準の更新、書類の電子化──これらは医師がやるべき仕事ではありません。</p>
           <p style={{ marginBottom: 16 }}>しかし、優秀な事務長を採用するのは至難の業。年収¥800万でも、在宅医療の制度を熟知した事務長は希少です。</p>
-          <p style={{ marginBottom: 16 }}>そこで MI-ZA は、<strong>事務長10年経験者×AI</strong> という組合せで、月¥98,000の伴走サブスクリプションを提供しています。2026年改定対応も、月次レポートで自動的に追跡。「気づいたら漏れていた」をなくします。</p>
+          <p style={{ marginBottom: 16 }}>そこで MI-ZA は、<strong>事務長10年経験者×AI</strong> という組合せで、月¥98,000（税別）の伴走サブスクリプションを提供しています。2026年改定対応も、月次レポートで自動的に追跡。「気づいたら漏れていた」をなくします。</p>
 
           <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>関連リンク</h2>
           <ul style={{ marginBottom: 16, paddingLeft: 24 }}>
@@ -2417,7 +2362,7 @@
                   <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, marginBottom: 12, fontWeight: 600 }}>レセ返戻リスクを事前に潰す</p>
                   <p style={{ fontFamily: serif, fontSize: 19, color: C.navy, fontWeight: 700, marginBottom: 12, lineHeight: 1.5 }}>病名チェック</p>
                   <div style={{ marginBottom: 16 }}>
-                    <p style={{ fontFamily: sans, fontSize: 14, color: C.dark, fontWeight: 700 }}>月 ¥30,000</p>
+                    <p style={{ fontFamily: sans, fontSize: 14, color: C.dark, fontWeight: 700 }}>月 ¥30,000（税別）</p>
                   </div>
                   <ul style={{ listStyle: "none", padding: 0, marginBottom: 20, flex: 1 }}>
                     {["処方薬と病名・保険病名と実病名のAI整合性チェック","訪問看護指示書の病名記載の妥当性確認","算定漏れ・返戻リスクの事前フラグ","MI-ZAによる最終確認＋月次レポート"].map((t, i) => (
@@ -2458,7 +2403,7 @@
                   <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, marginBottom: 12, fontWeight: 600 }}>経営判断に集中したい方へ</p>
                   <p style={{ fontFamily: serif, fontSize: 19, color: C.navy, fontWeight: 700, marginBottom: 12, lineHeight: 1.5 }}>経営相談 ＋ 月次レポート</p>
                   <div style={{ marginBottom: 16 }}>
-                    <p style={{ fontFamily: sans, fontSize: 14, color: C.dark, fontWeight: 700 }}>月 ¥100,000</p>
+                    <p style={{ fontFamily: sans, fontSize: 14, color: C.dark, fontWeight: 700 }}>月 ¥100,000（税別）</p>
                   </div>
                   <ul style={{ listStyle: "none", padding: 0, marginBottom: 20, flex: 1 }}>
                     {["月1回 1時間の経営相談（訪問 or オンライン／全員参加可）","月次レポート：業務指標と気づきの要約","医師パフォーマンスレポート：訪問件数・記録傾向","在宅医療 最新情報：診療報酬・制度・業界動向"].map((t, i) => (
@@ -2629,7 +2574,7 @@
                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                   {[
                     "1週間無料お試し：全サブスクプラン（01〜04）共通でご用意。気に入ればそのまま継続利用可能",
-                    "契約期間：01〜03は月単位（1ヶ月から可）／04 AI伴走は1年契約（1年経過後は通常価格 月¥98,000・以降1年ごと自動更新）",
+                    "契約期間：01〜03は月単位（1ヶ月から可）／04 AI伴走は1年契約（1年経過後は通常価格 月¥98,000（税別）・以降1年ごと自動更新）",
                     "個別コンサルティング：半年契約または1年契約",
                     "BCP策定支援（スポット）：1回完結／無料お試し対象外",
                     "解約予告：04 AI伴走の場合は契約満了の2ヶ月前まで",
@@ -2637,7 +2582,7 @@
                     "支払方法：月末締め・翌月末日 銀行振込（手数料貴院ご負担）",
                     "料金は1クリニック単位（医療法人複数院の場合は各院ごとの契約）",
                     "訪問対応エリア外のクリニック様：オンライン中心の対応＋必要に応じた訪問（交通費・宿泊費は実費ご負担）の組合せでも対応可能です。お申込み時にご相談ください。",
-                    "04プラン「先着10CLのみ ¥80,000固定」は、お申込み時に既に満枠となっている場合がございます。11社目以降は通常価格（月¥98,000）にてご契約となります。あらかじめご了承ください。",
+                    "04プラン「先着10CLのみ ¥80,000固定」は、お申込み時に既に満枠となっている場合がございます。11社目以降は通常価格（月¥98,000・税別）にてご契約となります。あらかじめご了承ください。",
                   ].map((t, i) => (
                     <li key={i} style={{ fontFamily: sans, fontSize: 12, color: C.dark, lineHeight: 1.85, paddingLeft: 16, position: "relative", marginBottom: 6 }}>
                       <span style={{ position: "absolute", left: 0, color: C.accent }}>•</span>{t}
@@ -2957,9 +2902,9 @@
           { q: "振込手数料はどちら負担ですか？", a: "クリニック様のご負担となります（B2B標準）。" },
           { q: "請求書の送付方法は？", a: "PDF メール送付が標準です。ご希望により郵送も可能です。" },
           { q: "法人契約は可能ですか？", a: "はい、医療法人複数院運営の場合は各院ごとの契約となります。料金は1クリニック単位です。" },
-          { q: "「先着10CLのみ ¥80,000固定」とは？", a: "04 AI伴走を最初に申し込む先着10CL（クリニック）のみが対象で、通常価格¥98,000を¥80,000に固定する特別価格です。11社目以降は通常価格（月¥98,000）でのご契約となります。" },
+          { q: "「先着10CLのみ ¥80,000固定」とは？", a: "04 AI伴走を最初に申し込む先着10CL（クリニック）のみが対象で、通常価格¥98,000を¥80,000に固定する特別価格です。11社目以降は通常価格（月¥98,000・税別）でのご契約となります。" },
           { q: "初期費用はかかりますか？", a: "初期設定期間中は料金が発生しません。サービス開始（Go-Live承認）後のみご請求となります。" },
-          { q: "消費税は別途ですか？", a: "はい、表示価格は税抜です。別途消費税がかかります。" },
+          { q: "消費税は別途ですか？", a: "はい、表示価格は税別です。別途消費税がかかります。" },
         ],
       },
       {
