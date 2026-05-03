@@ -855,18 +855,18 @@
                   {/* 含まれるサービス */}
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14, marginBottom: 28 }}>
                     {[
-                      { icon: "📋", title: "レセプト事前チェック", h: "週次／月8時間", d: "病名・算定・加算・施設基準を網羅的にチェック" },
-                      { icon: "📝", title: "訪問看護指示書 AI下書き", h: "月12時間", d: "医師ごとの文体・書式を学習、最終確認は人" },
-                      { icon: "📊", title: "月次レポート＋データ分析", h: "月12時間", d: "業務指標・医師パフォーマンス・累計効果" },
+                      { icon: "📋", title: "レセプト事前チェック", h: "週次", d: "病名・算定・加算・施設基準を網羅的にチェック" },
+                      { icon: "📝", title: "訪問看護指示書 AI下書き", h: "", d: "医師ごとの文体・書式を学習、最終確認は人" },
+                      { icon: "📊", title: "月次レポート＋データ分析", h: "", d: "業務指標・医師パフォーマンス・累計効果" },
                       { icon: "🤝", title: "訪問支援", h: "月2回×1時間（関東圏）", d: "現場でのヒアリング・課題整理" },
-                      { icon: "💬", title: "メールまたはチャット対応", h: "随時", d: "院長からのご相談に随時対応" },
+                      { icon: "💬", title: "メール対応", h: "随時", d: "院長からのご相談に随時対応" },
                       { icon: "📧", title: "メルマガ購読", h: "週1回", d: "在宅医療最新情報・診療報酬・制度動向" },
                     ].map((item, i) => (
                       <div key={i} style={{ background: "rgba(255,255,255,0.07)", padding: "14px 16px", borderLeft: `3px solid ${C.gold}` }}>
                         <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 700, color: C.white, marginBottom: 4, lineHeight: 1.4 }}>
                           <span style={{ fontSize: 16, marginRight: 6 }}>{item.icon}</span>{item.title}
                         </p>
-                        <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700, marginBottom: 4 }}>{item.h}</p>
+                        {item.h && <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700, marginBottom: 4 }}>{item.h}</p>}
                         <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>{item.d}</p>
                       </div>
                     ))}
