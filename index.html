@@ -837,6 +837,9 @@
                   在宅医療クリニックの業務全体に、AI×現役事務長が月単位で伴走。<br className="sp-only-br" />
                   常に最新のAI技術で、院長と現場の負担を軽くしていきます。
                 </p>
+                <p style={{ fontFamily: sans, fontSize: 12, color: C.gold, fontWeight: 700, marginTop: 10, lineHeight: 1.7 }}>
+                  ※ 対応カルテ・レセコン：<strong>モバカルネット＋ORCA</strong>（この組合せのみ対応）
+                </p>
               </div>
             </F>
             {/* AI伴走サービス・メインカード */}
@@ -993,15 +996,27 @@
                 <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 4, marginBottom: 8 }}>SINGLE SERVICES</p>
                 <h3 style={{ fontFamily: sans, fontSize: 17, fontWeight: 700, color: C.navy, marginBottom: 16 }}>サブスク以外の単発サービス</h3>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 14, marginBottom: 20 }}>
-                  <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ background: C.bg, padding: "16px 18px", textDecoration: "none", display: "block", borderLeft: `3px solid ${C.gold}`, textAlign: "left" }}>
-                    <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 4 }}>📹 動画教材／買い切り</p>
-                    <p style={{ fontFamily: serif, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 4 }}>事務長養成プログラム</p>
-                    <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.6 }}>¥49,800 ／ 2026年8月販売開始予定</p>
+                  <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ background: C.bg, textDecoration: "none", display: "block", borderLeft: `3px solid ${C.gold}`, textAlign: "left", overflow: "hidden" }}>
+                    <picture style={{ display: "contents" }}>
+                      <source srcSet="photo-consul-support.webp" type="image/webp" />
+                      <img src="photo-consul-support.jpg" alt="事務長養成プログラム" loading="lazy" decoding="async" style={{ width: "100%", height: 140, objectFit: "cover", display: "block" }} />
+                    </picture>
+                    <div style={{ padding: "16px 18px" }}>
+                      <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 4 }}>📹 動画教材／買い切り</p>
+                      <p style={{ fontFamily: serif, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 4 }}>事務長養成プログラム</p>
+                      <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.6 }}>¥49,800 ／ 2026年8月販売開始予定</p>
+                    </div>
                   </a>
-                  <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ background: C.bg, padding: "16px 18px", textDecoration: "none", display: "block", borderLeft: `3px solid ${C.gold}`, textAlign: "left" }}>
-                    <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 4 }}>🎨 プロジェクト型</p>
-                    <p style={{ fontFamily: serif, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 4 }}>HP・採用ページ制作</p>
-                    <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.6 }}>在宅医療専門・コンテンツ作成も含む</p>
+                  <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ background: C.bg, textDecoration: "none", display: "block", borderLeft: `3px solid ${C.gold}`, textAlign: "left", overflow: "hidden" }}>
+                    <picture style={{ display: "contents" }}>
+                      <source srcSet="photo-ai-collab.webp" type="image/webp" />
+                      <img src="photo-ai-collab.jpg" alt="HP・採用ページ制作" loading="lazy" decoding="async" style={{ width: "100%", height: 140, objectFit: "cover", display: "block" }} />
+                    </picture>
+                    <div style={{ padding: "16px 18px" }}>
+                      <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 4 }}>🎨 プロジェクト型</p>
+                      <p style={{ fontFamily: serif, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 4 }}>HP・採用ページ制作</p>
+                      <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.6 }}>在宅医療専門・コンテンツ作成も含む</p>
+                    </div>
                   </a>
                 </div>
                 <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ fontFamily: sans, fontSize: 13, color: C.accent, textDecoration: "underline" }}>
@@ -1079,7 +1094,7 @@
           <Sec py={56}>
             <div style={{ marginBottom: 20, textAlign: "center" }}>
               <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 4, marginBottom: 6 }}>STAFF</p>
-              <h3 style={{ fontFamily: sans, fontSize: 17, fontWeight: 700, color: C.navy }}>支える人たち</h3>
+              <h3 style={{ fontFamily: sans, fontSize: 17, fontWeight: 700, color: C.navy }}>伴走サポーター</h3>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16, maxWidth: 720, margin: "0 auto" }}>
               {[
@@ -2694,35 +2709,11 @@
                     <span style={{ fontSize: 11, color: C.gold, marginLeft: 8 }}>主要カルテに対応</span>
                   </label>
                   <select name="電子カルテ種別" style={{ width: "100%", padding: "11px 15px", border: `2px solid ${C.line}`, fontFamily: sans, fontSize: 14, outline: "none", boxSizing: "border-box", background: C.white }}>
-                    <option value="">選択してください</option>
-                    <optgroup label="在宅医療向け">
-                      <option value="ホームズ">ホームズ（NEC）</option>
-                      <option value="モバカルネット">モバカルネット</option>
-                      <option value="HOMIS">HOMIS</option>
-                      <option value="Doctor's File">Doctor's File（ドクターズファイル）</option>
-                      <option value="CrossLog">CrossLog（クロスログ）</option>
-                      <option value="きりんカルテ">きりんカルテ</option>
-                      <option value="エクスメディオ ヒポクラ">ヒポクラ／エクスメディオ</option>
-                      <option value="ZAITAKU.net">ZAITAKU.net</option>
-                    </optgroup>
-                    <optgroup label="クラウド型・汎用">
-                      <option value="CLINICS">CLINICS（メドレー）</option>
-                      <option value="Henry">Henry</option>
-                      <option value="エムスリー DigiKar">エムスリー DigiKar</option>
-                      <option value="CLIPLA">CLIPLA</option>
-                      <option value="きりんカルテSystem">きりんカルテSystem</option>
-                      <option value="Citrus">Citrus</option>
-                    </optgroup>
-                    <optgroup label="オンプレ型">
-                      <option value="Medicom-HRf">Medicom-HRf（PHC）</option>
-                      <option value="ダイナミクス">ダイナミクス</option>
-                      <option value="ラボル">ラボル</option>
-                      <option value="WINE">WINE</option>
-                      <option value="WORLD-PIX">WORLD-PIX</option>
-                    </optgroup>
-                    <option value="その他">その他（特記事項に記入）</option>
-                    <option value="未定・相談">未定・相談</option>
+                    <option value="モバカルネット＋ORCA">モバカルネット＋ORCA</option>
                   </select>
+                  <p style={{ fontFamily: sans, fontSize: 11, color: C.mid, marginTop: 6, lineHeight: 1.6 }}>
+                    ※ AI伴走サービスは <strong>モバカルネット＋ORCA</strong> の組合せのみ対応します。
+                  </p>
                 </div>
 
                 {/* 特記事項 */}
