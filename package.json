@@ -1,0 +1,10 @@
+{
+  "name": "mi-za-website",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/app.jsx --jsx-factory=React.createElement --jsx-fragment=React.Fragment --minify --target=es2019 --outfile=app.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}
