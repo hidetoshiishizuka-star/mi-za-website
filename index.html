@@ -1268,11 +1268,11 @@
       }, []);
       return (
         <>
-          <section style={{ background: C.navy, paddingTop: 108, paddingBottom: 60, textAlign: "center" }}>
+          <section style={{ background: `linear-gradient(rgba(15,34,56,0.78), rgba(15,34,56,0.86)), url(photo-hero-visit.jpg) center/cover no-repeat`, paddingTop: 108, paddingBottom: 60, textAlign: "center", position: "relative" }}>
             <F>
-              <p style={{ fontFamily: enFont, fontSize: 12, color: "rgba(255,255,255,0.35)", letterSpacing: 5, marginBottom: 10 }}>SERVICE MAP</p>
+              <p style={{ fontFamily: enFont, fontSize: 12, color: "rgba(255,255,255,0.45)", letterSpacing: 5, marginBottom: 10 }}>SERVICE MAP</p>
               <h1 style={{ fontFamily: sans, fontSize: 25, color: C.white, fontWeight: 700, margin: 0 }}>MI-ZAのサービス全体</h1>
-              <p style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.55)", marginTop: 14, lineHeight: 1.85 }}>
+              <p style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.7)", marginTop: 14, lineHeight: 1.85 }}>
                 サブスク・単発・個別コンサルの<br className="sp-only-br" />3つのご利用方法をご用意しています
               </p>
             </F>
@@ -1292,31 +1292,49 @@
             <F delay={0.1}>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16, marginBottom: 0 }}>
                 {/* メイン：サブスク */}
-                <a href="#sub-section" onClick={(e) => { e.preventDefault(); document.getElementById('sub-section').scrollIntoView({behavior:'smooth', block:'start'}); }} style={{ background: C.navy, color: C.white, padding: "24px 22px", textDecoration: "none", display: "block", position: "relative", borderTop: `4px solid ${C.gold}` }}>
-                  <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>🌟 メインサービス</p>
-                  <p style={{ fontFamily: serif, fontSize: 18, fontWeight: 700, color: C.white, marginBottom: 8 }}>サブスクリプション</p>
-                  <p style={{ fontFamily: sans, fontSize: 12, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, marginBottom: 12 }}>
-                    生成AIをフル活用したクリニック運営を目指すサブスクリプションサービス。生成AIの進化に合わせて、クリニックの成長と生産性向上を実現します。
-                  </p>
-                  <p style={{ fontFamily: sans, fontSize: 14, color: C.gold, fontWeight: 700 }}>月 ¥98,000（税別）／1事業所</p>
+                <a href="#sub-section" onClick={(e) => { e.preventDefault(); document.getElementById('sub-section').scrollIntoView({behavior:'smooth', block:'start'}); }} style={{ background: C.navy, color: C.white, textDecoration: "none", display: "block", position: "relative", borderTop: `4px solid ${C.gold}`, overflow: "hidden" }}>
+                  <picture style={{ display: "contents" }}>
+                    <source srcSet="photo-ai-tablet.webp" type="image/webp" />
+                    <img src="photo-ai-tablet.jpg" alt="AIタブレットを操作するシーン" loading="lazy" decoding="async" style={{ width: "100%", height: 140, objectFit: "cover", display: "block" }} />
+                  </picture>
+                  <div style={{ padding: "20px 22px" }}>
+                    <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>🌟 メインサービス</p>
+                    <p style={{ fontFamily: serif, fontSize: 18, fontWeight: 700, color: C.white, marginBottom: 8 }}>サブスクリプション</p>
+                    <p style={{ fontFamily: sans, fontSize: 12, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, marginBottom: 12 }}>
+                      生成AIをフル活用したクリニック運営を目指すサブスクリプションサービス。生成AIの進化に合わせて、クリニックの成長と生産性向上を実現します。
+                    </p>
+                    <p style={{ fontFamily: sans, fontSize: 14, color: C.gold, fontWeight: 700 }}>月 ¥98,000（税別）／1事業所</p>
+                  </div>
                 </a>
                 {/* 単発 */}
-                <a href="#single-section" onClick={(e) => { e.preventDefault(); document.getElementById('single-section').scrollIntoView({behavior:'smooth', block:'start'}); }} style={{ background: C.white, border: `2px solid ${C.line}`, padding: "24px 22px", textDecoration: "none", display: "block" }}>
-                  <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>💼 単発・買い切り</p>
-                  <p style={{ fontFamily: serif, fontSize: 18, fontWeight: 700, color: C.navy, marginBottom: 8 }}>動画教材・HP制作</p>
-                  <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginBottom: 12 }}>
-                    必要なときだけご利用いただける単発サービス。買い切り型・プロジェクト型。
-                  </p>
-                  <p style={{ fontFamily: sans, fontSize: 14, color: C.dark, fontWeight: 700 }}>動画 ¥49,800（税別）／1人　／ HP 個別お見積</p>
+                <a href="#single-section" onClick={(e) => { e.preventDefault(); document.getElementById('single-section').scrollIntoView({behavior:'smooth', block:'start'}); }} style={{ background: C.white, border: `2px solid ${C.line}`, textDecoration: "none", display: "block", overflow: "hidden" }}>
+                  <picture style={{ display: "contents" }}>
+                    <source srcSet="photo-jimucho-training.webp" type="image/webp" />
+                    <img src="photo-jimucho-training.jpg" alt="事務長養成プログラム・動画教材" loading="lazy" decoding="async" style={{ width: "100%", height: 140, objectFit: "cover", display: "block" }} />
+                  </picture>
+                  <div style={{ padding: "20px 22px" }}>
+                    <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>💼 単発・買い切り</p>
+                    <p style={{ fontFamily: serif, fontSize: 18, fontWeight: 700, color: C.navy, marginBottom: 8 }}>動画教材・HP制作</p>
+                    <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginBottom: 12 }}>
+                      必要なときだけご利用いただける単発サービス。買い切り型・プロジェクト型。
+                    </p>
+                    <p style={{ fontFamily: sans, fontSize: 14, color: C.dark, fontWeight: 700 }}>動画 ¥49,800（税別）／1人　／ HP 個別お見積</p>
+                  </div>
                 </a>
                 {/* 個別コンサル */}
-                <a href="#consul-section" onClick={(e) => { e.preventDefault(); document.getElementById('consul-section').scrollIntoView({behavior:'smooth', block:'start'}); }} style={{ background: C.white, border: `2px solid ${C.line}`, padding: "24px 22px", textDecoration: "none", display: "block" }}>
-                  <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>🤝 個別コンサル</p>
-                  <p style={{ fontFamily: serif, fontSize: 18, fontWeight: 700, color: C.navy, marginBottom: 8 }}>テーマ別ご相談</p>
-                  <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginBottom: 12 }}>
-                    経営企画・組織開発・マーケティングの3領域で個別に伴走。
-                  </p>
-                  <p style={{ fontFamily: sans, fontSize: 13, color: C.dark, fontWeight: 700 }}>ヒアリング後にお見積もり<span style={{ fontSize: 11, color: "#a65a17", fontWeight: 600, marginLeft: 6 }}>※満枠</span></p>
+                <a href="#consul-section" onClick={(e) => { e.preventDefault(); document.getElementById('consul-section').scrollIntoView({behavior:'smooth', block:'start'}); }} style={{ background: C.white, border: `2px solid ${C.line}`, textDecoration: "none", display: "block", overflow: "hidden" }}>
+                  <picture style={{ display: "contents" }}>
+                    <source srcSet="photo-consul-support.webp" type="image/webp" />
+                    <img src="photo-consul-support.jpg" alt="個別コンサル・オンライン伴走" loading="lazy" decoding="async" style={{ width: "100%", height: 140, objectFit: "cover", display: "block" }} />
+                  </picture>
+                  <div style={{ padding: "20px 22px" }}>
+                    <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>🤝 個別コンサル</p>
+                    <p style={{ fontFamily: serif, fontSize: 18, fontWeight: 700, color: C.navy, marginBottom: 8 }}>テーマ別ご相談</p>
+                    <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginBottom: 12 }}>
+                      経営企画・組織開発・マーケティングの3領域で個別に伴走。
+                    </p>
+                    <p style={{ fontFamily: sans, fontSize: 13, color: C.dark, fontWeight: 700 }}>ヒアリング後にお見積もり<span style={{ fontSize: 11, color: "#a65a17", fontWeight: 600, marginLeft: 6 }}>※満枠</span></p>
+                  </div>
                 </a>
               </div>
             </F>
@@ -1334,31 +1352,151 @@
                   </p>
                 </div>
               </F>
-              <F delay={0.1}>
-                <div style={{ maxWidth: 760, margin: "0 auto" }}>
-                  <div style={{ background: C.navy, color: C.white, padding: "24px 24px", borderTop: `4px solid ${C.gold}`, marginBottom: 16 }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 8, marginBottom: 8 }}>
-                      <p style={{ fontFamily: enFont, fontSize: 12, color: C.gold, letterSpacing: 3 }}>FLAGSHIP 04</p>
-                      <span style={{ background: C.gold, color: C.white, fontFamily: sans, fontSize: 10, fontWeight: 700, padding: "3px 10px", letterSpacing: 1 }}>主力プラン</span>
+              {/* AI伴走サービス・メインカード（トップから移植） */}
+              <F delay={0.05}>
+                <div style={{ maxWidth: 920, margin: "0 auto" }}>
+                  <div className="bg-ai-tablet" style={{ backgroundColor: C.navy, backgroundSize: "cover", backgroundPosition: "center", padding: "40px 32px", borderTop: `5px solid ${C.gold}`, position: "relative" }}>
+                    <span style={{ position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)", background: C.gold, color: C.white, fontSize: 11, fontWeight: 700, padding: "4px 14px", letterSpacing: 2, whiteSpace: "nowrap" }}>⭐ MAIN SERVICE</span>
+                    <div style={{ textAlign: "center", marginBottom: 24 }}>
+                      <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 4, marginBottom: 8, fontWeight: 700 }}>AI EMBEDDED PARTNER</p>
+                      <h3 style={{ fontFamily: serif, fontSize: 26, fontWeight: 700, color: C.white, marginBottom: 12, lineHeight: 1.4 }}>AI伴走サービス</h3>
+                      <p style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, maxWidth: 620, margin: "0 auto" }}>
+                        月2回×1時間（1回は訪問面談、1回はリモート面談）＋月32時間リモートによる生成AI稼働で、レセプト事前チェック・指示書下書き・月次レポート・データ分析まで業務全体に伴走します。
+                      </p>
                     </div>
-                    <p style={{ fontFamily: serif, fontSize: 19, fontWeight: 700, color: C.white, marginBottom: 8 }}>AI伴走サブスクリプション</p>
-                    <p style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, marginBottom: 12 }}>
-                      月2回×1時間（訪問面談＋リモート面談）＋月32時間リモートによる生成AI稼働で、レセプト事前チェック・書類自動化・月次レポート・データ分析まで業務全体に伴走。対応カルテ・レセコン：モバカルネット＋ORCA。
-                    </p>
-                    <p style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.white }}>月 ¥98,000（税別）<span style={{ fontSize: 12, color: C.gold, marginLeft: 10, fontWeight: 700 }}>先着10CLのみ ¥80,000固定（税別・受付中）</span></p>
+
+                    {/* 含まれるサービス */}
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14, marginBottom: 28 }}>
+                      {[
+                        { icon: "📋", title: "レセプト事前AIチェック", h: "週次", d: "病名・算定・加算・施設基準を網羅的にチェック" },
+                        { icon: "📝", title: "在宅医療における AI 活用", h: "", d: "音声カルテ入力・指示書下書き・書類自動化など、業務全体を AI で効率化" },
+                        { icon: "📊", title: "月次レポート＋データ分析", h: "", d: "業務指標・医師パフォーマンス・累計効果" },
+                        { icon: "🤝", title: "訪問支援", h: "月2回×1時間（関東圏）", d: "現場でのヒアリング・課題整理" },
+                        { icon: "💬", title: "メール対応", h: "随時", d: "院長からのご相談に随時対応" },
+                        { icon: "📧", title: "メルマガ購読", h: "週1回", d: "在宅医療最新情報・診療報酬・制度動向" },
+                      ].map((item, i) => (
+                        <div key={i} style={{ background: "rgba(255,255,255,0.07)", padding: "14px 16px", borderLeft: `3px solid ${C.gold}` }}>
+                          <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 700, color: C.white, marginBottom: 4, lineHeight: 1.4 }}>
+                            <span style={{ fontSize: 16, marginRight: 6 }}>{item.icon}</span>{item.title}
+                          </p>
+                          {item.h && <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700, marginBottom: 4 }}>{item.h}</p>}
+                          <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>{item.d}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* AI活用事例 */}
+                    <div style={{ marginBottom: 22, paddingTop: 8 }}>
+                      <p style={{ fontFamily: enFont, fontSize: 10, color: C.gold, letterSpacing: 3, marginBottom: 6, fontWeight: 700 }}>AI USE CASES</p>
+                      <h4 style={{ fontFamily: serif, fontSize: 16, color: C.white, fontWeight: 700, marginBottom: 4 }}>在宅医療における AI 活用事例</h4>
+                      <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 14, lineHeight: 1.7 }}>
+                        上記の月次伴走に加え、貴院の状況に応じて以下のような AI 活用にも対応可能です。
+                      </p>
+                      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+                        {[
+                          { h: "臨床支援", items: ["音声によるカルテ入力", "音声による新患メモの自動入力", "未来カルテ（予測カルテ）の自動生成", "訪問看護指示書作成の自動化", "紹介状・診療情報提供書の下書き自動生成", "オンコール時のトリアージ支援", "ポリファーマシーチェック", "医療材料・衛生材料の負担者判定"] },
+                          { h: "レセプト・診療報酬", items: ["レセプトチェック（病名・多重投与・不要病名等）", "在宅医療充実体制加算の最適取得検討", "施設基準の充足状況モニタリング", "診療報酬改定の影響額シミュレーション"] },
+                          { h: "経営分析", items: ["レセ締め即日の実績集計＋過去2年比較＋医師パフォーマンス分析（PPT自動作成）", "BU評価料のスタッフ配分検討", "患者紹介元・連携先の分析", "将来患者数・収益予測シミュレーション"] },
+                          { h: "業務効率化", items: ["訪問ルートの最適化", "スタッフシフト・訪問スケジュール最適化", "カンファレンス・打合せ議事録の自動作成", "雇用契約書・労働条件通知書の自動生成"] },
+                          { h: "その他", items: ["WEBサイト構築サポート", "BCP（事業継続計画）策定支援"] },
+                        ].map((cat, i) => (
+                          <div key={i} style={{ background: "rgba(255,255,255,0.05)", padding: "12px 14px", borderTop: `2px solid ${C.gold}` }}>
+                            <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>{cat.h}</p>
+                            <ul style={{ paddingLeft: 14, margin: 0 }}>
+                              {cat.items.map((item, j) => (
+                                <li key={j} style={{ fontFamily: sans, fontSize: 10, color: "rgba(255,255,255,0.78)", lineHeight: 1.65, marginBottom: 4 }}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                      <p style={{ fontFamily: sans, fontSize: 10, color: "rgba(255,255,255,0.5)", marginTop: 12, lineHeight: 1.6, textAlign: "center" }}>
+                        ※ 上記は活用例。実際の実装は貴院の状況・優先順位に応じて月次伴走の中で進めます。
+                      </p>
+                    </div>
+
+                    {/* 料金・契約 */}
+                    <div style={{ background: "rgba(201,169,90,0.12)", padding: "20px 24px", marginBottom: 22, borderLeft: `4px solid ${C.gold}`, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
+                      <div>
+                        <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>月額料金</p>
+                        <p style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.white, marginBottom: 4 }}>月 ¥98,000<span style={{ fontSize: 12, fontWeight: 400, marginLeft: 4 }}>（税別）／1事業所</span></p>
+                        <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700 }}>先着10CLのみ ¥80,000固定（税別・受付中）</p>
+                      </div>
+                      <div>
+                        <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>契約期間</p>
+                        <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.white }}>1年契約</p>
+                        <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.7)" }}>1年経過後は通常価格 月¥98,000（税別）</p>
+                      </div>
+                      <div>
+                        <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>お試し</p>
+                        <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.white }}>1週間無料お試し</p>
+                        <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.7)" }}>違約金なしでキャンセル可能</p>
+                      </div>
+                    </div>
+
+                    {/* CTA */}
+                    <div style={{ textAlign: "center" }}>
+                      <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ background: C.gold, color: C.white, border: "none", padding: "14px 40px", fontFamily: sans, fontSize: 15, fontWeight: 700, letterSpacing: 2, textDecoration: "none", display: "inline-block" }}>
+                        AI伴走サービスを問い合わせてみる →
+                      </a>
+                    </div>
                   </div>
                 </div>
               </F>
-              <F delay={0.2}>
-                <div style={{ textAlign: "center", marginTop: 28 }}>
-                  <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} className="mz-btn" style={{
-                    background: C.gold, color: C.white, border: "none",
-                    padding: "13px 36px", cursor: "pointer",
-                    fontFamily: sans, fontSize: 14, fontWeight: 700, letterSpacing: 2,
-                    textDecoration: "none", display: "inline-block",
-                  }}>
-                    サービスを問い合わせてみる →
-                  </a>
+              {/* 実装イメージ・ビジュアル（月次レポート / AI音声入力） */}
+              <F delay={0.15}>
+                <div style={{ maxWidth: 920, margin: "32px auto 0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16 }}>
+                  <div style={{ background: C.white, border: `1px solid ${C.line}`, overflow: "hidden", display: "flex", flexDirection: "column" }}>
+                    <picture style={{ display: "contents" }}>
+                      <source srcSet="illust-monthly-report.webp" type="image/webp" />
+                      <img src="illust-monthly-report.jpg" alt="月次レポート — 業務指標・医師パフォーマンス・累計効果を可視化" loading="lazy" decoding="async" style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover", background: C.white, display: "block" }} />
+                    </picture>
+                    <div style={{ padding: "16px 18px", borderTop: `3px solid ${C.gold}` }}>
+                      <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 3, marginBottom: 6, fontWeight: 700 }}>MONTHLY REPORT</p>
+                      <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.navy, marginBottom: 6, lineHeight: 1.5 }}>月次レポート＋データ分析</p>
+                      <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85 }}>
+                        業務指標・医師パフォーマンス・累計効果を毎月レポーティング。経営判断に必要な数字を可視化します。
+                      </p>
+                    </div>
+                  </div>
+                  <div style={{ background: C.white, border: `1px solid ${C.line}`, overflow: "hidden", display: "flex", flexDirection: "column" }}>
+                    <picture style={{ display: "contents" }}>
+                      <source srcSet="photo-ai-voice.webp" type="image/webp" />
+                      <img src="photo-ai-voice.jpg" alt="AI音声入力 — 訪問先で医師が話すだけでカルテ・指示書が下書きされる" loading="lazy" decoding="async" style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover", display: "block" }} />
+                    </picture>
+                    <div style={{ padding: "16px 18px", borderTop: `3px solid ${C.coral}` }}>
+                      <p style={{ fontFamily: enFont, fontSize: 11, color: C.coral, letterSpacing: 3, marginBottom: 6, fontWeight: 700 }}>VOICE INPUT</p>
+                      <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.navy, marginBottom: 6, lineHeight: 1.5 }}>音声でカルテ・指示書を下書き</p>
+                      <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85 }}>
+                        訪問先で医師が話すだけで、AI が電子カルテ用のテキスト化・指示書下書きを生成。事務作業を大幅に短縮します。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </F>
+              <F delay={0.25}>
+                <div style={{ textAlign: "center", marginTop: 24 }}>
+                  <div style={{ padding: "16px 20px", background: C.white, border: `2px solid ${C.navy}`, maxWidth: 600, marginLeft: "auto", marginRight: "auto", textAlign: "left" }}>
+                    <p style={{ fontFamily: sans, fontSize: 12, fontWeight: 700, color: C.navy, marginBottom: 6, letterSpacing: 0.5 }}>📋 ご契約後のご協力のお願い</p>
+                    <p style={{ fontFamily: sans, fontSize: 12, color: C.dark, lineHeight: 1.85, marginBottom: 6 }}>
+                      AI×現役事務長で精度を出すため、初期設定時に貴クリニックから次のような情報のご提供をお願いしています。<strong>設定作業はMI-ZAが代行</strong>しますが、データ抽出・連携・現場の運用情報共有にはクリニック側のご協力が不可欠です。
+                    </p>
+                    <ul style={{ fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.85, paddingLeft: 18, margin: 0 }}>
+                      <li>過去カルテ・訪問看護指示書（医師の文体学習用）</li>
+                      <li>レセプトデータ・保険病名（病名チェック用）</li>
+                      <li>経営数字・KPI（経営相談・月次レポート用）</li>
+                      <li>電子カルテ・請求システム種別／業務フロー</li>
+                    </ul>
+                    <p style={{ fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.7, marginTop: 8 }}>
+                      ※ 1週間無料お試し期間中もデータご提供のうえ運用を試していただきます。詳細は契約前のご面談でご案内します。
+                    </p>
+                  </div>
+                  <p style={{ marginTop: 12, fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.85 }}>
+                    ※ 04プラン「先着10CLのみ ¥80,000固定」は、お申込みのタイミングにより既に満枠となっている場合がございます。<br className="sp-only-br" />11社目以降は通常価格（月¥98,000・税別）にてご契約となりますことを、あらかじめご了承ください。
+                  </p>
+                  <p style={{ marginTop: 8, fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85 }}>
+                    💡 参照記事：<a href="/blog/mighty-checker-comparison/" onClick={(e) => { e.preventDefault(); go(15); }} style={{ color: C.accent, textDecoration: "underline" }}>マイティーチェッカーとMI-ZAの病名チェック・レセプト事前チェックは何が違うのか</a>
+                  </p>
                 </div>
               </F>
             </div>
@@ -1451,7 +1589,12 @@
                 </div>
               </F>
               <F delay={0.1}>
-                <div style={{ maxWidth: 720, margin: "0 auto", background: C.white, padding: "28px 28px", borderLeft: `4px solid ${C.accent}` }}>
+                <div style={{ maxWidth: 720, margin: "0 auto", background: C.white, borderLeft: `4px solid ${C.accent}`, overflow: "hidden" }}>
+                  <picture style={{ display: "contents" }}>
+                    <source srcSet="photo-clinic-meeting.webp" type="image/webp" />
+                    <img src="photo-clinic-meeting.jpg" alt="院内会議 — 院長・看護師・事務とMI-ZAの伴走" loading="lazy" decoding="async" style={{ width: "100%", height: 220, objectFit: "cover", display: "block" }} />
+                  </picture>
+                  <div style={{ padding: "24px 28px" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16, flexWrap: "wrap", gap: 8 }}>
                     <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.navy }}>3領域：経営企画／組織開発／マーケティング</p>
                     <span style={{ background: "#fff4e8", color: "#a65a17", fontFamily: sans, fontSize: 11, fontWeight: 700, padding: "4px 10px", letterSpacing: 1 }}>
@@ -1477,6 +1620,7 @@
                   <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ fontFamily: sans, fontSize: 12, color: C.accent, textDecoration: "underline", fontWeight: 600 }}>
                     順番待ちエントリーはこちら →
                   </a>
+                  </div>
                 </div>
               </F>
             </div>
