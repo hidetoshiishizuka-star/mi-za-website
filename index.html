@@ -688,7 +688,7 @@
                 <F key={i} delay={i * 0.07}>
                   <div style={{
                     padding: "23px 21px",
-                    borderLeft: `3px solid ${C.navy}`,
+                    borderLeft: `3px solid ${[C.accent, C.sun, C.coral, C.sky][i]}`,
                   }}>
                     <p style={{ fontFamily: sans, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 8, lineHeight: 1.6 }}>{c.title}</p>
                     <p style={{ fontFamily: sans, fontSize: 15, color: C.mid, lineHeight: 1.9 }}>{c.desc}</p>
@@ -735,8 +735,8 @@
                     s: ["01 病名チェック", "03 経営相談（改定対応）"],
                   },
                 ].map((item, i) => (
-                  <div key={i} style={{ background: C.white, padding: "24px 24px", borderTop: `3px solid ${C.gold}`, display: "flex", flexDirection: "column" }}>
-                    <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 6 }}>0{i+1}</p>
+                  <div key={i} style={{ background: C.white, padding: "24px 24px", borderTop: `3px solid ${[C.accent, C.sun, C.coral, C.sky][i]}`, display: "flex", flexDirection: "column" }}>
+                    <p style={{ fontFamily: enFont, fontSize: 11, color: [C.accent, C.sun, C.coral, C.sky][i], letterSpacing: 3, marginBottom: 6 }}>0{i+1}</p>
                     <p style={{ fontFamily: serif, fontSize: 16, fontWeight: 700, color: C.navy, marginBottom: 10, lineHeight: 1.5 }}>{item.c}</p>
                     <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginBottom: 14, flexGrow: 1 }}>{item.a}</p>
                   </div>
