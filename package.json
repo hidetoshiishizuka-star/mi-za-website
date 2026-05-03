@@ -2,9 +2,13 @@
   "name": "mi-za-website",
   "private": true,
   "scripts": {
-    "build": "esbuild src/app.jsx --jsx-factory=React.createElement --jsx-fragment=React.Fragment --minify --target=es2019 --outfile=app.js"
+    "build": "esbuild src/app.jsx --bundle --jsx-factory=React.createElement --jsx-fragment=React.Fragment --minify --target=es2019 --outfile=app.js"
   },
   "devDependencies": {
     "esbuild": "^0.24.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
