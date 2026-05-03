@@ -875,6 +875,36 @@
                     ))}
                   </div>
 
+                  {/* AI活用事例 */}
+                  <div style={{ marginBottom: 22, paddingTop: 8 }}>
+                    <p style={{ fontFamily: enFont, fontSize: 10, color: C.gold, letterSpacing: 3, marginBottom: 6, fontWeight: 700 }}>AI USE CASES</p>
+                    <h4 style={{ fontFamily: serif, fontSize: 16, color: C.white, fontWeight: 700, marginBottom: 4 }}>在宅医療における AI 活用事例</h4>
+                    <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 14, lineHeight: 1.7 }}>
+                      上記の月次伴走に加え、貴院の状況に応じて以下のような AI 活用にも対応可能です。
+                    </p>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+                      {[
+                        { h: "臨床支援", items: ["音声によるカルテ入力", "音声による新患メモの自動入力", "未来カルテ（予測カルテ）の自動生成", "訪問看護指示書作成の自動化", "紹介状・診療情報提供書の下書き自動生成", "オンコール時のトリアージ支援", "ポリファーマシーチェック", "医療材料・衛生材料の負担者判定"] },
+                        { h: "レセプト・診療報酬", items: ["レセプトチェック（病名・多重投与・不要病名等）", "在宅医療充実体制加算の最適取得検討", "施設基準の充足状況モニタリング", "診療報酬改定の影響額シミュレーション"] },
+                        { h: "経営分析", items: ["レセ締め即日の実績集計＋過去2年比較＋医師パフォーマンス分析（PPT自動作成）", "BU評価料のスタッフ配分検討", "患者紹介元・連携先の分析", "将来患者数・収益予測シミュレーション"] },
+                        { h: "業務効率化", items: ["訪問ルートの最適化", "スタッフシフト・訪問スケジュール最適化", "カンファレンス・打合せ議事録の自動作成", "雇用契約書・労働条件通知書の自動生成"] },
+                        { h: "その他", items: ["WEBサイト構築サポート", "BCP（事業継続計画）策定支援"] },
+                      ].map((cat, i) => (
+                        <div key={i} style={{ background: "rgba(255,255,255,0.05)", padding: "12px 14px", borderTop: `2px solid ${C.gold}` }}>
+                          <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>{cat.h}</p>
+                          <ul style={{ paddingLeft: 14, margin: 0 }}>
+                            {cat.items.map((item, j) => (
+                              <li key={j} style={{ fontFamily: sans, fontSize: 10, color: "rgba(255,255,255,0.78)", lineHeight: 1.65, marginBottom: 4 }}>{item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                    <p style={{ fontFamily: sans, fontSize: 10, color: "rgba(255,255,255,0.5)", marginTop: 12, lineHeight: 1.6, textAlign: "center" }}>
+                      ※ 上記は活用例。実際の実装は貴院の状況・優先順位に応じて月次伴走の中で進めます。
+                    </p>
+                  </div>
+
                   {/* 料金・契約 */}
                   <div style={{ background: "rgba(201,169,90,0.12)", padding: "20px 24px", marginBottom: 22, borderLeft: `4px solid ${C.gold}`, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
                     <div>
