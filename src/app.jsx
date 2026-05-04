@@ -2128,9 +2128,9 @@ function Contact() {
           <F delay={0.1}>
             <div style={{ display: "flex", alignItems: "center", gap: 0, margin: "33px 0 41px", flexWrap: "wrap", justifyContent: "center" }}>
               {[
-                { n: "01", t: "フォームを送信" },
-                { n: "02", t: "3営業日以内にご連絡" },
-                { n: "03", t: "30分お話しします" },
+                { n: "01", t: "フォームに入力" },
+                { n: "02", t: "送信するをクリック" },
+                { n: "03", t: "3営業日以内にご連絡" },
               ].map((s, i) => (
                 <React.Fragment key={i}>
                   <div style={{ textAlign: "center", padding: "17px 21px", minWidth: 140 }}>
