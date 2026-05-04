@@ -2154,6 +2154,21 @@ function Contact() {
                   <input type="text" name={l} style={{ width: "100%", padding: "11px 15px", border: `2px solid ${C.line}`, fontFamily: sans, fontSize: 14, outline: "none", boxSizing: "border-box", background: C.white }} />
                 </div>
               ))}
+              <div style={{ marginBottom: 20 }}>
+                <label style={{ display: "block", fontFamily: sans, fontSize: 13, fontWeight: 600, color: C.navy, marginBottom: 6 }}>
+                  お問い合わせ種別<span style={{ fontSize: 11, color: C.accent, marginLeft: 6 }}>必須</span>
+                </label>
+                <select name="お問い合わせ種別" required defaultValue="" style={{ width: "100%", padding: "11px 15px", border: `2px solid ${C.line}`, fontFamily: sans, fontSize: 14, outline: "none", boxSizing: "border-box", background: C.white, color: C.navy, appearance: "auto" }}>
+                  <option value="" disabled>選択してください</option>
+                  <option value="無料相談（30分）の予約">無料相談（30分）の予約</option>
+                  <option value="AI伴走サービスについて">AI伴走サービスについて</option>
+                  <option value="個別コンサルティングについて">個別コンサルティングについて</option>
+                  <option value="動画教材（事務長養成プログラム）について">動画教材（事務長養成プログラム）について</option>
+                  <option value="HP・採用ページ制作について">HP・採用ページ制作について</option>
+                  <option value="取材・メディア掲載のご依頼">取材・メディア掲載のご依頼</option>
+                  <option value="その他">その他</option>
+                </select>
+              </div>
               <div style={{ marginBottom: 28 }}>
                 <label style={{ display: "block", fontFamily: sans, fontSize: 13, fontWeight: 600, color: C.navy, marginBottom: 6 }}>ご相談内容<span style={{ fontSize: 11, color: C.accent, marginLeft: 6 }}>必須</span></label>
                 <textarea rows={5} name="ご相談内容" style={{ width: "100%", padding: "11px 15px", border: `2px solid ${C.line}`, fontFamily: sans, fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box", background: C.white }} />
