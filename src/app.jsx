@@ -2149,7 +2149,7 @@ function Contact() {
                 </div>
               ))}
               <div style={{ marginBottom: 28 }}>
-                <label style={{ display: "block", fontFamily: sans, fontSize: 13, fontWeight: 600, color: C.navy, marginBottom: 6 }}>ご相談内容<span style={{ fontSize: 11, color: C.accent, marginLeft: 6 }}>必須</span></label>
+                <label style={{ display: "block", fontFamily: sans, fontSize: 13, fontWeight: 600, color: C.navy, marginBottom: 6 }}>ご相談内容</label>
                 <textarea rows={5} name="ご相談内容" style={{ width: "100%", padding: "11px 15px", border: `2px solid ${C.line}`, fontFamily: sans, fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box", background: C.white }} />
               </div>
               {sendError && (
