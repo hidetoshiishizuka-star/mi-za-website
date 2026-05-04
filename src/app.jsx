@@ -560,7 +560,7 @@ function Home({ go }) {
                   ))}
                 </div>
                 <p style={{ fontFamily: sans, fontSize: 10, color: "rgba(255,255,255,0.5)", marginTop: 12, lineHeight: 1.6, textAlign: "center" }}>
-                  ※ 上記は活用例。実際の実装は貴院の状況・優先順位に応じて月次伴走の中で進めます。
+                  ※ 上記はあくまでも活用例となります。実際の実装は貴院の状況・優先順位に応じて月次伴走の中で順次実装を進めます。
                 </p>
               </div>
 
@@ -848,7 +848,7 @@ function Home({ go }) {
             <div style={{ padding: "40px 32px", display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
               <p style={{ fontFamily: serif, fontSize: 20, color: C.navy, letterSpacing: 1, marginBottom: 12, lineHeight: 1.5 }} className="sp-heading">現状を整理するところから、<br />始めませんか。</p>
               <p style={{ fontFamily: sans, fontSize: 13, color: C.mid, lineHeight: 1.85, marginBottom: 24 }}>
-                Zoom 30分で「貴院の課題」と「使えるサービス」を整理してご提案します。<br />
+                Zoom 30分を通じて「貴院の課題」に基づき「使えるサービス」をご提案します。<br />
                 売り込みなし・契約なしでもOKです。
               </p>
               <div>
@@ -1087,7 +1087,7 @@ function Service({ go, scrollAnchorRef }) {
                     ))}
                   </div>
                   <p style={{ fontFamily: sans, fontSize: 10, color: "rgba(255,255,255,0.5)", marginTop: 12, lineHeight: 1.6, textAlign: "center" }}>
-                    ※ 上記は活用例。実際の実装は貴院の状況・優先順位に応じて月次伴走の中で進めます。
+                    ※ 上記はあくまでも活用例となります。実際の実装は貴院の状況・優先順位に応じて月次伴走の中で順次実装を進めます。
                   </p>
                 </div>
 
