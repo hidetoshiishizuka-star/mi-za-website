@@ -1349,7 +1349,7 @@ function Service({ go, scrollAnchorRef }) {
               <p style={{ fontFamily: sans, fontSize: 12, color: C.gold, fontWeight: 700, letterSpacing: 1, marginBottom: 8 }}>🌟 サブスク</p>
               <p style={{ fontFamily: serif, fontSize: 16, fontWeight: 700, color: C.navy, marginBottom: 12 }}>2〜4週間でサービス開始</p>
               <ol style={{ paddingLeft: 18, margin: 0 }}>
-                {["申込フォーム送信","電子契約締結（freeeサイン）","AI導入ご相談","AI実装（順次）"].map((t, i) => (
+                {["申込フォーム送信","電子契約締結（freeeサイン）","AI導入内容ご相談","AI実装（順次）"].map((t, i) => (
                   <li key={i} style={{ fontFamily: sans, fontSize: 13, color: C.dark, lineHeight: 1.85, marginBottom: 4 }}>{t}</li>
                 ))}
               </ol>
