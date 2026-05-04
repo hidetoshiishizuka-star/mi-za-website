@@ -547,7 +547,7 @@ function Home({ go }) {
                     { h: "レセプト・診療報酬", items: ["レセプトチェック（病名・多重投与・不要病名等）", "在宅医療充実体制加算の最適取得検討", "施設基準の充足状況モニタリング", "診療報酬改定の影響額シミュレーション"] },
                     { h: "経営分析", items: ["レセ締め即日の実績集計＋過去2年比較＋医師パフォーマンス分析（PPT自動作成）", "BU評価料のスタッフ配分検討", "患者紹介元・連携先の分析", "将来患者数・収益予測シミュレーション"] },
                     { h: "業務効率化", items: ["訪問ルートの最適化", "スタッフシフト・訪問スケジュール最適化", "カンファレンス・打合せ議事録の自動作成", "雇用契約書・労働条件通知書の自動生成"] },
-                    { h: "その他", items: ["WEBサイト構築サポート", "BCP（事業継続計画）策定支援"] },
+                    { h: "その他", items: ["（オプション）WEBサイト構築サポート", "（オプション）BCP（事業継続計画）策定支援"] },
                   ].map((cat, i) => (
                     <div key={i} style={{ background: "rgba(255,255,255,0.05)", padding: "12px 14px", borderTop: `2px solid ${C.gold}` }}>
                       <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>{cat.h}</p>
@@ -569,7 +569,6 @@ function Home({ go }) {
                 <div>
                   <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>月額料金</p>
                   <p style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.white, marginBottom: 4 }}>月 ¥98,000<span style={{ fontSize: 12, fontWeight: 400, marginLeft: 4 }}>（税別）／1事業所</span></p>
-                  <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700 }}>先着10CLのみ ¥80,000固定（税別・受付中）</p>
                 </div>
                 <div>
                   <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>契約期間</p>
@@ -611,9 +610,6 @@ function Home({ go }) {
                 ※ 1週間無料お試し期間中もデータご提供のうえ運用を試していただきます。詳細は契約前のご面談でご案内します。
               </p>
             </div>
-            <p style={{ marginTop: 12, fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.85 }}>
-              ※ 04プラン「先着10CLのみ ¥80,000固定」は、お申込みのタイミングにより既に満枠となっている場合がございます。<br className="sp-only-br" />11社目以降は通常価格（月¥98,000・税別）にてご契約となりますことを、あらかじめご了承ください。
-            </p>
             <p style={{ marginTop: 12 }}>
               <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ fontFamily: sans, fontSize: 13, color: C.accent, textDecoration: "underline" }}>
                 各プランの詳細を見る →
@@ -1078,7 +1074,7 @@ function Service({ go, scrollAnchorRef }) {
                       { h: "レセプト・診療報酬", items: ["レセプトチェック（病名・多重投与・不要病名等）", "在宅医療充実体制加算の最適取得検討", "施設基準の充足状況モニタリング", "診療報酬改定の影響額シミュレーション"] },
                       { h: "経営分析", items: ["レセ締め即日の実績集計＋過去2年比較＋医師パフォーマンス分析（PPT自動作成）", "BU評価料のスタッフ配分検討", "患者紹介元・連携先の分析", "将来患者数・収益予測シミュレーション"] },
                       { h: "業務効率化", items: ["訪問ルートの最適化", "スタッフシフト・訪問スケジュール最適化", "カンファレンス・打合せ議事録の自動作成", "雇用契約書・労働条件通知書の自動生成"] },
-                      { h: "その他", items: ["WEBサイト構築サポート", "BCP（事業継続計画）策定支援"] },
+                      { h: "その他", items: ["（オプション）WEBサイト構築サポート", "（オプション）BCP（事業継続計画）策定支援"] },
                     ].map((cat, i) => (
                       <div key={i} style={{ background: "rgba(255,255,255,0.05)", padding: "12px 14px", borderTop: `2px solid ${C.gold}` }}>
                         <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>{cat.h}</p>
@@ -1100,8 +1096,7 @@ function Service({ go, scrollAnchorRef }) {
                   <div>
                     <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>月額料金</p>
                     <p style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.white, marginBottom: 4 }}>月 ¥98,000<span style={{ fontSize: 12, fontWeight: 400, marginLeft: 4 }}>（税別）／1事業所</span></p>
-                    <p style={{ fontFamily: sans, fontSize: 11, color: C.gold, fontWeight: 700 }}>先着10CLのみ ¥80,000固定（税別・受付中）</p>
-                  </div>
+                    </div>
                   <div>
                     <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>契約期間</p>
                     <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.white }}>1年契約</p>
@@ -1171,9 +1166,6 @@ function Service({ go, scrollAnchorRef }) {
                   ※ 1週間無料お試し期間中もデータご提供のうえ運用を試していただきます。詳細は契約前のご面談でご案内します。
                 </p>
               </div>
-              <p style={{ marginTop: 12, fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.85 }}>
-                ※ 04プラン「先着10CLのみ ¥80,000固定」は、お申込みのタイミングにより既に満枠となっている場合がございます。<br className="sp-only-br" />11社目以降は通常価格（月¥98,000・税別）にてご契約となりますことを、あらかじめご了承ください。
-              </p>
               <p style={{ marginTop: 8, fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85 }}>
                 💡 参照記事：<a href="/blog/mighty-checker-comparison/" onClick={(e) => { e.preventDefault(); go(14); }} style={{ color: C.accent, textDecoration: "underline" }}>マイティーチェッカーとMI-ZAの病名チェック・レセプト事前チェックは何が違うのか</a>
               </p>
