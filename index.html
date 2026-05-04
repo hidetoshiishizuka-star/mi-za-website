@@ -242,14 +242,13 @@
 </head>
 <body>
   <!-- Netlify Forms検出用の隠しフォーム -->
-  <form hidden method='post' name='contact'><input type='hidden' name='form-name' value='contact' />
-    <input name="お名前" />
-    <input name="医療機関名" />
-    <input name="お役職" />
-    <input name="メールアドレス" />
-    <input name="お電話番号" />
+  <form hidden method='post' name='contact' data-netlify='true' netlify-honeypot='bot-field'>
+    <input type='hidden' name='form-name' value='contact' />
+    <input type='hidden' name='bot-field' />
     <select name="お問い合わせ種別">
+      <option value="">選択してください</option>
       <option value="無料相談（30分）の予約">無料相談（30分）の予約</option>
+      <option value="メルマガ登録">メルマガ登録</option>
       <option value="AI伴走サービスについて">AI伴走サービスについて</option>
       <option value="個別コンサルティングについて">個別コンサルティングについて</option>
       <option value="動画教材（事務長養成プログラム）について">動画教材（事務長養成プログラム）について</option>
@@ -257,10 +256,12 @@
       <option value="取材・メディア掲載のご依頼">取材・メディア掲載のご依頼</option>
       <option value="その他">その他</option>
     </select>
+    <input name="お名前" />
+    <input name="医療機関名" />
+    <input name="お役職" />
+    <input name="メールアドレス" type="email" />
+    <input name="お電話番号" />
     <textarea name="ご相談内容"></textarea>
-  </form>
-  <form hidden method='post' name='newsletter'><input type='hidden' name='form-name' value='newsletter' />
-    <input name="メールアドレス" />
   </form>
   <div id="root">
     <!-- Static skeleton: paints before React boots, gives the browser an LCP-eligible element -->
