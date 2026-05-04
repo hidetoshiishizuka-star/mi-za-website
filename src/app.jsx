@@ -878,13 +878,8 @@ function Home({ go }) {
                 売り込みなし・契約なしでもOKです。
               </p>
               <div>
-                <Btn href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }}>30分相談する</Btn>
+                <Btn href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }}>無料相談申込み</Btn>
               </div>
-              <p style={{ marginTop: 14 }}>
-                <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ fontFamily: sans, fontSize: 12, color: C.accent, textDecoration: "underline" }}>
-                  料金プランを先に確認する →
-                </a>
-              </p>
             </div>
           </div>
         </F>
