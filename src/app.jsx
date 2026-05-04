@@ -1677,14 +1677,14 @@ function BlogPostLayout({ post, go, children }) {
       "author": {
         "@type": "Organization",
         "name": "株式会社MI-ZA",
-        "url": "https://mi-za.org"
+        "url": "https://mi-za.jp"
       },
       "publisher": {
         "@type": "Organization",
         "name": "株式会社MI-ZA",
-        "logo": { "@type": "ImageObject", "url": "https://mi-za.org/mi-za-icon.png" }
+        "logo": { "@type": "ImageObject", "url": "https://mi-za.jp/mi-za-icon.png" }
       },
-      "mainEntityOfPage": "https://mi-za.org/blog/" + post.slug + "/",
+      "mainEntityOfPage": "https://mi-za.jp/blog/" + post.slug + "/",
     };
     const s = document.createElement('script');
     s.type = 'application/ld+json';
@@ -2231,8 +2231,8 @@ function App() {
     const set = (sel, prop, val) => { const el = document.querySelector(sel); if (el) el[prop] = val; };
     set('meta[name="description"]', 'content', p.desc);
     set('meta[name="robots"]', 'content', (p.url === "/privacy/" || p.url === "/contact/" || p.url.startsWith("/contact/form") || p.url.startsWith("/contact/booking") || p.url.startsWith("/contact/thanks")) ? "noindex, follow" : "index, follow");
-    set('link[rel="canonical"]', 'href', "https://mi-za.org" + p.url);
-    set('meta[property="og:url"]', 'content', "https://mi-za.org" + p.url);
+    set('link[rel="canonical"]', 'href', "https://mi-za.jp" + p.url);
+    set('meta[property="og:url"]', 'content', "https://mi-za.jp" + p.url);
     set('meta[property="og:title"]', 'content', p.title);
     set('meta[property="og:description"]', 'content', p.desc);
     set('meta[name="twitter:title"]', 'content', p.title);
@@ -2247,8 +2247,8 @@ function App() {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "ホーム", item: "https://mi-za.org/" },
-          { "@type": "ListItem", position: 2, name: p.ja, item: "https://mi-za.org" + p.url }
+          { "@type": "ListItem", position: 1, name: "ホーム", item: "https://mi-za.jp/" },
+          { "@type": "ListItem", position: 2, name: p.ja, item: "https://mi-za.jp" + p.url }
         ]
       });
       document.head.appendChild(bc);
