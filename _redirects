@@ -1,3 +1,10 @@
+# Domain migration: mi-za.org -> mi-za.jp (2026-05-04)
+https://mi-za.org/*       https://mi-za.jp/:splat  301!
+https://www.mi-za.org/*   https://mi-za.jp/:splat  301!
+http://mi-za.org/*        https://mi-za.jp/:splat  301!
+http://www.mi-za.org/*    https://mi-za.jp/:splat  301!
+
+# SPA fallbacks
 /service/*  /index.html  200
 /cases/*    /index.html  200
 /company/*  /index.html  200
