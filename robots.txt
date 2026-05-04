@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mi-za.org/sitemap.xml
+Sitemap: https://mi-za.jp/sitemap.xml
