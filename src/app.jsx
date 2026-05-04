@@ -2202,7 +2202,7 @@ function Footer({ go }) {
             </p>
           </div>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap", justifyContent: "flex-end", alignSelf: "flex-start" }}>
-              {[0, 1, 4, 2, 3, 8, 12, 5, 6, 7].map(i => {
+              {[0, 1, 4, 2, 3, 12, 5, 6, 7].map(i => {
                 const p = PAGES[i];
                 return <a key={i} href={p.url} onClick={(e) => { e.preventDefault(); go(i); }} style={{ fontFamily: sans, fontSize: 12, color: "rgba(255,255,255,0.4)", cursor: "pointer", textDecoration: "none" }}>{p.ja}</a>;
               })}
