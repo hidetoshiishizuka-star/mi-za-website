@@ -386,22 +386,22 @@ function Home({ go }) {
               {
                 c: "院長がいないと動かない",
                 a: "スタッフが判断できる仕組みづくりと、事務長機能の代行・育成。判断の集中を解消し、組織として動ける状態へ。",
-                s: ["個別コンサル「組織開発」", "03 経営相談（壁打ち）"],
+                s: ["個別コンサル「組織開発」", "個別コンサル「経営相談（壁打ち）」"],
               },
               {
                 c: "忙しいのに利益が残らない",
                 a: "月次の損益・人件費・単価を可視化し、ボトルネックを特定。書類作成や事務作業については、業務自動化を含めた生成AIによる業務効率化を実現、利益体質に。",
-                s: ["04 AI伴走（月次レポート）", "個別コンサル「経営企画」"],
+                s: ["AI伴走サービス（月次レポート）", "個別コンサル「経営企画」"],
               },
               {
                 c: "看護師や医事の連鎖退職の発生",
                 a: "標準業務から、他職種との業務分担の最適化や、生成AIによる事務負荷を軽減し、看護師が本来の看護に専念できる環境を少しづつ実現。並行して採用・定着の仕組みを整備していく。",
-                s: ["04 AI伴走サブスクリプション", "個別コンサル「組織開発」"],
+                s: ["AI伴走サービス", "個別コンサル「組織開発」"],
               },
               {
                 c: "加算が取れていない",
                 a: "レセファイル分析による一次分析、1号用紙や2号用紙のAIを活用した自動収集・分析によるレセ処理サポート、診療報酬改定時のシミュレーションや算定可能加算の取得対応も伴走。",
-                s: ["01 病名チェック", "03 経営相談（改定対応）"],
+                s: ["AI伴走サービス（病名チェック・改定対応）"],
               },
             ].map((item, i) => (
               <div key={i} style={{ background: C.white, padding: "24px 24px", borderTop: `3px solid ${[C.accent, C.sun, C.coral, C.sky][i]}`, display: "flex", flexDirection: "column" }}>
@@ -510,7 +510,7 @@ function Home({ go }) {
                 <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 4, marginBottom: 8, fontWeight: 700 }}>AI EMBEDDED PARTNER</p>
                 <h3 style={{ fontFamily: serif, fontSize: 26, fontWeight: 700, color: C.white, marginBottom: 12, lineHeight: 1.4 }}>AI伴走サービス</h3>
                 <p style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, maxWidth: 620, margin: "0 auto" }}>
-                  月2回×1時間（1回は訪問面談、1回はリモート面談）＋月32時間リモートによる生成AI稼働で、レセプト事前チェック・指示書下書き・月次レポート・データ分析まで業務全体に伴走します。
+                  月2回×1時間のオンライン定例（Zoom）＋月32時間リモートによる生成AI稼働で、レセプト事前チェック・指示書下書き・月次レポート・データ分析まで業務全体に伴走します。全てオンライン対応のため全国どこのクリニック様でもご利用いただけます。
                 </p>
               </div>
 
@@ -520,7 +520,7 @@ function Home({ go }) {
                   { icon: "📋", title: "レセプト事前AIチェック", h: "週次", d: "病名・算定・加算・施設基準を網羅的にチェック" },
                   { icon: "📝", title: "在宅医療における AI 活用", h: "", d: "音声カルテ入力・指示書下書き・書類自動化など、業務全体を AI で効率化" },
                   { icon: "📊", title: "月次レポート＋データ分析", h: "", d: "業務指標・医師パフォーマンス・累計効果" },
-                  { icon: "🤝", title: "訪問・オンライン支援", h: "月2回×1時間（訪問×1／オンライン×1、訪問は関東圏のみ）", d: "現場のヒアリング・課題整理・AI運用調整" },
+                  { icon: "💻", title: "AI支援（オンライン定例）", h: "月2回×1時間（Zoom）", d: "現状ヒアリング・課題整理・AI運用調整" },
                   { icon: "💬", title: "メール対応", h: "随時", d: "院長からのご相談に随時対応" },
                   { icon: "📧", title: "メルマガ購読", h: "週1回", d: "在宅医療最新情報・診療報酬・制度動向" },
                 ].map((item, i) => (
@@ -714,7 +714,7 @@ function Home({ go }) {
         </div>
         <F delay={0.2}>
           <p style={{ fontFamily: sans, fontSize: 12, color: C.light, letterSpacing: 3, marginBottom: 8 }}>VOICE</p>
-          <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, marginBottom: 20, fontWeight: 600 }}>※ 以下は<strong style={{ color: C.navy }}>過去の個別コンサルティング支援実績</strong>におけるお声です。AI伴走サブスクリプション（2026年5月開始）の導入予定クリニック様のお声は、リリース後に順次掲載いたします。</p>
+          <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, marginBottom: 20, fontWeight: 600 }}>※ 以下は<strong style={{ color: C.navy }}>過去の個別コンサルティング支援実績</strong>におけるお声です。AI伴走サービス（2026年5月開始）の導入予定クリニック様のお声は、リリース後に順次掲載いたします。</p>
         </F>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(281px, 1fr))", gap: 20 }}>
           {VOICES.map((v, i) => (
@@ -772,7 +772,7 @@ function Home({ go }) {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16, maxWidth: 720, margin: "0 auto" }}>
           {[
             { role: "CEO", img: "photo-ceo.jpg", name: "代表取締役　石塚（波村）美絵", short: "事務長10年・組織開発／個別コンサル・03経営相談・事務長養成プログラム・HP制作 担当", alt: "石塚美絵 MI-ZA代表 在宅医療コンサルタント" },
-            { role: "DIRECTOR", img: "photo-director.jpg", name: "取締役　石塚 秀俊", short: "現役事務長・AI実装／04 AI伴走サブスク・01病名チェック・02訪問看護指示書 のAI実装と現場実証 担当", alt: "石塚秀俊 MI-ZA取締役 在宅医療コンサルタント" },
+            { role: "DIRECTOR", img: "photo-director.jpg", name: "取締役　石塚 秀俊", short: "現役事務長・AI実装／AI伴走サービス（レセプト事前チェック・訪問看護指示書下書き・月次レポート）のAI実装と現場実証 担当", alt: "石塚秀俊 MI-ZA取締役 在宅医療コンサルタント" },
           ].map((m, i) => (
             <F key={i} delay={i * 0.1}>
               <div style={{ display: "flex", gap: 12, alignItems: "center", padding: "14px 16px", background: C.bg }}>
@@ -1037,7 +1037,7 @@ function Service({ go, scrollAnchorRef }) {
                   <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 4, marginBottom: 8, fontWeight: 700 }}>AI EMBEDDED PARTNER</p>
                   <h3 style={{ fontFamily: serif, fontSize: 26, fontWeight: 700, color: C.white, marginBottom: 12, lineHeight: 1.4 }}>AI伴走サービス</h3>
                   <p style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, maxWidth: 620, margin: "0 auto" }}>
-                    月2回×1時間（1回は訪問面談、1回はリモート面談）＋月32時間リモートによる生成AI稼働で、レセプト事前チェック・指示書下書き・月次レポート・データ分析まで業務全体に伴走します。
+                    月2回×1時間のオンライン定例（Zoom）＋月32時間リモートによる生成AI稼働で、レセプト事前チェック・指示書下書き・月次レポート・データ分析まで業務全体に伴走します。全てオンライン対応のため全国どこのクリニック様でもご利用いただけます。
                   </p>
                 </div>
 
@@ -1047,7 +1047,7 @@ function Service({ go, scrollAnchorRef }) {
                     { icon: "📋", title: "レセプト事前AIチェック", h: "週次", d: "病名・算定・加算・施設基準を網羅的にチェック" },
                     { icon: "📝", title: "在宅医療における AI 活用", h: "", d: "音声カルテ入力・指示書下書き・書類自動化など、業務全体を AI で効率化" },
                     { icon: "📊", title: "月次レポート＋データ分析", h: "", d: "業務指標・医師パフォーマンス・累計効果" },
-                    { icon: "🤝", title: "訪問・オンライン支援", h: "月2回×1時間（訪問×1／オンライン×1、訪問は関東圏のみ）", d: "現場のヒアリング・課題整理・AI運用調整" },
+                    { icon: "💻", title: "AI支援（オンライン定例）", h: "月2回×1時間（Zoom）", d: "現状ヒアリング・課題整理・AI運用調整" },
                     { icon: "💬", title: "メール対応", h: "随時", d: "院長からのご相談に随時対応" },
                     { icon: "📧", title: "メルマガ購読", h: "週1回", d: "在宅医療最新情報・診療報酬・制度動向" },
                   ].map((item, i) => (
@@ -1137,13 +1137,13 @@ function Service({ go, scrollAnchorRef }) {
               <div style={{ background: C.white, border: `1px solid ${C.line}`, overflow: "hidden", display: "flex", flexDirection: "column" }}>
                 <picture style={{ display: "contents" }}>
                   <source srcSet="photo-doorstep.webp" type="image/webp" />
-                  <img src="photo-doorstep.jpg" alt="訪問・オンライン支援 — 月2回×1時間、現場のヒアリング・課題整理・AI運用調整" loading="lazy" decoding="async" style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover", display: "block" }} />
+                  <img src="photo-doorstep.jpg" alt="AI支援（オンライン定例）— 月2回×1時間、現場のヒアリング・課題整理・AI運用調整" loading="lazy" decoding="async" style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover", display: "block" }} />
                 </picture>
                 <div style={{ padding: "16px 18px", borderTop: `3px solid ${C.sky}` }}>
-                  <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 6, fontWeight: 700 }}>ON-SITE SUPPORT</p>
-                  <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.navy, marginBottom: 6, lineHeight: 1.5 }}>月2回×1時間の訪問・オンライン支援（関東圏、訪問×1回／月、オンライン×1回／月）</p>
+                  <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 6, fontWeight: 700 }}>ONLINE SUPPORT</p>
+                  <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.navy, marginBottom: 6, lineHeight: 1.5 }}>月2回×1時間のオンラインAI支援（Zoom）</p>
                   <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85 }}>
-                    現役事務長が貴院を訪問又はオンラインにて、現場のヒアリング・課題整理・AI運用調整を直接実施。AI と人の両輪で伴走します。
+                    現役事務長がZoomで、現場のヒアリング・課題整理・AI運用調整を直接実施。AI と人の両輪で伴走します。全てオンライン対応のため全国どこのクリニック様でもご利用いただけます。
                   </p>
                 </div>
               </div>
@@ -1340,7 +1340,7 @@ function Service({ go, scrollAnchorRef }) {
               <p style={{ fontFamily: sans, fontSize: 12, color: C.navy, fontWeight: 700, letterSpacing: 1, marginBottom: 8 }}>🤝 個別コンサル</p>
               <p style={{ fontFamily: serif, fontSize: 16, fontWeight: 700, color: C.navy, marginBottom: 12 }}>順番待ち・空き次第ご案内</p>
               <ol style={{ paddingLeft: 18, margin: 0 }}>
-                {["順番待ちエントリー","空き発生時にご連絡（不定期）","Zoom 30分のヒアリング","お見積もり・支援内容ご提案・契約","訪問支援開始"].map((t, i) => (
+                {["順番待ちエントリー","空き発生時にご連絡（不定期）","Zoom 30分のヒアリング","お見積もり・支援内容ご提案・契約","オンラインAI支援開始"].map((t, i) => (
                   <li key={i} style={{ fontFamily: sans, fontSize: 13, color: C.dark, lineHeight: 1.85, marginBottom: 4 }}>{t}</li>
                 ))}
               </ol>
@@ -1707,7 +1707,7 @@ function BlogPostLayout({ post, go, children }) {
           <div style={{ marginTop: 48, padding: "28px 24px", background: C.bg, borderLeft: `4px solid ${C.gold}` }}>
             <p style={{ fontFamily: sans, fontSize: 12, color: C.gold, fontWeight: 700, marginBottom: 8, letterSpacing: 1 }}>📌 この記事の発信元</p>
             <p style={{ fontFamily: sans, fontSize: 14, color: C.dark, lineHeight: 1.85, marginBottom: 12 }}>
-              在宅医療クリニックの事務長業務をAI×現役事務長で支援するMI-ZA。本記事の知見はそのまま <strong>04 AI伴走サブスクリプション</strong>に組み込まれています。
+              在宅医療クリニックの事務長業務をAI×現役事務長で支援するMI-ZA。本記事の知見はそのまま <strong>AI伴走サービス</strong>に組み込まれています。
             </p>
             <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} className="mz-btn" style={{
               background: C.gold, color: C.white, border: "none",
@@ -1805,10 +1805,8 @@ function BlogPost1({ go }) {
       <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>MI-ZAの位置づけ</h2>
       <p style={{ marginBottom: 16 }}>MI-ZA は、事務長機能の中で <strong>AI で省力化できる範囲</strong> を AI で肩代わりし、<strong>人にしかできない範囲</strong> を MI-ZA の現役事務長10年経験者が担う設計です。</p>
       <ul style={{ marginBottom: 16, paddingLeft: 24 }}>
-        <li style={{ marginBottom: 8 }}><strong>04 AI伴走サブスクリプション</strong>：8領域横断で、AI×人で業務全体に伴走</li>
-        <li style={{ marginBottom: 8 }}><strong>01 病名チェック</strong>：領域 ② の中の診療報酬業務に特化</li>
-        <li style={{ marginBottom: 8 }}><strong>02 訪問看護指示書 作成支援</strong>：領域 ② の中の指示書業務に特化</li>
-        <li style={{ marginBottom: 8 }}><strong>03 経営相談 + 月次レポート</strong>：領域 ① の経営判断サポートに特化</li>
+        <li style={{ marginBottom: 8 }}><strong>AI伴走サービス</strong>：8領域横断で、AI×人で業務全体に伴走（病名チェック・レセプト事前チェック・訪問看護指示書下書き・月次レポートを含む）</li>
+        <li style={{ marginBottom: 8 }}><strong>個別コンサルティング</strong>：経営企画・組織開発・マーケティングの3領域でテーマ別にご相談</li>
         <li style={{ marginBottom: 8 }}><strong>BCP策定支援</strong>：領域 ⑦ 行政申請の中の単発支援</li>
       </ul>
       <p style={{ marginBottom: 16 }}>「うちのクリニックは何タイプの事務長機能が必要か」「兼務で回せるか、専任が必要か」「どこをAIで省力化できるか」——迷われている院長は、ぜひ一度ご相談ください。</p>
@@ -1819,7 +1817,7 @@ function BlogPost1({ go }) {
           📖 <a href="/blog/2026-reimbursement-revision/" onClick={(e) => { e.preventDefault(); go(13); }} style={{ color: C.accent, textDecoration: "underline" }}>2026年診療報酬改定で在宅医療クリニックが対応すべき5項目</a>
         </li>
         <li style={{ marginBottom: 8 }}>
-          🌟 <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ color: C.accent, textDecoration: "underline" }}>04 AI伴走サブスクリプションのプラン詳細</a>
+          🌟 <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ color: C.accent, textDecoration: "underline" }}>AI伴走サービスの詳細</a>
         </li>
       </ul>
     </BlogPostLayout>
@@ -1889,7 +1887,7 @@ function BlogPost2({ go }) {
         <li style={{ marginBottom: 8 }}>訪問看護ステーションとの電子授受</li>
         <li style={{ marginBottom: 8 }}>長期保存と検索性の確保</li>
       </ul>
-      <p style={{ marginBottom: 16 }}>MI-ZA の <strong>02 訪問看護指示書 作成支援サブスク</strong>は、まさにこの電子化の流れに対応した設計です。AI下書き＋医師確認＋電子化までワンストップで対応します。</p>
+      <p style={{ marginBottom: 16 }}>MI-ZA の <strong>AI伴走サービス（訪問看護指示書下書きを含む）</strong>は、まさにこの電子化の流れに対応した設計です。AI下書き＋医師確認＋電子化までワンストップで対応します。</p>
 
       <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>まとめ：事務長が居ないクリニックは、誰が対応するのか</h2>
       <p style={{ marginBottom: 16 }}>2026年改定への対応は、<strong>事務長の有無で大きく結果が変わる</strong>領域です。新加算の把握、施設基準の更新、書類の電子化──これらは医師がやるべき仕事ではありません。</p>
@@ -1902,7 +1900,7 @@ function BlogPost2({ go }) {
           📖 <a href="/blog/home-medical-secretary-day/" onClick={(e) => { e.preventDefault(); go(12); }} style={{ color: C.accent, textDecoration: "underline" }}>在宅医療事務長の1日：朝礼から月末締めまで</a>
         </li>
         <li style={{ marginBottom: 8 }}>
-          🌟 <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ color: C.accent, textDecoration: "underline" }}>02 訪問看護指示書 作成支援サブスクの詳細</a>
+          🌟 <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ color: C.accent, textDecoration: "underline" }}>AI伴走サービスの詳細（訪問看護指示書下書きを含む）</a>
         </li>
       </ul>
     </BlogPostLayout>
@@ -1951,18 +1949,18 @@ function BlogPost3({ go }) {
             <tr><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}`, fontWeight: 700 }}>指示書連動</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>レセプトのみ</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>訪問看護指示書の病名記載まで横断チェック</td></tr>
             <tr><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}`, fontWeight: 700 }}>報告</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>エラーリスト（要解釈）</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>AI抽出 ＋ 月次レポート ＋ 人による解説</td></tr>
             <tr><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}`, fontWeight: 700 }}>導入工数</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>マスタ設定・運用学習が必要</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>設定はMI-ZAが代行</td></tr>
-            <tr><td style={{ padding: "10px 12px", fontWeight: 700 }}>料金（参考）</td><td style={{ padding: "10px 12px" }}>ソフト導入＋月額（規模に応じる）</td><td style={{ padding: "10px 12px" }}>Plan 01: 月¥30,000 ／ Plan 04 内包: 月¥98,000</td></tr>
+            <tr><td style={{ padding: "10px 12px", fontWeight: 700 }}>料金（参考）</td><td style={{ padding: "10px 12px" }}>ソフト導入＋月額（規模に応じる）</td><td style={{ padding: "10px 12px" }}>AI伴走サービスに内包：月 ¥98,000（税別）／1事業所</td></tr>
           </tbody>
         </table>
       </div>
 
       <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>「病名チェック」と「レセプト事前チェック」の違い</h2>
-      <p style={{ marginBottom: 16 }}>MI-ZA内でも紛らわしいので整理します。</p>
+      <p style={{ marginBottom: 16 }}>MI-ZA内でも紛らわしいので整理します。AI伴走サービスでは両方を実施しています。</p>
       <ul style={{ marginBottom: 16, paddingLeft: 24 }}>
-        <li style={{ marginBottom: 8 }}><strong>病名チェック（Plan 01・月¥30,000）</strong>——病名と処方薬・指示書・保険病名の整合性に特化。月次でのレセ提出前点検。単独利用可。</li>
-        <li style={{ marginBottom: 8 }}><strong>レセプト事前チェック（Plan 04 AI伴走サブスク内・月¥98,000）</strong>——病名チェックを含み、点数算定・加算・施設基準要件まで広げた週次の事前点検。Plan 04に内包。</li>
+        <li style={{ marginBottom: 8 }}><strong>病名チェック</strong>——病名と処方薬・指示書・保険病名の整合性に特化。月次でのレセ提出前点検。</li>
+        <li style={{ marginBottom: 8 }}><strong>レセプト事前チェック</strong>——病名チェックを含み、点数算定・加算・施設基準要件まで広げた週次の事前点検。</li>
       </ul>
-      <p style={{ marginBottom: 16 }}>つまり <strong>レセプト事前チェック ⊃ 病名チェック</strong> の関係です。Plan 04を契約しているクリニックは、Plan 01の内容を別途契約する必要はありません。</p>
+      <p style={{ marginBottom: 16 }}>つまり <strong>レセプト事前チェック ⊃ 病名チェック</strong> の関係です。AI伴走サービスでは、両方を一括して提供しています。</p>
 
       <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>マイティーチェッカー導入済みクリニックでの併用</h2>
       <p style={{ marginBottom: 16 }}>「すでにマイティーチェッカーを入れている」というクリニックでも、MI-ZAの導入は意味があります。</p>
@@ -1976,9 +1974,9 @@ function BlogPost3({ go }) {
       <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>選び方の目安</h2>
       <ul style={{ marginBottom: 16, paddingLeft: 24 }}>
         <li style={{ marginBottom: 8 }}>外来も含めた汎用レセ点検が中心 → <strong>マイティーチェッカー</strong>で十分なケースが多い</li>
-        <li style={{ marginBottom: 8 }}>在宅医療・訪問診療が主軸で、指示書・在宅加算・状態変化も含めて見たい → <strong>MI-ZAのPlan 01 または Plan 04</strong></li>
-        <li style={{ marginBottom: 8 }}>事務長が不在 or 採用難で、業務全体を伴走してほしい → <strong>MI-ZA Plan 04（AI伴走サブスク）</strong></li>
-        <li style={{ marginBottom: 8 }}>既存ツール（マイティー含む）を残したまま、在宅特有の取りこぼしだけ補強したい → <strong>MI-ZA Plan 01 を併用</strong></li>
+        <li style={{ marginBottom: 8 }}>在宅医療・訪問診療が主軸で、指示書・在宅加算・状態変化も含めて見たい → <strong>MI-ZAのAI伴走サービス</strong></li>
+        <li style={{ marginBottom: 8 }}>事務長が不在 or 採用難で、業務全体を伴走してほしい → <strong>MI-ZAのAI伴走サービス</strong></li>
+        <li style={{ marginBottom: 8 }}>既存ツール（マイティー含む）を残したまま、在宅特有の取りこぼしだけ補強したい → <strong>MI-ZAのAI伴走サービス（病名チェック・レセプト事前チェックを含む）と併用</strong></li>
       </ul>
 
       <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>まとめ</h2>
@@ -1994,7 +1992,7 @@ function BlogPost3({ go }) {
           📖 <a href="/blog/2026-reimbursement-revision/" onClick={(e) => { e.preventDefault(); go(13); }} style={{ color: C.accent, textDecoration: "underline" }}>2026年診療報酬改定で在宅医療クリニックが対応すべき5項目</a>
         </li>
         <li style={{ marginBottom: 8 }}>
-          🌟 <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ color: C.accent, textDecoration: "underline" }}>サブスクのプラン詳細（01 病名チェック ／ 04 AI伴走サブスク）</a>
+          🌟 <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ color: C.accent, textDecoration: "underline" }}>AI伴走サービスの詳細（病名チェック・レセプト事前チェックを含む）</a>
         </li>
       </ul>
     </BlogPostLayout>
