@@ -674,7 +674,7 @@ function Home({ go }) {
                   <img src="photo-jimucho-training.jpg" alt="事務長養成プログラム" loading="lazy" decoding="async" style={{ width: "100%", height: 140, objectFit: "cover", display: "block" }} />
                 </picture>
                 <div style={{ padding: "16px 18px" }}>
-                  <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 4 }}>📹 動画教材／買い切り</p>
+                  <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 4 }}>📹 動画教材／買い切り（3ヶ月視聴）</p>
                   <p style={{ fontFamily: serif, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 4 }}>事務長養成プログラム</p>
                   <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.6 }}>¥49,800 ／ 2026年8月販売開始予定</p>
                 </div>
@@ -1188,7 +1188,7 @@ function Service({ go, scrollAnchorRef }) {
               n: "01",
               t: "事務長養成プログラム（動画版）",
               d: "事務長10年の経験から、在宅医療クリニックの事務長業務を体系化した全12回（各1時間）の動画教材＋パワポ資料。3ヶ月間、繰り返し視聴可能。新任事務長の研修にも最適です。",
-              tag: "動画教材／買い切り",
+              tag: "動画教材／買い切り（3ヶ月視聴）",
               price: "¥49,800（税別）",
               priceNote: "🎁 発売記念 先着10名様 ¥39,800（税別）／ 動画12本×各1時間＋パワポ資料・3ヶ月間、繰り返し視聴可能",
               cta: "販売開始のお知らせを受け取る",
