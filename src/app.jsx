@@ -573,7 +573,6 @@ function Home({ go }) {
                 <div>
                   <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>契約期間</p>
                   <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.white }}>1年契約</p>
-                  <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.7)" }}>1年経過後は通常価格 月¥98,000（税別）</p>
                 </div>
                 <div>
                   <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>お試し</p>
@@ -1100,7 +1099,6 @@ function Service({ go, scrollAnchorRef }) {
                   <div>
                     <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>契約期間</p>
                     <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.white }}>1年契約</p>
-                    <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.7)" }}>1年経過後は通常価格 月¥98,000（税別）</p>
                   </div>
                   <div>
                     <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>お試し</p>
