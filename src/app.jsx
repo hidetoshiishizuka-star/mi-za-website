@@ -972,7 +972,7 @@ function Service({ go, scrollAnchorRef }) {
                 <img src="photo-jimucho-training.jpg" alt="事務長養成プログラム・動画教材" loading="lazy" decoding="async" style={{ width: "100%", height: 140, objectFit: "cover", display: "block" }} />
               </picture>
               <div style={{ padding: "20px 22px" }}>
-                <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>💼 単発・買い切り</p>
+                <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>💼 単発・買い切り（動画教材は3ヶ月視聴）</p>
                 <p style={{ fontFamily: serif, fontSize: 18, fontWeight: 700, color: C.navy, marginBottom: 8 }}>動画教材・HP制作</p>
                 <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginBottom: 12 }}>
                   必要なときだけご利用いただける単発サービス。買い切り型・プロジェクト型。
@@ -1322,7 +1322,7 @@ function Service({ go, scrollAnchorRef }) {
             </div>
             {/* 単発用フロー */}
             <div style={{ background: C.bg, padding: "24px 22px", borderTop: `4px solid ${C.accent}` }}>
-              <p style={{ fontFamily: sans, fontSize: 12, color: C.accent, fontWeight: 700, letterSpacing: 1, marginBottom: 8 }}>💼 単発・買い切り</p>
+              <p style={{ fontFamily: sans, fontSize: 12, color: C.accent, fontWeight: 700, letterSpacing: 1, marginBottom: 8 }}>💼 単発・買い切り（動画教材は3ヶ月視聴）</p>
               <p style={{ fontFamily: serif, fontSize: 16, fontWeight: 700, color: C.navy, marginBottom: 12 }}>動画は購入後即視聴可</p>
               <ol style={{ paddingLeft: 18, margin: 0 }}>
                 {["お問い合わせ／販売開始通知ご登録","ヒアリング（HP制作の場合）","お見積もり提示／動画購入","制作・納品 ／ 動画即視聴"].map((t, i) => (
