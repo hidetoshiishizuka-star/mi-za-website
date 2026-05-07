@@ -1641,8 +1641,8 @@ function Blog({ go }) {
             <p style={{ fontFamily: sans, fontSize: 13, color: C.dark, lineHeight: 1.85, marginBottom: 12 }}>
               noteでも発信しています。
             </p>
-            <a href="https://note.com/miza_ai_zaitaku" target="_blank" rel="noopener noreferrer" style={{ fontFamily: sans, fontSize: 13, color: C.accent, textDecoration: "underline", fontWeight: 700 }}>
-              note.com/miza_ai_zaitaku を見る →
+            <a href="https://note.com/miemove" target="_blank" rel="noopener noreferrer" style={{ fontFamily: sans, fontSize: 13, color: C.accent, textDecoration: "underline", fontWeight: 700 }}>
+              note.com/miemove を見る →
             </a>
           </div>
         </F>
@@ -2186,7 +2186,7 @@ function Footer({ go }) {
           </div>
         </div>
         <div style={{ display: "flex", gap: 20, justifyContent: "center", alignItems: "center", marginTop: 36, paddingTop: 24, borderTop: "2px solid rgba(255,255,255,0.07)" }}>
-          <a href="https://note.com/miza_ai_zaitaku" target="_blank" rel="noopener noreferrer" title="note（公式ブログ）" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", display: "inline-flex", transition: "color 0.2s" }} onMouseOver={e => e.currentTarget.style.color = "rgba(255,255,255,0.7)"} onMouseOut={e => e.currentTarget.style.color = "rgba(255,255,255,0.3)"}>
+          <a href="https://note.com/miemove" target="_blank" rel="noopener noreferrer" title="note（代表ブログ）" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", display: "inline-flex", transition: "color 0.2s" }} onMouseOver={e => e.currentTarget.style.color = "rgba(255,255,255,0.7)"} onMouseOut={e => e.currentTarget.style.color = "rgba(255,255,255,0.3)"}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style={{ display: "block" }}><path d="M0 .279c4.623 0 10.953-.235 15.498-.117 6.099.156 8.39 2.813 8.468 9.374.077 3.71 0 14.335 0 14.335h-6.598c0-9.296.04-10.83 0-13.759-.078-2.578-.814-3.807-2.795-4.041-2.097-.235-7.975-.04-7.975-.04v17.84H0Z"/></svg>
           </a>
           <a href="https://x.com/miza_ai_zaitaku" target="_blank" rel="noopener noreferrer" title="X（旧Twitter）" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", display: "inline-flex", transition: "color 0.2s" }} onMouseOver={e => e.currentTarget.style.color = "rgba(255,255,255,0.7)"} onMouseOut={e => e.currentTarget.style.color = "rgba(255,255,255,0.3)"}>
