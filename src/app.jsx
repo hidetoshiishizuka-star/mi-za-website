@@ -370,7 +370,7 @@ function Home({ go }) {
           <P><strong>MI-ZAは、クリニックが抱える課題解決にアドバイスするだけでなく、</strong>変化が根づくまで一緒に考え、最新他院事例を基に、組織の改善を促していきます。</P>
           <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, marginTop: 16, lineHeight: 1.85 }}>
             📖 関連記事：
-            <a href="/blog/home-medical-secretary-day/" onClick={(e) => { e.preventDefault(); go(12); }} style={{ color: C.accent, textDecoration: "underline", marginLeft: 4 }}>事務長の1日</a>
+            <a href="/blog/home-medical-secretary-day/" onClick={(e) => { e.preventDefault(); go(12); }} style={{ color: C.accent, textDecoration: "underline", marginLeft: 4 }}>事務長業務の全体像（8領域）</a>
             <span style={{ marginLeft: 8, marginRight: 8 }}>／</span>
             <a href="/blog/2026-reimbursement-revision/" onClick={(e) => { e.preventDefault(); go(13); }} style={{ color: C.accent, textDecoration: "underline" }}>2026年診療報酬改定対応</a>
           </p>
@@ -1729,7 +1729,7 @@ function BlogPostLayout({ post, go, children }) {
   );
 }
 
-/* ─── BLOG POST 1：在宅医療事務長の1日 ─── */
+/* ─── BLOG POST 1：在宅医療事務長の仕事の全体像（8領域） ─── */
 function BlogPost1({ go }) {
   const post = BLOG_POSTS.find(p => p.slug === 'home-medical-secretary-day');
   return (
@@ -1815,7 +1815,7 @@ function BlogPost1({ go }) {
           📖 <a href="/blog/2026-reimbursement-revision/" onClick={(e) => { e.preventDefault(); go(13); }} style={{ color: C.accent, textDecoration: "underline" }}>2026年診療報酬改定で在宅医療クリニックが対応すべき5項目</a>
         </li>
         <li style={{ marginBottom: 8 }}>
-          🌟 <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ color: C.accent, textDecoration: "underline" }}>AI伴走サービスの詳細</a>
+          🌟 <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ color: C.accent, textDecoration: "underline" }}>AI伴走サービスの詳細</a>
         </li>
       </ul>
     </BlogPostLayout>
@@ -1895,10 +1895,10 @@ function BlogPost2({ go }) {
       <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>関連リンク</h2>
       <ul style={{ marginBottom: 16, paddingLeft: 24 }}>
         <li style={{ marginBottom: 8 }}>
-          📖 <a href="/blog/home-medical-secretary-day/" onClick={(e) => { e.preventDefault(); go(12); }} style={{ color: C.accent, textDecoration: "underline" }}>在宅医療事務長の1日：朝礼から月末締めまで</a>
+          📖 <a href="/blog/home-medical-secretary-day/" onClick={(e) => { e.preventDefault(); go(12); }} style={{ color: C.accent, textDecoration: "underline" }}>在宅医療事務長の仕事の全体像：8領域とタイプ別の重心</a>
         </li>
         <li style={{ marginBottom: 8 }}>
-          🌟 <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ color: C.accent, textDecoration: "underline" }}>AI伴走サービスの詳細（訪問看護指示書下書きを含む）</a>
+          🌟 <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ color: C.accent, textDecoration: "underline" }}>AI伴走サービスの詳細（訪問看護指示書下書きを含む）</a>
         </li>
       </ul>
     </BlogPostLayout>
@@ -1984,13 +1984,13 @@ function BlogPost3({ go }) {
       <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>関連リンク</h2>
       <ul style={{ marginBottom: 16, paddingLeft: 24 }}>
         <li style={{ marginBottom: 8 }}>
-          📖 <a href="/blog/home-medical-secretary-day/" onClick={(e) => { e.preventDefault(); go(12); }} style={{ color: C.accent, textDecoration: "underline" }}>在宅医療事務長の1日：朝礼から月末締めまで</a>
+          📖 <a href="/blog/home-medical-secretary-day/" onClick={(e) => { e.preventDefault(); go(12); }} style={{ color: C.accent, textDecoration: "underline" }}>在宅医療事務長の仕事の全体像：8領域とタイプ別の重心</a>
         </li>
         <li style={{ marginBottom: 8 }}>
           📖 <a href="/blog/2026-reimbursement-revision/" onClick={(e) => { e.preventDefault(); go(13); }} style={{ color: C.accent, textDecoration: "underline" }}>2026年診療報酬改定で在宅医療クリニックが対応すべき5項目</a>
         </li>
         <li style={{ marginBottom: 8 }}>
-          🌟 <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ color: C.accent, textDecoration: "underline" }}>AI伴走サービスの詳細（病名チェック・レセプト事前チェックを含む）</a>
+          🌟 <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ color: C.accent, textDecoration: "underline" }}>AI伴走サービスの詳細（病名チェック・レセプト事前チェックを含む）</a>
         </li>
       </ul>
     </BlogPostLayout>
