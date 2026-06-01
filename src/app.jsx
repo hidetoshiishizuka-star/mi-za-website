@@ -2056,10 +2056,31 @@ function Contact() {
   const [submitted, setSubmitted] = React.useState(false);
   const [sendError, setSendError] = React.useState("");
   const [sending, setSending] = React.useState(false);
+  const [confirmed, setConfirmed] = React.useState(false);
   function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
     setSendError("");
+
+    // ハニーポット（Bot対策）：見えないフィールドに何か入っていたら拒否
+    if (form["bot-field"] && form["bot-field"].value) {
+      setSendError("送信できませんでした。");
+      return;
+    }
+
+    // 「ご相談内容」最低20文字（いたずら送信防止）
+    const inquiry = (form["ご相談内容"] && form["ご相談内容"].value) || "";
+    if (inquiry.trim().length < 20) {
+      setSendError("ご相談内容を20文字以上でご入力ください。");
+      return;
+    }
+
+    // 確認チェック必須
+    if (!confirmed) {
+      setSendError("「私はロボットではありません」のチェックをお願いいたします。");
+      return;
+    }
+
     setSending(true);
     fetch("/", {
       method: "POST",
@@ -2110,8 +2131,12 @@ function Contact() {
           </F>
 
           <F>
-            <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} style={{ background: C.bg, padding: "41px 33px", marginTop: 24 }}>
+            <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} style={{ background: C.bg, padding: "41px 33px", marginTop: 24 }}>
               <input type="hidden" name="form-name" value="contact" />
+              {/* ハニーポット：人間には見えない、Botだけが入力する */}
+              <p style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }} aria-hidden="true">
+                <label>このフィールドは入力しないでください: <input name="bot-field" tabIndex={-1} autoComplete="off" /></label>
+              </p>
               <div style={{ marginBottom: 20 }}>
                 <label style={{ display: "block", fontFamily: sans, fontSize: 13, fontWeight: 600, color: C.navy, marginBottom: 6 }}>
                   お問い合わせ種別
@@ -2128,24 +2153,34 @@ function Contact() {
                   <option value="その他">その他</option>
                 </select>
               </div>
-              {[["お名前",true],["医療機関名",true],["お役職",false],["メールアドレス",true],["お電話番号",false]].map(([l,req],i) => (
+              {[["お名前",true,"text"],["医療機関名",true,"text"],["お役職",false,"text"],["メールアドレス",true,"email"],["お電話番号",false,"tel"]].map(([l,req,type],i) => (
                 <div key={i} style={{ marginBottom: 20 }}>
                   <label style={{ display: "block", fontFamily: sans, fontSize: 13, fontWeight: 600, color: C.navy, marginBottom: 6 }}>
                     {l}{req && <span style={{ fontSize: 11, color: C.accent, marginLeft: 6 }}>必須</span>}
                   </label>
-                  <input type="text" name={l} style={{ width: "100%", padding: "11px 15px", border: `2px solid ${C.line}`, fontFamily: sans, fontSize: 14, outline: "none", boxSizing: "border-box", background: C.white }} />
+                  <input type={type} name={l} required={req} autoComplete={l === "メールアドレス" ? "email" : l === "お電話番号" ? "tel" : l === "お名前" ? "name" : "off"} style={{ width: "100%", padding: "11px 15px", border: `2px solid ${C.line}`, fontFamily: sans, fontSize: 14, outline: "none", boxSizing: "border-box", background: C.white }} />
                 </div>
               ))}
-              <div style={{ marginBottom: 28 }}>
-                <label style={{ display: "block", fontFamily: sans, fontSize: 13, fontWeight: 600, color: C.navy, marginBottom: 6 }}>ご相談内容</label>
-                <textarea rows={5} name="ご相談内容" style={{ width: "100%", padding: "11px 15px", border: `2px solid ${C.line}`, fontFamily: sans, fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box", background: C.white }} />
+              <div style={{ marginBottom: 20 }}>
+                <label style={{ display: "block", fontFamily: sans, fontSize: 13, fontWeight: 600, color: C.navy, marginBottom: 6 }}>
+                  ご相談内容<span style={{ fontSize: 11, color: C.accent, marginLeft: 6 }}>必須</span>
+                  <span style={{ fontSize: 11, color: C.mid, marginLeft: 6, fontWeight: 400 }}>（20文字以上）</span>
+                </label>
+                <textarea rows={5} name="ご相談内容" required minLength={20} placeholder="どのようなことでお困りか／ご検討中のことを20文字以上でご記入ください。" style={{ width: "100%", padding: "11px 15px", border: `2px solid ${C.line}`, fontFamily: sans, fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box", background: C.white }} />
+              </div>
+              {/* 確認チェック（いたずら送信防止） */}
+              <div style={{ marginBottom: 24, padding: "14px 16px", background: C.white, border: `1px solid ${C.line}` }}>
+                <label style={{ display: "flex", alignItems: "flex-start", gap: 10, fontFamily: sans, fontSize: 13, color: C.dark, lineHeight: 1.7, cursor: "pointer" }}>
+                  <input type="checkbox" checked={confirmed} onChange={(e) => setConfirmed(e.target.checked)} style={{ marginTop: 4, transform: "scale(1.2)" }} required />
+                  <span><strong>私はロボットではありません</strong>。上記の内容で送信することに同意します。</span>
+                </label>
               </div>
               {sendError && (
                 <div role="alert" aria-live="assertive" style={{ background: "#fff4f4", border: "1px solid #d9534f", color: "#a73535", padding: "12px 16px", borderRadius: 4, marginBottom: 16, fontFamily: "sans-serif", fontSize: 14, textAlign: "center" }}>
                   {sendError}
                 </div>
               )}
-              <div style={{ textAlign: "center" }}><Btn type="submit" disabled={sending}>{sending ? "送信中..." : "送信する"}</Btn></div>
+              <div style={{ textAlign: "center" }}><Btn type="submit" disabled={sending || !confirmed}>{sending ? "送信中..." : "送信する"}</Btn></div>
             </form>
           </F>
         </Sec>
