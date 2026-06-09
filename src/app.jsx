@@ -508,7 +508,7 @@ function Home({ go }) {
                 <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 4, marginBottom: 8, fontWeight: 700 }}>AI EMBEDDED PARTNER</p>
                 <h3 style={{ fontFamily: serif, fontSize: 26, fontWeight: 700, color: C.white, marginBottom: 12, lineHeight: 1.4 }}>AI伴走サービス</h3>
                 <p style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, maxWidth: 620, margin: "0 auto" }}>
-                  月2回×1時間のオンライン定例（Zoom）＋月32時間リモートによる生成AI稼働で、レセプト事前チェック・指示書下書き・月次レポート・データ分析まで業務全体に伴走します。全てオンライン対応のため全国どこのクリニック様でもご利用いただけます。
+                  月32時間リモートによる生成AI稼働で、レセプト事前チェック・指示書下書き・月次レポート・データ分析まで業務全体に伴走します。全てオンライン対応のため全国どこのクリニック様でもご利用いただけます。
                 </p>
               </div>
 
@@ -518,7 +518,6 @@ function Home({ go }) {
                   { icon: "📋", title: "レセプト事前AIチェック", h: "週次", d: "病名・算定・加算・施設基準を網羅的にチェック" },
                   { icon: "📝", title: "在宅医療における AI 活用", h: "", d: "音声カルテ入力・指示書下書き・書類自動化など、業務全体を AI で効率化" },
                   { icon: "📊", title: "月次レポート＋データ分析", h: "", d: "業務指標・医師パフォーマンス・累計効果" },
-                  { icon: "💻", title: "AI支援（オンライン定例）", h: "月2回×1時間（Zoom）", d: "現状ヒアリング・課題整理・AI運用調整" },
                   { icon: "💬", title: "メール対応", h: "随時", d: "院長からのご相談に随時対応" },
                   { icon: "📧", title: "メルマガ購読", h: "週1回", d: "在宅医療最新情報・診療報酬・制度動向" },
                 ].map((item, i) => (
@@ -981,7 +980,7 @@ function Service({ go, scrollAnchorRef }) {
                   <p style={{ fontFamily: enFont, fontSize: 11, color: C.gold, letterSpacing: 4, marginBottom: 8, fontWeight: 700 }}>AI EMBEDDED PARTNER</p>
                   <h3 style={{ fontFamily: serif, fontSize: 26, fontWeight: 700, color: C.white, marginBottom: 12, lineHeight: 1.4 }}>AI伴走サービス</h3>
                   <p style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, maxWidth: 620, margin: "0 auto" }}>
-                    月2回×1時間のオンライン定例（Zoom）＋月32時間リモートによる生成AI稼働で、レセプト事前チェック・指示書下書き・月次レポート・データ分析まで業務全体に伴走します。全てオンライン対応のため全国どこのクリニック様でもご利用いただけます。
+                    月32時間リモートによる生成AI稼働で、レセプト事前チェック・指示書下書き・月次レポート・データ分析まで業務全体に伴走します。全てオンライン対応のため全国どこのクリニック様でもご利用いただけます。
                   </p>
                 </div>
 
@@ -991,7 +990,6 @@ function Service({ go, scrollAnchorRef }) {
                     { icon: "📋", title: "レセプト事前AIチェック", h: "週次", d: "病名・算定・加算・施設基準を網羅的にチェック" },
                     { icon: "📝", title: "在宅医療における AI 活用", h: "", d: "音声カルテ入力・指示書下書き・書類自動化など、業務全体を AI で効率化" },
                     { icon: "📊", title: "月次レポート＋データ分析", h: "", d: "業務指標・医師パフォーマンス・累計効果" },
-                    { icon: "💻", title: "AI支援（オンライン定例）", h: "月2回×1時間（Zoom）", d: "現状ヒアリング・課題整理・AI運用調整" },
                     { icon: "💬", title: "メール対応", h: "随時", d: "院長からのご相談に随時対応" },
                     { icon: "📧", title: "メルマガ購読", h: "週1回", d: "在宅医療最新情報・診療報酬・制度動向" },
                   ].map((item, i) => (
@@ -1074,19 +1072,6 @@ function Service({ go, scrollAnchorRef }) {
                   <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.navy, marginBottom: 6, lineHeight: 1.5 }}>月次レポート＋データ分析</p>
                   <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85 }}>
                     業務指標・医師パフォーマンス・累計効果を毎月レポーティング。経営判断に必要な数字を可視化します。
-                  </p>
-                </div>
-              </div>
-              <div style={{ background: C.white, border: `1px solid ${C.line}`, overflow: "hidden", display: "flex", flexDirection: "column" }}>
-                <picture style={{ display: "contents" }}>
-                  <source srcSet="photo-doorstep.webp" type="image/webp" />
-                  <img src="photo-doorstep.jpg" alt="AI支援（オンライン定例）— 月2回×1時間、現場のヒアリング・課題整理・AI運用調整" loading="lazy" decoding="async" style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover", display: "block" }} />
-                </picture>
-                <div style={{ padding: "16px 18px", borderTop: `3px solid ${C.sky}` }}>
-                  <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 6, fontWeight: 700 }}>ONLINE SUPPORT</p>
-                  <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.navy, marginBottom: 6, lineHeight: 1.5 }}>月2回×1時間のオンラインAI支援（Zoom）</p>
-                  <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85 }}>
-                    現役事務長がZoomで、現場のヒアリング・課題整理・AI運用調整を直接実施。AI と人の両輪で伴走します。全てオンライン対応のため全国どこのクリニック様でもご利用いただけます。
                   </p>
                 </div>
               </div>
