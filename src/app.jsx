@@ -568,7 +568,7 @@ function Home({ go }) {
               <div style={{ background: "rgba(201,169,90,0.12)", padding: "20px 24px", marginBottom: 22, borderLeft: `4px solid ${C.gold}`, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
                 <div>
                   <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>月額料金</p>
-                  <p style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.white, marginBottom: 4 }}>月 ¥98,000<span style={{ fontSize: 12, fontWeight: 400, marginLeft: 4 }}>（税別）／1事業所</span></p>
+                  <p style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.white, marginBottom: 4 }}>金額はお問い合わせください</p>
                 </div>
                 <div>
                   <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>契約期間</p>
@@ -962,7 +962,7 @@ function Service({ go, scrollAnchorRef }) {
                 <p style={{ fontFamily: sans, fontSize: 12, color: "rgba(255,255,255,0.85)", lineHeight: 1.85, marginBottom: 12 }}>
                   生成AIをフル活用したクリニック運営を目指すサブスクリプションサービス。生成AIの進化に合わせて、クリニックの成長と生産性向上を実現します。
                 </p>
-                <p style={{ fontFamily: sans, fontSize: 14, color: C.gold, fontWeight: 700 }}>月 ¥98,000（税別）／1事業所</p>
+                <p style={{ fontFamily: sans, fontSize: 14, color: C.gold, fontWeight: 700 }}>金額はお問い合わせください</p>
               </div>
             </a>
             {/* 単発 */}
@@ -1094,7 +1094,7 @@ function Service({ go, scrollAnchorRef }) {
                 <div style={{ background: "rgba(201,169,90,0.12)", padding: "20px 24px", marginBottom: 22, borderLeft: `4px solid ${C.gold}`, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
                   <div>
                     <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>月額料金</p>
-                    <p style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.white, marginBottom: 4 }}>月 ¥98,000<span style={{ fontSize: 12, fontWeight: 400, marginLeft: 4 }}>（税別）／1事業所</span></p>
+                    <p style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.white, marginBottom: 4 }}>金額はお問い合わせください</p>
                     </div>
                   <div>
                     <p style={{ fontFamily: sans, fontSize: 11, color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>契約期間</p>
@@ -1890,7 +1890,7 @@ function BlogPost2({ go }) {
       <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>まとめ：事務長が居ないクリニックは、誰が対応するのか</h2>
       <p style={{ marginBottom: 16 }}>2026年改定への対応は、<strong>事務長の有無で大きく結果が変わる</strong>領域です。新加算の把握、施設基準の更新、書類の電子化──これらは医師がやるべき仕事ではありません。</p>
       <p style={{ marginBottom: 16 }}>しかし、優秀な事務長を採用するのは至難の業。年収¥800万でも、在宅医療の制度を熟知した事務長は希少です。</p>
-      <p style={{ marginBottom: 16 }}>そこで MI-ZA は、<strong>事務長10年経験者×AI</strong> という組合せで、月¥98,000（税別）の伴走サブスクリプションを提供しています。2026年改定対応も、月次レポートで自動的に追跡。「気づいたら漏れていた」をなくします。</p>
+      <p style={{ marginBottom: 16 }}>そこで MI-ZA は、<strong>事務長10年経験者×AI</strong> という組合せで、伴走サブスクリプションを提供しています（金額はお問い合わせください）。2026年改定対応も、月次レポートで自動的に追跡。「気づいたら漏れていた」をなくします。</p>
 
       <h2 style={{ fontFamily: sans, fontSize: 18, fontWeight: 700, color: C.navy, marginTop: 36, marginBottom: 12 }}>関連リンク</h2>
       <ul style={{ marginBottom: 16, paddingLeft: 24 }}>
@@ -1947,7 +1947,7 @@ function BlogPost3({ go }) {
             <tr><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}`, fontWeight: 700 }}>指示書連動</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>レセプトのみ</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>訪問看護指示書の病名記載まで横断チェック</td></tr>
             <tr><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}`, fontWeight: 700 }}>報告</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>エラーリスト（要解釈）</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>AI抽出 ＋ 月次レポート ＋ 人による解説</td></tr>
             <tr><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}`, fontWeight: 700 }}>導入工数</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>マスタ設定・運用学習が必要</td><td style={{ padding: "10px 12px", borderBottom: `1px solid ${C.line}` }}>設定はMI-ZAが代行</td></tr>
-            <tr><td style={{ padding: "10px 12px", fontWeight: 700 }}>料金（参考）</td><td style={{ padding: "10px 12px" }}>ソフト導入＋月額（規模に応じる）</td><td style={{ padding: "10px 12px" }}>AI伴走サービスに内包：月 ¥98,000（税別）／1事業所</td></tr>
+            <tr><td style={{ padding: "10px 12px", fontWeight: 700 }}>料金（参考）</td><td style={{ padding: "10px 12px" }}>ソフト導入＋月額（規模に応じる）</td><td style={{ padding: "10px 12px" }}>AI伴走サービスに内包（金額はお問い合わせください）</td></tr>
           </tbody>
         </table>
       </div>
