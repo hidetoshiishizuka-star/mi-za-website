@@ -457,16 +457,14 @@ function Home({ go }) {
         </F>
       </Sec>
 
-      {/* SERVICES — 4サービス概要 */}
+      {/* SERVICES — 2サービス概要 */}
       <Sec py={72} bg={C.white}>
-        <SH en="SERVICES" ja="4 つのサービス" />
+        <SH en="SERVICES" ja="2 つのサービス" />
         <F>
           <div style={{ maxWidth: 920, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
             {[
               { n: "01", t: "AI伴走サービス", d: "自院に育つ専属AIで、書類作成・レセ事前チェック・医師音声カルテ・月次分析を自動化。月単位契約。" },
               { n: "02", t: "個別コンサルティング", d: "経営企画・組織開発・マーケティングの3軸で、院長と現場の判断を支援。半年・1年契約で伴走します。" },
-              { n: "03", t: "事務長養成プログラム", d: "現役事務長経験者が直接伝える、3ヶ月・全12回の個別育成プログラム。実務の優先順位から院長との関わり方まで。" },
-              { n: "04", t: "ホームページ製作", d: "医療広告ガイドライン準拠のホームページ・医師採用ページ・広報誌制作。ロゴ・イラスト制作にも対応します。" },
             ].map((s, i) => (
               <div key={i} style={{ background: C.white, padding: "32px 24px", borderTop: `3px solid ${C.gold}`, display: "flex", flexDirection: "column" }}>
                 <p style={{ fontFamily: enFont, fontSize: 12, color: C.gold, letterSpacing: 3, marginBottom: 8 }}>{s.n}</p>
@@ -661,43 +659,6 @@ function Home({ go }) {
         </F>
       </Sec>
 
-      {/* 単発サービス導線（軽い導線） */}
-      <Sec py={56}>
-        <F>
-          <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
-            <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 4, marginBottom: 8 }}>SINGLE SERVICES</p>
-            <h3 style={{ fontFamily: sans, fontSize: 17, fontWeight: 700, color: C.navy, marginBottom: 16 }}>個別サービス</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 14, marginBottom: 20 }}>
-              <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ background: C.bg, textDecoration: "none", display: "block", borderLeft: `3px solid ${C.gold}`, textAlign: "left", overflow: "hidden" }}>
-                <picture style={{ display: "contents" }}>
-                  <source srcSet="photo-jimucho-training.webp" type="image/webp" />
-                  <img src="photo-jimucho-training.jpg" alt="事務長養成プログラム" loading="lazy" decoding="async" style={{ width: "100%", height: 140, objectFit: "cover", display: "block" }} />
-                </picture>
-                <div style={{ padding: "16px 18px" }}>
-                  <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 4 }}>📹 動画教材／買い切り（3ヶ月視聴）</p>
-                  <p style={{ fontFamily: serif, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 4 }}>事務長養成プログラム</p>
-                  <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.6 }}>¥49,800 ／ 2026年8月販売開始予定</p>
-                </div>
-              </a>
-              <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ background: C.bg, textDecoration: "none", display: "block", borderLeft: `3px solid ${C.gold}`, textAlign: "left", overflow: "hidden" }}>
-                <picture style={{ display: "contents" }}>
-                  <source srcSet="photo-hp-build.webp" type="image/webp" />
-                  <img src="photo-hp-build.jpg" alt="HP・採用ページ制作" loading="lazy" decoding="async" style={{ width: "100%", height: 140, objectFit: "cover", display: "block" }} />
-                </picture>
-                <div style={{ padding: "16px 18px" }}>
-                  <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 4 }}>🎨 プロジェクト型</p>
-                  <p style={{ fontFamily: serif, fontSize: 15, fontWeight: 700, color: C.navy, marginBottom: 4 }}>HP・採用ページ制作</p>
-                  <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.6 }}>在宅医療専門・コンテンツ作成も含む</p>
-                </div>
-              </a>
-            </div>
-            <a href="/service/" onClick={(e) => { e.preventDefault(); go(1); }} style={{ fontFamily: sans, fontSize: 13, color: C.accent, textDecoration: "underline" }}>
-              全サービスを詳しく見る →
-            </a>
-          </div>
-        </F>
-      </Sec>
-
       {/* Results + Voice */}
       <Sec py={72}>
         <SH en="RESULTS" ja="実績" />
@@ -770,7 +731,7 @@ function Home({ go }) {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16, maxWidth: 720, margin: "0 auto" }}>
           {[
-            { role: "CEO", img: "photo-ceo.jpg", name: "代表取締役　石塚（波村）美絵", short: "事務長10年・組織開発／個別コンサル・03経営相談・事務長養成プログラム・HP制作 担当", alt: "石塚美絵 MI-ZA代表 在宅医療コンサルタント" },
+            { role: "CEO", img: "photo-ceo.jpg", name: "代表取締役　石塚（波村）美絵", short: "事務長10年・組織開発／AI伴走サービス・個別コンサルティング 担当", alt: "石塚美絵 MI-ZA代表 在宅医療コンサルタント" },
             { role: "DIRECTOR", img: "photo-director.jpg", name: "取締役　石塚 秀俊", short: "現役事務長・AI実装／AI伴走サービス（レセプト事前チェック・訪問看護指示書下書き・月次レポート）のAI実装と現場実証 担当", alt: "石塚秀俊 MI-ZA取締役 在宅医療コンサルタント" },
           ].map((m, i) => (
             <F key={i} delay={i * 0.1}>
@@ -898,7 +859,6 @@ const SERVICES = [
     items:[
       {h:"マーケティング戦略の立案・実行", p:"自院の強みの分析、患者構成の把握、競合との差別化など、データに基づいた戦略を立案し実行まで伴走します。"},
       {h:"地域連携の仕組みづくり", p:"病院・居宅介護支援事業所・訪問看護・薬局・施設など、地域の関係機関との信頼関係を築くための仕組みづくりを支援します。"},
-      {h:"ホームページの作成・運用", p:"HP作成・運用、医師採用ページの企画、広報誌の制作、医療広告ガイドラインに準拠した情報発信を支援します。ロゴ・イラスト制作にも対応しています。", link:"https://note.com/miza_painting", linkText:"フリーイラスト配布（note）"},
     ],
   },
 ];
@@ -932,7 +892,7 @@ function Service({ go, scrollAnchorRef }) {
           <p style={{ fontFamily: enFont, fontSize: 12, color: "rgba(255,255,255,0.45)", letterSpacing: 5, marginBottom: 10 }}>SERVICE MAP</p>
           <h1 style={{ fontFamily: sans, fontSize: 25, color: C.white, fontWeight: 700, margin: 0 }}>MI-ZAのサービス全体</h1>
           <p style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.7)", marginTop: 14, lineHeight: 1.85 }}>
-            サブスク・単発・個別コンサルの<br className="sp-only-br" />3つのご利用方法をご用意しています
+            サブスクと個別コンサルの<br className="sp-only-br" />2つのご利用方法をご用意しています
           </p>
         </F>
       </section>
@@ -942,9 +902,9 @@ function Service({ go, scrollAnchorRef }) {
         <F>
           <div style={{ marginBottom: 28, textAlign: "center" }}>
             <p style={{ fontFamily: enFont, fontSize: 12, color: C.gold, letterSpacing: 4, marginBottom: 8 }}>OVERVIEW</p>
-            <h2 style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.navy, marginBottom: 8, textWrap: "balance" }}>3つのご利用方法</h2>
+            <h2 style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.navy, marginBottom: 8, textWrap: "balance" }}>2つのご利用方法</h2>
             <p style={{ fontFamily: sans, fontSize: 13, color: C.mid, lineHeight: 1.85 }}>
-              貴院のニーズに合わせて、定額・単発・個別の3形態からお選びいただけます
+              貴院のニーズに合わせて、定額・個別の2形態からお選びいただけます
             </p>
           </div>
         </F>
@@ -963,21 +923,6 @@ function Service({ go, scrollAnchorRef }) {
                   生成AIをフル活用したクリニック運営を目指すサブスクリプションサービス。生成AIの進化に合わせて、クリニックの成長と生産性向上を実現します。
                 </p>
                 <p style={{ fontFamily: sans, fontSize: 14, color: C.gold, fontWeight: 700 }}>金額はお問い合わせください</p>
-              </div>
-            </a>
-            {/* 単発 */}
-            <a href="#single-section" onClick={(e) => { e.preventDefault(); document.getElementById('single-section').scrollIntoView({behavior:'smooth', block:'start'}); }} style={{ background: C.white, border: `2px solid ${C.line}`, textDecoration: "none", display: "block", overflow: "hidden" }}>
-              <picture style={{ display: "contents" }}>
-                <source srcSet="photo-jimucho-training.webp" type="image/webp" />
-                <img src="photo-jimucho-training.jpg" alt="事務長養成プログラム・動画教材" loading="lazy" decoding="async" style={{ width: "100%", height: 140, objectFit: "cover", display: "block" }} />
-              </picture>
-              <div style={{ padding: "20px 22px" }}>
-                <p style={{ fontFamily: sans, fontSize: 11, color: C.accent, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>💼 単発・買い切り（動画教材は3ヶ月視聴）</p>
-                <p style={{ fontFamily: serif, fontSize: 18, fontWeight: 700, color: C.navy, marginBottom: 8 }}>動画教材・HP制作</p>
-                <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginBottom: 12 }}>
-                  必要なときだけご利用いただける単発サービス。買い切り型・プロジェクト型。
-                </p>
-                <p style={{ fontFamily: sans, fontSize: 14, color: C.dark, fontWeight: 700 }}>動画 ¥49,800（税別）／1人　／ HP 個別お見積</p>
               </div>
             </a>
             {/* 個別コンサル */}
@@ -1172,86 +1117,12 @@ function Service({ go, scrollAnchorRef }) {
         </div>
       </Sec>
 
-      {/* ② 単発・買い切り */}
-      <Sec py={72}>
-        <div id="single-section" style={{ scrollMarginTop: 80 }}>
-        <div style={{ marginBottom: 28, textAlign: "center" }}>
-          <p style={{ fontFamily: enFont, fontSize: 12, color: C.gold, letterSpacing: 4, marginBottom: 8 }}>② INDIVIDUAL SERVICES</p>
-          <h2 style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.navy, marginBottom: 10, textWrap: "balance" }}>個別サービス</h2>
-          <p style={{ fontFamily: sans, fontSize: 13, color: C.mid, lineHeight: 1.85 }}>
-            必要なときだけご利用いただける、買い切り型・プロジェクト型のサービスです。
-          </p>
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
-          {[
-            {
-              n: "01",
-              t: "事務長養成プログラム（動画版）",
-              d: "事務長10年の経験から、在宅医療クリニックの事務長業務を体系化した全12回（各1時間）の動画教材＋パワポ資料。3ヶ月間、繰り返し視聴可能。新任事務長の研修にも最適です。",
-              tag: "動画教材／買い切り（3ヶ月視聴）",
-              price: "¥49,800（税別）",
-              priceNote: "🎁 発売記念 先着10名様 ¥39,800（税別）／ 動画12本×各1時間＋パワポ資料・3ヶ月間、繰り返し視聴可能",
-              cta: "販売開始のお知らせを受け取る",
-              ctaHref: "/contact/",
-              ctaPage: 6,
-              comingSoon: "2026年8月 販売開始予定",
-            },
-            {
-              n: "02",
-              t: "HP・採用ページ制作",
-              d: "在宅医療クリニック専門の視点で、目的に合ったサイトを制作します。コンテンツ（原稿・写真・SEO）の作成まで一括対応。医療広告ガイドラインにも準拠。",
-              tag: "プロジェクト型／オンライン対応",
-              price: "ヒアリング後にお見積もり",
-              priceNote: "コンテンツ作成（原稿・写真・SEO）・医療広告ガイドライン準拠チェックまで一括対応",
-              cta: "ヒアリングを依頼する",
-              ctaHref: "/contact/",
-              ctaPage: 6,
-            },
-          ].map((s, i) => (
-            <F key={i} delay={i * 0.1}>
-              <div style={{ background: C.white, padding: "29px 25px", display: "flex", flexDirection: "column", borderTop: `4px solid ${C.gold}`, position: "relative" }}>
-                {s.comingSoon && (
-                  <div style={{ position: "absolute", top: -10, right: 16, background: C.accent, color: C.white, fontFamily: sans, fontSize: 10, fontWeight: 700, padding: "4px 12px", letterSpacing: 1 }}>
-                    COMING SOON
-                  </div>
-                )}
-                <p style={{ fontFamily: enFont, fontSize: 11, color: C.accent, letterSpacing: 3, marginBottom: 8 }}>{s.tag}</p>
-                <p style={{ fontFamily: sans, fontSize: 17, fontWeight: 700, color: C.navy, marginBottom: 12 }}>{s.n}. {s.t}</p>
-                {s.comingSoon && (
-                  <p style={{ fontFamily: sans, fontSize: 12, color: C.accent, fontWeight: 700, marginBottom: 12, padding: "6px 10px", background: "rgba(61,107,142,0.08)", display: "inline-block", alignSelf: "flex-start" }}>
-                    🗓 {s.comingSoon}
-                  </p>
-                )}
-                <p style={{ fontFamily: sans, fontSize: 13, color: C.mid, lineHeight: 1.9, marginBottom: 16, flex: 1 }}>{s.d}</p>
-                <div style={{ marginBottom: 12, padding: "12px 14px", background: C.bg, borderLeft: `3px solid ${C.gold}` }}>
-                  <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 700, color: C.navy, marginBottom: 4 }}>{s.price}</p>
-                  <p style={{ fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.6 }}>{s.priceNote}</p>
-                </div>
-                {s.optionTitle && (
-                  <div style={{ marginBottom: 16, padding: "12px 14px", background: "rgba(201,169,90,0.08)", border: `1px solid ${C.gold}` }}>
-                    <p style={{ fontFamily: sans, fontSize: 12, color: C.gold, fontWeight: 700, marginBottom: 4, letterSpacing: 0.5 }}>{s.optionTitle}</p>
-                    <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 700, color: C.navy, marginBottom: 6 }}>{s.optionPrice}</p>
-                    <p style={{ fontFamily: sans, fontSize: 11, color: C.mid, lineHeight: 1.7 }}>{s.optionDesc}</p>
-                  </div>
-                )}
-                <a href={s.ctaHref} onClick={e => { e.preventDefault(); go(s.ctaPage); }} style={{ display: "inline-block", fontFamily: sans, fontSize: 12, color: C.navy, background: "transparent", border: `2px solid ${C.navy}`, padding: "10px 24px", letterSpacing: 1, transition: "all 0.2s", textDecoration: "none", alignSelf: "flex-start", fontWeight: 600 }}
-                  onMouseOver={e => { e.currentTarget.style.background = C.navy; e.currentTarget.style.color = C.white; }}
-                  onMouseOut={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = C.navy; }}>
-                  {s.cta} →
-                </a>
-              </div>
-            </F>
-          ))}
-        </div>
-        </div>
-      </Sec>
-
-      {/* ③ 個別コンサルティング */}
+      {/* ② 個別コンサルティング */}
       <Sec bg={C.bg} py={72}>
         <div id="consul-section" style={{ scrollMarginTop: 80 }}>
           <F>
             <div style={{ marginBottom: 28, textAlign: "center" }}>
-              <p style={{ fontFamily: enFont, fontSize: 12, color: C.gold, letterSpacing: 4, marginBottom: 8 }}>③ INDIVIDUAL CONSULTING</p>
+              <p style={{ fontFamily: enFont, fontSize: 12, color: C.gold, letterSpacing: 4, marginBottom: 8 }}>② INDIVIDUAL CONSULTING</p>
               <h2 style={{ fontFamily: sans, fontSize: 22, fontWeight: 700, color: C.navy, marginBottom: 10, textWrap: "balance" }}>個別コンサルティング</h2>
               <p style={{ fontFamily: sans, fontSize: 13, color: C.mid, lineHeight: 1.85 }}>
                 経営企画・組織開発・マーケティングの3領域で、テーマ別に個別ご相談をお受けしています。
@@ -1313,19 +1184,6 @@ function Service({ go, scrollAnchorRef }) {
               <p style={{ fontFamily: serif, fontSize: 16, fontWeight: 700, color: C.navy, marginBottom: 12 }}>2〜4週間でサービス開始</p>
               <ol style={{ paddingLeft: 18, margin: 0 }}>
                 {["申込フォーム送信","電子契約締結（freeeサイン）","AI導入内容ご相談","AI実装（順次）"].map((t, i) => (
-                  <li key={i} style={{ fontFamily: sans, fontSize: 13, color: C.dark, lineHeight: 1.85, marginBottom: 4 }}>{t}</li>
-                ))}
-              </ol>
-              <a href="/contact/" onClick={(e) => { e.preventDefault(); go(6); }} style={{ display: "inline-block", marginTop: 12, fontFamily: sans, fontSize: 12, color: C.accent, textDecoration: "underline" }}>
-                お問い合わせはこちら →
-              </a>
-            </div>
-            {/* 単発用フロー */}
-            <div style={{ background: C.bg, padding: "24px 22px", borderTop: `4px solid ${C.accent}` }}>
-              <p style={{ fontFamily: sans, fontSize: 12, color: C.accent, fontWeight: 700, letterSpacing: 1, marginBottom: 8 }}>💼 単発・買い切り（動画教材は3ヶ月視聴）</p>
-              <p style={{ fontFamily: serif, fontSize: 16, fontWeight: 700, color: C.navy, marginBottom: 12 }}>動画は購入後即視聴可</p>
-              <ol style={{ paddingLeft: 18, margin: 0 }}>
-                {["お問い合わせ／販売開始通知ご登録","ヒアリング（HP制作の場合）","お見積もり提示／動画購入","制作・納品 ／ 動画即視聴"].map((t, i) => (
                   <li key={i} style={{ fontFamily: sans, fontSize: 13, color: C.dark, lineHeight: 1.85, marginBottom: 4 }}>{t}</li>
                 ))}
               </ol>
@@ -2147,8 +2005,6 @@ function Contact() {
                   <option value="メルマガ登録">メルマガ登録</option>
                   <option value="AI伴走サービスについて">AI伴走サービスについて</option>
                   <option value="個別コンサルティングについて">個別コンサルティングについて</option>
-                  <option value="動画教材（事務長養成プログラム）について">動画教材（事務長養成プログラム）について</option>
-                  <option value="HP・採用ページ制作について">HP・採用ページ制作について</option>
                   <option value="取材・メディア掲載のご依頼">取材・メディア掲載のご依頼</option>
                   <option value="その他">その他</option>
                 </select>
