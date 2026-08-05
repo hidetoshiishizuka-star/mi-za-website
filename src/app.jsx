@@ -1383,7 +1383,7 @@ function Member({ go }) {
         </F>
       </section>
       <Sec bg={C.bg}>
-        <F><P style={{ marginBottom: 40 }}>ふたりとも事務長として、在宅医療の現場を知っています。</P></F>
+        <F><P style={{ marginBottom: 40 }}>支援にあたるのは、事務長としてクリニックの運営を担ってきたメンバーです。</P></F>
         {MEMBERS.map((m, i) => (
           <F key={i} delay={i * 0.1}>
             <div style={{ paddingBottom: i === 0 ? 40 : 0, marginBottom: i === 0 ? 40 : 0, borderBottom: i === 0 ? `2px solid ${C.line}` : "none" }}>
