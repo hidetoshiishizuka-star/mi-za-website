@@ -1854,7 +1854,7 @@ function Privacy() {
     { h: "所在地", d: "東京都港区北青山1-3-1 アールキューブ青山3F" },
   ];
   const sections = [
-    { h: "収集する個人情報", d: "お問い合わせフォームを通じて、氏名・医療機関名・役職・メールアドレス・電話番号・ご相談内容を収集します。" },
+    { h: "収集する個人情報", d: "お問い合わせフォームを通じて、氏名・医療機関名／会社名・役職・メールアドレス・電話番号・ご相談内容を収集します。" },
     { h: "利用目的", d: "収集した個人情報は、お問い合わせへの回答・ご連絡、およびサービスのご提案のみに使用します。それ以外の目的には使用しません。" },
     { h: "第三者への提供", d: "法令に基づく場合を除き、ご本人の同意なく第三者に個人情報を提供することはありません。" },
     { h: "個人情報の管理", d: "個人情報への不正アクセス・紛失・破壊・改ざん・漏洩を防ぐため、適切な安全管理措置を講じます。" },
@@ -1996,11 +1996,12 @@ function Contact() {
                   <option value="メルマガ登録">メルマガ登録</option>
                   <option value="AI伴走サービスについて">AI伴走サービスについて</option>
                   <option value="個別コンサルティングについて">個別コンサルティングについて</option>
+                  <option value="データ・レポートについて（法人向け）">データ・レポートについて（法人向け）</option>
                   <option value="取材・メディア掲載のご依頼">取材・メディア掲載のご依頼</option>
                   <option value="その他">その他</option>
                 </select>
               </div>
-              {[["お名前",true,"text"],["医療機関名",true,"text"],["お役職",false,"text"],["メールアドレス",true,"email"],["お電話番号",false,"tel"]].map(([l,req,type],i) => (
+              {[["お名前",true,"text"],["医療機関名／会社名",true,"text"],["お役職",false,"text"],["メールアドレス",true,"email"],["お電話番号",false,"tel"]].map(([l,req,type],i) => (
                 <div key={i} style={{ marginBottom: 20 }}>
                   <label style={{ display: "block", fontFamily: sans, fontSize: 13, fontWeight: 600, color: C.navy, marginBottom: 6 }}>
                     {l}{req && <span style={{ fontSize: 11, color: C.accent, marginLeft: 6 }}>必須</span>}
