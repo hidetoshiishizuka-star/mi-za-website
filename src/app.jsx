@@ -315,7 +315,7 @@ function Home({ go }) {
                 AI<strong className="why-accent why-accent-3" style={{ color: C.gold }}>実装</strong>
               </p>
               <p style={{ fontFamily: sans, fontSize: 12, color: C.mid, lineHeight: 1.85, marginTop: 12 }}>
-                この3点が揃うのは MI-ZA だけ。在宅医療の現場で磨かれた最新の生成AIサービスを提供します。
+                この3点を、ひとつの会社でまとめて行います。AIは、在宅医療の現場で使いながら整えます。
               </p>
             </div>
           </div>
