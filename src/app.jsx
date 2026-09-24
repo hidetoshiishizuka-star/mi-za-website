@@ -283,8 +283,8 @@ function Home({ go }) {
             </h1>
           </F>
           <F delay={0.3}>
-            <p style={{ fontFamily: sans, fontSize: 12, color: C.gold, letterSpacing: 2, marginBottom: 18, wordBreak: "keep-all" }}>
-              院長・看護師・事務に並走し、自院に育つAIで日々を支える。
+            <p className="hero-lead" style={{ fontFamily: serif, fontSize: "clamp(15px, 2.2vw, 18px)", fontWeight: 600, color: C.gold, letterSpacing: 1.5, lineHeight: 1.9, marginBottom: 20 }}>
+              院長・看護師・事務に並走し、<br className="sp-only-br" />自院に育つAIで日々を支える。
             </p>
           </F>
           <F delay={0.42}>
