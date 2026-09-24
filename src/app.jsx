@@ -289,7 +289,7 @@ function Home({ go }) {
           </F>
           <F delay={0.42}>
             <p className="hero-sub" style={{ fontFamily: sans, fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.95, marginBottom: 28, letterSpacing: 0.5 }}>
-              増収・経費減を、<strong style={{ color: C.gold, fontWeight: 700 }}>組織生産性向上</strong>と共に実現する。
+              AIに任せる仕事と、<strong style={{ color: C.gold, fontWeight: 700 }}>人が確認する仕事</strong>を、一緒に決めます。
             </p>
           </F>
           <F delay={0.54}>
